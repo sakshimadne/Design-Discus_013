@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply m-0 p-0 box-border;
+}
+
+:root {
+    --small-nav-bg-blue: #1570a6;
+    --nav-text-blue: #1570a6;
+    --small-navbar-top-bg-grey: #eeeeee;
+}
+
+/* navbar-section */
+/* =================================================== */
+
+/* small-navbar */
+/* --------------------------------- */
+
+.small-navbar-wrapper {
+    @apply mb-2;
+}
+
+.small-navbar-link-wrapper {
+    @apply w-[100vw] text-right bg-[var(--small-navbar-top-bg-grey)] text-sm px-2 py-[0.1rem];
+}
+
+.small-nav-link {
+    @apply text-[var(--nav-text-blue)] cursor-pointer;
+}
+
+.small-nav-link:hover {
+    @apply text-black;
+}
+
+.sn-top-link:hover {
+    @apply underline;
+}
+
+.small-navbar {
+    @apply flex justify-between items-center py-3 pl-3;
+}
+
+.small-nav-logo {
+    @apply w-[71.875%];
+}
+
+.small-nav-right {
+    @apply flex justify-center items-center gap-5 text-lg;
+}
+
+.small-navigation {
+    @apply flex flex-col justify-center items-start;
+}
+
+.small-nav-card {
+    @apply flex justify-start items-baseline gap-1 text-white bg-[var(--small-nav-bg-blue)] w-full my-[0.02rem] py-2 pl-3;
+}
+
+.small-nav-darrow {
+    @apply text-xs;
+}
+
+/* medium-navbar */
+/* --------------------------------- */
+
+.medium-navbar {
+    @apply hidden;
+}
+
+.medium-nav-link-wrapper {
+    @apply text-right text-[var(--nav-text-blue)] pr-3 py-3;
+}
+
+.medium-nav-link {
+    @apply text-sm;
+}
+
+.medium-nav-link:hover {
+    @apply underline cursor-pointer;
+}
+
+.nav-logo-search-wrapper {
+    @apply flex justify-center items-center w-[100vw];
+}
+
+.nav-logo-search {
+    @apply flex justify-between items-start max-w-[1180px] w-full px-4 pt-1 pb-4;
+}
+
+.nav-search-input {
+    @apply w-[90%];
+}
+
+.nav-search {
+    @apply border-[1px] border-gray-500 w-[34.74%];
+}
+
+.nav-search-input {
+    width: calc(100% - 25px);
+    @apply cursor-text outline-none pl-2;
+}
+
+.nav-search-input::selection {
+    @apply border-transparent;
+}
+
+.nav-search-icon {
+    @apply text-[var(--nav-text-blue)] w-5;
+}
+
+.medium-navigation {
+    @apply flex items-center justify-start gap-8 pl-4 pb-3;
+}
+
+.medium-nav-darrow {
+    @apply text-[0.6rem] font-bold;
+}
+
+/* large-navbar */
+/* --------------------------------- */
+
+.large-navbar {
+    @apply hidden;
+}
+
+.large-nav-logo-search-wrapper {
+    @apply pt-6 flex justify-center items-center w-[100vw];
+}
+
+.large-navigation-link-wrapper {
+    @apply w-full flex justify-center items-center;
+}
+
+.large-navigation-link {
+    @apply flex justify-between items-start pr-4 w-full max-w-[1180px];
+}
+
+.large-nav-link {
+    @apply text-[var(--nav-text-blue)] cursor-pointer;
+}
+
+.large-nav-link:hover {
+    @apply underline;
+}
+
+/* *************     media-queries (navbar-section)     ************** */
+
+@media screen and (min-width: 539px) {
+    .small-navbar-wrapper {
+        @apply hidden;
+    }
+
+    .medium-navbar {
+        @apply block;
+    }
+}
+
+@media screen and (min-width: 899px) {
+    .medium-navbar {
+        @apply hidden;
+    }
+
+    .large-navbar {
+        @apply block;
+    }
+}
+
+/* cortana-section */
+/* =================================================== */
+
+/* discover-section */
+/* =================================================== */
+
+/* follow-us-section */
+/* =================================================== */
+
+/* url-section */
+/* =================================================== */
+
+/* footer-section */
+/* =================================================== */
