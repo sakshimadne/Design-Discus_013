@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon2000</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+    }
+    
+    .header-top {
+        background-color: #003366;
+        color: white;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        width: 150px;
+        margin-right: 20px;
+    }
+    
+    .nav-tabs a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .main-container {
+        display: flex;
+        margin: 20px;
+    }
+    
+    .sidebar, .right-sidebar {
+        background-color: #f8f8f8;
+        padding: 15px;
+        width: 200px;
+        border: 1px solid #ddd;
+    }
+    
+    .sidebar-section {
+        margin-bottom: 20px;
+    }
+    
+    .sidebar h2, .right-sidebar h2 {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .sidebar a, .right-sidebar a {
+        color: #004080;
+        text-decoration: none;
+    }
+    
+    .sidebar ul, .right-sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .sidebar ul li, .right-sidebar ul li {
+        margin-bottom: 5px;
+    }
+    
+    main {
+        flex-grow: 1;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        margin: 0 20px;
+    }
+    
+    main h1 {
+        font-size: 20px;
+        color: #e47911;
+    }
+    
+    main p {
+        font-size: 14px;
+    }
+    
+    .right-sidebar {
+        background-color: #f8f8f8;
+        padding: 15px;
+        width: 200px;
+        border: 1px solid #ddd;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <img src="amazon-logo.png" alt="Amazon Logo" class="logo">
+            <div class="nav-tabs">
+                <a href="#">WELCOME</a>
+                <a href="#">AUCTIONS</a>
+                <a href="#">BOOKS</a>
+                <a href="#">MUSIC</a>
+                <a href="#">ELECTRONICS</a>
+                <a href="#">GIFT IDEAS</a>
+                <a href="#">DEALS OF THE DAY</a>
+                <a href="#">FRIENDS & FAVORITES</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h2>Search</h2>
+                <select>
+                    <option>All Products</option>
+                </select>
+                <p>Search of the Day: <a href="#">travel guide</a></p>
+            </div>
+
+            <div class="sidebar-section">
+                <h2>Browse</h2>
+                <ul>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">DVD & Video</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Software</a></li>
+                    <li><a href="#">Toys</a></li>
+                    <li><a href="#">Video Games</a></li>
+                    <li><a href="#">Tools & Hardware</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Give the Gift of Choice</h1>
+            <p>Mother's Day is May 14. Feel like you're running behind? Don't panic. We have <a href="#">e-mail gift certificates</a>...</p>
+            <img src="gift-certificate.png" alt="Gift Certificate">
+        </main>
+
+        <aside class="right-sidebar">
+            <div class="sidebar-section">
+                <h2>What's new at Amazon.com?</h2>
+                <p><a href="#">Already a customer? Sign in</a></p>
+                <h3>New Releases</h3>
+                <ul>
+                    <li><a href="#">Business & Investing</a></li>
+                    <li><a href="#">Alternative, Indie & Punk</a></li>
+                    <li><a href="#">Classics</a></li>
+                    <li><a href="#">Action Figures</a></li>
+                    <li><a href="#">PDAs & Organizers</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
