@@ -356,6 +356,26 @@
 /* footer-section */
 /* ---------------------------------------- */
 
+.footer-section-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer-bottom {
+    display: flex;
+    gap: 0.6rem;
+}
+
 /* media queries */
 /* ----------------------------------- */
 /* ----------------------------------- */
@@ -397,5 +417,9 @@
     }
     .bottom-left {
         width: 100%;
+    }
+    .footer-section-wrapper {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 }
