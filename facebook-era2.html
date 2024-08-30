@@ -32,14 +32,16 @@
       #nav-right {
         display: flex;
         gap: 9px;
-        border: 1px solid red;
       }
       #nav-right div {
-        border: 1px solid black;
+        display: block;
+      }
+      #nav-right div label {
+        display: flex;
       }
 
-      label {
-        display: inline-block;
+      #form-container label {
+        display: flex;
       }
       button {
         margin-top: 10px;
@@ -132,12 +134,36 @@
         /* left: 130px; */
         font-weight: 600;
       }
-      input {
+      #form-container input {
         width: 300px;
       }
       #main-container > #main-right > #form-container p {
         font-size: 14px;
         margin-top: 10px;
+      }
+      #footer-link {
+      }
+      #footer-link ul:nth-child(1) {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #6a8cd4;
+      }
+      #footer-link div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #footer-link div ul {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        color: #6a8cd4;
       }
     </style>
   </head>
@@ -200,6 +226,35 @@
           </div>
           <p><a href="">Create a page</a> for celebrate, brand or business</p>
         </div>
+      </div>
+    </div>
+    <div id="footer-link">
+      <ul>
+        <li>English (US)</li>
+        <li>Espanol</li>
+        <li>Portugues (Brasil)</li>
+        <li>Francais (Franch)</li>
+        <li>Deutsch</li>
+        <li>Italiano</li>
+        <li>اردو</li>
+        <li>हिन्दी</li>
+        <li>中国人</li>
+      </ul>
+      <hr />
+      <div>
+        <p>Facebook © 2010</p>
+        <ul>
+          <li>Mobile</li>
+          <li>Find Friends</li>
+          <li>Budget</li>
+          <li>Career</li>
+          <li>About</li>
+          <li>Advertising</li>
+          <li>Developers</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li>Help</li>
+        </ul>
       </div>
     </div>
   </body>

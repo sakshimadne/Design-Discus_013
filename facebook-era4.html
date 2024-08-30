@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook 2030</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #141e30, #243b55);
+        color: #f0f0f0;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo h1 {
+        font-size: 36px;
+        color: #00aaff;
+        margin-left: 50px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      .logo span {
+        color: #00ff6a;
+      }
+
+      .login-box {
+        margin-right: 50px;
+        display: flex;
+        align-items: center;
+      }
+
+      .login-box form {
+        display: flex;
+        align-items: center;
+      }
+
+      .login-box input {
+        margin-right: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 25px;
+        background: #1e1e1e;
+        color: #fff;
+        outline: none;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .login-box input:focus {
+        box-shadow: 0 0 15px #00aaff;
+      }
+
+      .login-box button {
+        padding: 10px 20px;
+        background-color: #00aaff;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .login-box button:hover {
+        background-color: #008fd4;
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+        width: 100%;
+        transition: all 0.3s ease;
+      }
+
+      .left-content {
+        width: 50%;
+        padding-left: 50px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .left-content h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+        font-weight: 300;
+      }
+
+      .hologram {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        animation: rotateHologram 20s infinite linear;
+      }
+
+      .hologram img {
+        width: 100%;
+        filter: drop-shadow(0 0 15px #00aaff);
+        transform: perspective(500px) rotateX(45deg);
+      }
+
+      .right-content {
+        width: 40%;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        animation: slideIn 1.5s ease-in-out;
+      }
+
+      .signup-box h2 {
+        color: #00aaff;
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .signup-box p {
+        color: #a0a0a0;
+        margin-bottom: 20px;
+      }
+
+      .signup-box input {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 12px;
+        border: none;
+        border-radius: 25px;
+        background: #1e1e1e;
+        color: #fff;
+        font-size: 16px;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      .signup-box input:focus {
+        box-shadow: 0 0 15px #00ff6a;
+      }
+
+      .signup-box button {
+        width: 100%;
+        padding: 12px;
+        background-color: #00ff6a;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: all 0.3s ease;
+      }
+
+      .signup-box button:hover {
+        background-color: #00d455;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        color: #999;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes rotateHologram {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <h1>facebook<span>2030</span></h1>
+        </div>
+        <div class="login-box">
+          <form id="loginForm">
+            <input type="text" placeholder="Username or Email" id="email" />
+            <input type="password" placeholder="Password" id="password" />
+            <button type="submit">Log In</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="left-content">
+          <h2>Reconnect with the world in a new dimension.</h2>
+          <div class="hologram">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2-0RBx5r4nAi7QpPD5PT7jj3PUsHI_E9fQ&s"
+              alt="Holographic connection"
+              id="hologramImage"
+            />
+          </div>
+        </div>
+        <div class="right-content">
+          <div class="signup-box">
+            <h2>Join the Future</h2>
+            <p>Experience social media redefined.</p>
+            <form id="signupForm">
+              <input type="text" placeholder="First name" id="firstName" />
+              <input type="text" placeholder="Last name" id="lastName" />
+              <input
+                type="text"
+                placeholder="Mobile number or email"
+                id="mobileOrEmail"
+              />
+              <input
+                type="password"
+                placeholder="Create a password"
+                id="newPassword"
+              />
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Facebook 2030 &copy; 2024 | MASAI</p>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          showHologramEffect("Logging in...");
+        });
+
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          showHologramEffect("Creating account...");
+        });
+
+      function showHologramEffect(message) {
+        const hologramImage = document.getElementById("hologramImage");
+        hologramImage.src = "hologram_effect.png";
+        alert(message);
+
+        setTimeout(() => {
+          hologramImage.src = "hologram.png";
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
