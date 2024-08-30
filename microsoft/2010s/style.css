@@ -235,6 +235,8 @@
     @apply cursor-pointer underline;
 }
 
+/* *************     media-queries (cortana-section)     ************** */
+
 @media screen and (min-width: 540px) {
     .small-cortana {
         @apply hidden;
@@ -261,6 +263,221 @@
 
 /* discover-section */
 /* =================================================== */
+
+/* discover-top-grid */
+/* ------------------------------ */
+
+.discover-top-grid {
+    @apply flex flex-col justify-center items-start max-w-[436px] w-full px-2 py-5;
+}
+
+.dt-grid-card {
+    @apply flex flex-col justify-center items-start;
+}
+
+.dt-card-image:hover {
+    @apply cursor-pointer;
+}
+
+.dt-card-link {
+    @apply text-[var(--nav-text-blue)];
+}
+
+.dt-card-link:hover {
+    @apply cursor-pointer underline text-black;
+}
+
+/* discover-title-urls */
+/* ------------------------------ */
+
+.discover-content {
+    @apply hidden;
+}
+
+.discover-title-urls {
+    @apply px-3 flex flex-col justify-center items-start gap-3;
+}
+
+.discover-title {
+    @apply text-3xl font-light;
+}
+
+.dtitle-urls {
+    @apply flex gap-4 flex-wrap;
+}
+
+.dt-url {
+    @apply text-[var(--nav-text-blue)] h-[0.5rem];
+}
+
+.dt-url:hover {
+    @apply underline text-black cursor-pointer;
+}
+
+/* discover-home-work-urls */
+/* ----------------------------- */
+
+/* discover-home-work ------------- */
+
+.discover-home-work {
+    @apply flex flex-col items-start justify-center gap-2 mt-8 mb-12 px-3;
+}
+
+.home-work-btns {
+    @apply flex items-center justify-start pb-2;
+}
+
+.hw-btn {
+    @apply px-2 py-1;
+}
+
+.hw-btn:hover {
+    @apply text-[var(--small-nav-bg-blue)] cursor-pointer;
+}
+
+.active-btn {
+    @apply bg-[var(--small-nav-bg-blue)] text-white;
+}
+
+.active-btn:hover {
+    @apply bg-black text-white;
+}
+
+.hw-grid {
+    @apply hidden flex-col gap-10;
+}
+
+.hgrid-item {
+    @apply flex items-start justify-start;
+}
+
+.hgrid-image {
+    @apply w-[44.9%] pr-5;
+}
+
+.hgrid-image:hover {
+    @apply opacity-80 cursor-pointer;
+}
+
+.hgrid-img {
+    @apply w-full;
+}
+
+.hgrid-link,
+.durl {
+    @apply text-sm text-[var(--nav-text-blue)];
+}
+
+.hgrid-link:hover,
+.durl:hover {
+    @apply text-black underline cursor-pointer;
+}
+
+/* discover-urls --------------------- */
+
+.discover-urls {
+    @apply grid grid-cols-1 gap-12 px-3;
+}
+
+.discover-url-card {
+    @apply flex flex-col justify-center items-start gap-6;
+}
+
+.durl-list {
+    @apply flex flex-col justify-center items-start gap-2;
+}
+
+/* *************     media-queries (discover-section)     ************** */
+
+@media screen and (min-width: 539px) {
+    .discover-top-grid-wrapper {
+        @apply w-full flex justify-center items-center;
+    }
+
+    .discover-top-grid {
+        @apply flex-row gap-3 max-w-[1180px] px-3;
+    }
+
+    .discover-content-wrapper {
+        @apply mb-16;
+    }
+
+    .discover-content {
+        @apply flex flex-col items-start justify-center;
+    }
+
+    .dt-grid-card {
+        @apply flex flex-col justify-center items-start;
+    }
+
+    .hw-grid {
+        @apply flex;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .discover-top-grid {
+        @apply gap-4 px-4 py-6 xl:px-0 xl:gap-6;
+    }
+
+    .discover-title-urls {
+        @apply px-4 gap-4;
+    }
+
+    .dtitle-urls {
+        @apply gap-5;
+    }
+
+    .hw-grid {
+        @apply flex-row gap-4;
+    }
+
+    .hgrid-item {
+        @apply flex-col;
+    }
+
+    .hgrid-image {
+        @apply w-full pr-0;
+    }
+
+    .hgrid-link {
+        @apply text-[0.825rem];
+    }
+
+    .discover-urls {
+        @apply grid-cols-3 gap-4;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .discover-top-grid {
+        @apply py-7 lg:py-10;
+    }
+
+    .discover-title-urls {
+        @apply px-5 gap-7 lg:pl-0 lg:pr-24;
+    }
+
+    .discover-title {
+        @apply text-[2.4rem];
+    }
+
+    .dtitle-urls {
+        @apply flex-col text-xl font-light gap-8;
+    }
+
+    .discover-section-wrapper {
+        @apply flex justify-center items-center;
+    }
+
+    .discover-content {
+        @apply flex-row items-center justify-between gap-12 max-w-[1180px] lg:px-0;
+    }
+
+    .discover-home-work-urls {
+        @apply lg:pr-0 lg:mr-0;
+    }
+}
 
 /* follow-us-section */
 /* =================================================== */
