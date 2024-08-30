@@ -10,6 +10,7 @@
     --small-nav-bg-blue: #1570a6;
     --nav-text-blue: #1570a6;
     --small-navbar-top-bg-grey: #eeeeee;
+    --cortana-bg-grey: #333333;
 }
 
 /* navbar-section */
@@ -86,7 +87,7 @@
 }
 
 .nav-logo-search {
-    @apply flex justify-between items-start max-w-[1180px] w-full px-4 pt-1 pb-4;
+    @apply flex justify-between items-start max-w-[1180px] w-full px-4 pt-1 pb-4 xl:px-0;
 }
 
 .nav-search-input {
@@ -111,7 +112,7 @@
 }
 
 .medium-navigation {
-    @apply flex items-center justify-start gap-8 pl-4 pb-3;
+    @apply flex items-center justify-start gap-8 pl-4 pb-3 xl:pl-0;
 }
 
 .medium-nav-darrow {
@@ -126,7 +127,7 @@
 }
 
 .large-nav-logo-search-wrapper {
-    @apply pt-6 flex justify-center items-center w-[100vw];
+    @apply pt-7 flex justify-center items-center w-[100vw] xl:mx-0 xl:px-0;
 }
 
 .large-navigation-link-wrapper {
@@ -143,6 +144,10 @@
 
 .large-nav-link:hover {
     @apply underline;
+}
+
+.m-navigate-item:hover {
+    @apply cursor-pointer text-[var(--nav-text-blue)];
 }
 
 /* *************     media-queries (navbar-section)     ************** */
@@ -169,6 +174,90 @@
 
 /* cortana-section */
 /* =================================================== */
+
+/* small-cortana */
+/* --------------------------------- */
+
+.small-cortana-text {
+    @apply flex flex-col bg-[var(--cortana-bg-grey)] text-white pl-10 pr-7 gap-1 pt-3 pb-10;
+}
+
+.cortana-header {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    @apply text-[1.18rem] font-extralight leading-5;
+}
+
+.cortana-footer {
+    @apply flex justify-start items-center gap-5 text-sm font-normal;
+}
+
+.cortana-footer p:hover {
+    @apply underline cursor-pointer;
+}
+
+/* medium-cortana */
+/* ---------------------------------- */
+.medium-cortana {
+    @apply hidden;
+}
+
+.medium-cortana-text {
+    @apply flex flex-col bg-[var(--cortana-bg-grey)] text-white pl-10 pr-7 gap-1 pt-3 pb-6;
+}
+
+/* large-cortana */
+/* ---------------------------------- */
+.large-cortana {
+    @apply hidden bg-[url(media/cortana.png)] bg-cover h-[33.4vw] relative cursor-pointer justify-center items-center;
+}
+
+.large-cortana-text-wrapper {
+    @apply w-full h-full max-w-[1180px];
+}
+
+.large-cortana-text {
+    @apply absolute text-white bg-[var(--cortana-bg-grey)] flex flex-col justify-between items-start gap-8 w-[270.4px] px-5 py-4 mt-5 ml-5 z-10 cursor-pointer lg:gap-12 lg:px-6 lg:py-6 lg:w-[300px] xl:mx-0;
+}
+
+.large-cortana-header {
+    @apply text-[1.2rem] leading-6 font-light lg:text-[27px] lg:leading-8;
+}
+
+.large-cortana-footer {
+    @apply flex flex-col justify-center items-start gap-1 text-sm lg:text-[1rem];
+}
+
+.large-cortana-footer p {
+    @apply cursor-pointer;
+}
+
+.large-cortana-footer p:hover {
+    @apply cursor-pointer underline;
+}
+
+@media screen and (min-width: 540px) {
+    .small-cortana {
+        @apply hidden;
+    }
+    .medium-cortana {
+        @apply block;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .medium-cortana {
+        @apply hidden;
+    }
+    .large-cortana {
+        @apply flex;
+    }
+}
+
+@media screen and (min-width: 1230px) {
+    .large-cortana-text {
+        margin-left: calc((100vw-1180px) / 2);
+    }
+}
 
 /* discover-section */
 /* =================================================== */
