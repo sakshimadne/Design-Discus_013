@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Landing Page</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f5;
+      }
+
+      .container {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .header {
+        background-color: #3b5998;
+        color: white;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo h1 {
+        margin-left: 50px;
+        font-size: 36px;
+        font-weight: bold;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .login-box {
+        margin-right: 50px;
+      }
+
+      .login-box form {
+        display: flex;
+        align-items: center;
+      }
+
+      .login-box input {
+        margin-right: 5px;
+        padding: 8px;
+        border: 1px solid #dddfe2;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      .login-box button {
+        padding: 8px 16px;
+        background-color: #4267b2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .login-box button:hover {
+        background-color: #365899;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+      }
+
+      .left-content {
+        width: 50%;
+        padding-left: 50px;
+      }
+
+      .left-content h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .left-content img {
+        width: 80%;
+      }
+
+      .right-content {
+        width: 40%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-right: 50px;
+      }
+
+      .signup-box h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .signup-box p {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .signup-box input {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #dddfe2;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .signup-box button {
+        width: 100%;
+        padding: 10px;
+        background-color: #42b72a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .signup-box button:hover {
+        background-color: #36a420;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f0f2f5;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <h1>facebook</h1>
+        </div>
+        <div class="login-box">
+          <form id="loginForm">
+            <input type="text" placeholder="Email or Phone" id="email" />
+            <input type="password" placeholder="Password" id="password" />
+            <button type="submit">Log In</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="left-content">
+          <h2>Connect with friends and the world around you on Facebook.</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0_zN-lWdLrOHghswhX2GsEhtU6EGIhXHt-A&s" alt="Connect with friends" />
+        </div>
+        <div class="right-content">
+          <div class="signup-box">
+            <h2>Create an account</h2>
+            <p>It's quick and easy.</p>
+            <form id="signupForm">
+              <input type="text" placeholder="First name" id="firstName" />
+              <input type="text" placeholder="Last name" id="lastName" />
+              <input
+                type="text"
+                placeholder="Mobile number or email"
+                id="mobileOrEmail"
+              />
+              <input
+                type="password"
+                placeholder="New password"
+                id="newPassword"
+              />
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Facebook &copy; 2024</p>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Login form submitted!");
+        });
+
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Signup form submitted!");
+        });
+    </script>
+  </body>
+</html>
