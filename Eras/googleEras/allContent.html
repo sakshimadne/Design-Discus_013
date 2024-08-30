@@ -115,6 +115,70 @@
       footer p {
         font-size: 1em;
       }
+      /* Responsive Styles */
+      @media (max-width: 1024px) {
+        .era {
+          flex-direction: column;
+        }
+
+        .era-image {
+          margin: 20px 0;
+          width: 100%;
+          order: 1;
+        }
+
+        .era-content {
+          order: 2;
+          text-align: center;
+        }
+
+        .era h2 {
+          font-size: 1.8em;
+        }
+
+        .era p,
+        .era ul {
+          font-size: 1em;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .era {
+          padding: 15px;
+        }
+
+        .era h2 {
+          font-size: 1.6em;
+        }
+
+        .era p,
+        .era ul {
+          font-size: 0.95em;
+        }
+
+        .era-content {
+          text-align: left;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .era {
+          padding: 10px;
+        }
+
+        .era h2 {
+          font-size: 1.4em;
+        }
+
+        .era p,
+        .era ul {
+          font-size: 0.9em;
+        }
+
+        .era-content {
+          text-align: left;
+        }
+      }
     </style>
   </head>
   <body>
@@ -205,7 +269,7 @@
           </p>
         </div>
         <div class="era-image">
-          <img src="../images/google-1990.png" alt="Google in the 1990s" />
+          <img src="../../images/google-1990.png" alt="Google in the 1990s" />
         </div>
       </section>
 
@@ -281,7 +345,7 @@
           </p>
         </div>
         <div class="era-image">
-          <img src="images/google-2010s.png" alt="Google in the 2010s" />
+          <img src="../../images/google-2010.png" alt="Google in the 2010s" />
         </div>
       </section>
 
@@ -355,7 +419,8 @@
           </p>
         </div>
         <div class="era-image">
-          <img src="images/google-2020s.png" alt="Google in the 2020s" />
+          <img src="../../images/google-2020.png" alt="Google in the 2020s" />
+          <img src="../../images/google2024.png" alt="Google in the 2020s" />
         </div>
       </section>
     </main>
