@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google UI Evolution</title>
+    <link rel="stylesheet" href="../../src/styles.css" />
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: #0078d4;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+
+      header p {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+      }
+
+      #era-container {
+        margin-top: 20px;
+      }
+
+      #era-container a {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .era {
+        background-color: white;
+        margin-bottom: 40px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .era-content {
+        flex: 1 1 60%;
+        min-width: 300px;
+      }
+
+      .era-image {
+        flex: 1 1 35%;
+        max-width: 300px;
+        margin-left: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .era-content {
+          flex: 1 1 55%;
+        }
+
+        .era-image {
+          flex: 1 1 40%;
+          max-width: 250px;
+          margin-left: 10px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .era {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .era-image {
+          margin-left: 0;
+          margin-top: 20px;
+          width: 100%;
+          max-width: 400px;
+        }
+
+        .era-content {
+          width: 100%;
+        }
+
+        header h1 {
+          font-size: 2em;
+        }
+
+        header p {
+          font-size: 1em;
+        }
+
+        h2 {
+          font-size: 1.8em;
+        }
+
+        h3 {
+          font-size: 1.3em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.5em;
+        }
+
+        header p {
+          font-size: 0.9em;
+        }
+
+        h2 {
+          font-size: 1.5em;
+        }
+
+        h3 {
+          font-size: 1.1em;
+        }
+
+        .era-image {
+          max-width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-900 font-sans">
+    <header class="bg-blue-600 text-white p-6">
+      <h1 class="text-4xl font-bold mb-2 text-center">Google UI Evolution</h1>
+      <p class="text-center text-lg">
+        Select an era to see how Google's interface has evolved over time.
+      </p>
+    </header>
+    <!-- *****THIS IS BLOG WE HAVE TO FIX IN ANOTHER FILE -->
+    <!-- <div class="blog-container my-8 flex justify-center">
+      <a
+        href="./Blogs/Blog.html"
+        class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out"
+        >Visit the Blog</a
+      >
+    </div> -->
+
+    <div
+      id="era-container"
+      class="flex flex-wrap justify-center gap-4 px-6 max-w-full mx-auto"
+    >
+      <a
+        href="./google1990.html"
+        class="bg-blue-500 hover:bg-blue-700 text-white py-3 px-4 rounded-lg text-center font-medium transition duration-300 ease-in-out"
+        >Google in 1990</a
+      >
+      <a
+        href="./google2000.html"
+        class="bg-blue-500 hover:bg-blue-700 text-white py-3 px-4 rounded-lg text-center font-medium transition duration-300 ease-in-out"
+        >Google in 2000</a
+      >
+      <a
+        href="./google2010.html"
+        class="bg-blue-500 hover:bg-blue-700 text-white py-3 px-4 rounded-lg text-center font-medium transition duration-300 ease-in-out"
+        >Google in 2010</a
+      >
+      <a
+        href="./google2020.html"
+        class="bg-blue-500 hover:bg-blue-700 text-white py-3 px-4 rounded-lg text-center font-medium transition duration-300 ease-in-out"
+        >Google in 2020</a
+      >
+      <a
+        href="./google2030.html"
+        class="bg-blue-500 hover:bg-blue-700 text-white py-3 px-4 rounded-lg text-center font-medium transition duration-300 ease-in-out"
+        >Google in 2030</a
+      >
+    </div>
+
+    <div id="content-container" class="my-8"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
