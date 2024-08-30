@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: #f3f3f3;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 20px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+            margin-right: 20px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-container span {
+            font-size: 12px;
+            margin: 2px 0;
+        }
+
+        .text-container .hello {
+            color: orange; 
+        }
+
+        .cart-section {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .top-bar-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-bar-right span {
+            font-size: 12px;
+            margin: 2px 0;
+        }
+
+        .top-bar-right span:first-of-type {
+            color: orange; 
+        }
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            background-color:#0077cc;
+        }
+
+        .side-menu-placeholder {
+            width: 200px; 
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            margin-left: 15px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .search-text {
+            color: white; 
+            margin-right: 10px; 
+            font-size: 14px;
+        }
+
+        .search-bar select {
+            padding: 5px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            flex-grow: 1; 
+            border-radius: 5px; 
+            margin-right: 10px;
+        }
+
+        .search-bar .search-btn {
+            padding: 5px;
+            width: 35px;
+            height: 35px;
+            background-color: #f90;
+            border: none;
+            border-radius: 50%; 
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+            font-weight: 400;
+        }
+
+        .cart-wishlist-buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-left: 15px;
+        }
+
+        .cart-wishlist-buttons button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding:5px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: 5px;
+            width: 100%;
+            
+        }
+        .side-menu {
+            width: 200px;
+            background-color: white; 
+            padding: 0; 
+            float: left;
+            font-family: Arial, sans-serif;
+            border: 2px solid #0077cc; 
+            box-shadow: 2px 5px 5px rgba(2, 0, 0, 0.1);
+            border-radius: 5px; 
+            margin-left: 15px;
+            margin-top: -60px;
+        }
+
+        .side-menu h3 {
+            font-size: 16px;
+            margin: 0;
+            padding: 10px 15px;
+            color: white; 
+            background-color: orange; 
+            border-bottom: 2px solid #0077cc; 
+            border-radius: 5px 5px 0 0; 
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 15px;
+            margin: 0;
+        }
+
+        .side-menu ul li {
+            margin-bottom: 12px;
+        }
+
+        .side-menu ul li a {
+            text-decoration: none;
+            color: orange;
+            font-size: 16px;
+            font-weight: 700;
+            display: block;
+            padding: 8px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .side-menu ul p{
+            font-size: 12px;
+            color: #0077cc;
+            font-weight: 550;
+        }
+
+        .side-menu ul li a:hover {
+            background-color: #0077cc;
+            color: white;
+        }
+
+        main {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .featured-product {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        .featured-product img {
+            width: 250px;
+        }
+
+        .product-info {
+            margin-left: 20px;
+        }
+
+        .product-info h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .product-info p {
+            font-size: 18px;
+            color: #333;
+            margin: 5px 0;
+        }
+
+        .product-info span {
+            color: #ff9900;
+            font-weight: bold;
+        }
+
+        .product-info a {
+            color: #0077cc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .customer-looks, .digital-bestsellers {
+            margin-top: 20px;
+        }
+
+        .customer-looks h3, .digital-bestsellers h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            width: 30%;
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100px;
+        }
+
+        .product-item p {
+            font-size: 14px;
+            color: #333;
+            margin: 5px 0;
+        }
+        .customer-looks h3{
+            color: rgba(255, 153, 0, 0.903);
+            border-bottom: 1.5px solid gray;
+        }
+        .digital-bestsellers h3{
+            color: rgba(255, 153, 0, 0.833);
+            border-bottom: 1.5px solid gray;
+        }
+        .foot001{
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 95%;
+            margin-left: 20px;
+        }
+        .foot001text{
+            display: flex;
+        }
+        .foot001text a{
+            color: blue;
+            margin-left: 10px;
+            margin-top: -10px;
+        }
+        .foot001text h3{
+            color: #f90;
+            margin-top: -10px;
+            margin-left: 10px;
+        }
+        .opacitycolor {
+            background: linear-gradient(
+                rgb(148, 238, 243), 
+                rgba(0, 0, 255, 0)  
+            );
+            height: 25px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .foot001 span{
+            color: rgb(4, 4, 159);
+            text-decoration: underline;
+            font-weight: 800;
+            margin-left: 10px;
+        }
+        .foot001 p{
+            margin-top: -15px;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+        .foot002{
+            display: flex;
+            justify-content: space-evenly
+        }
+        .foot002text li{
+            display: block;
+            margin-top: 10px;
+            color: #0077cc;
+        }
+        .foot002text h3{
+            color: orange;
+        }
+        .foot03 {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            margin-left: 50px;
+        }
+        .foot03logo img {
+            height: 80px;
+            width: auto;
+        }
+        .foot03text {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            align-items: center;
+            color: #0077cc;
+        }
+        .foot03text p {
+            margin: 5px; 
+        }
+        .foot04{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .foot04 p{
+            color: #0077cc;
+        }
+        .foot04 li a{
+            text-decoration: none;
+            font-size: 12px;
+            color: gray;
+            list-style-type: none;
+        }
+        .foot04 li{
+            list-style-type: none;
+        }
+        .foot04last{
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+        }
+        .foot04last p{
+            color: #0077cc;
+            margin-left: 10px;
+        }
+        .foot04last a{
+            color: gray;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <img src="http://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo.png" alt="Amazon Logo" class="logo">
+                <div class="text-container">
+                    <span><span class="hello">Hello</span>. <a href="#">Sign in</a> to get personalized recommendations. New customer? <a href="#">Start here</a>.</span>
+                    <div class="cart-section">
+                        <a href="#">Your Amazon.com</a> | <a href="#">Gift Cards</a>
+                    </div>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <span>Free 2-day shipping</span>
+                <span><a href="#">Your Account</a> | <a href="#">Help</a></span>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="side-menu-placeholder"></div>
+            <div class="search-container">
+                <form class="search-bar">
+                    <span class="search-text">Search</span> 
+                    <select>
+                        <option value="all">All Departments</option>
+                    </select>
+                    <input type="text" placeholder="">
+                    <button class="search-btn">Go</button>
+                </form>
+                <div class="cart-wishlist-buttons">
+                    <button><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                    <button>Wishlist</button>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <nav class="side-menu">
+        <h3>Shop All Departments</h3>
+        <ul>
+            <li><a href="#">Books</a></li>
+                <p>Books</p>
+                <p>Kindle Books</p>
+                <p> Text Books</p>
+                <p>Audio Books</p>
+            <li><a href="#">Movies, Music & Games</a></li>
+                <p>Movies & TV</p>
+                <p>MP3 Downloads</p>
+                <p>Blue Ray</p>
+                <p>Video Games</p>
+            <li><a href="#">Digital Downloads</a></li>
+                <p>Movies Downloads</p>
+                <p>Game Downloads</p>
+                <p>Video Downloads</p>
+                <p>MP3 Downloads</p>
+            <li><a href="#">Kindle</a></li>
+                <p>Kindle Wi-Fi</p>
+                <p>Kindle DX</p>
+                <p>Kindle Reading Apps</p>
+                <p>Kindle Store</p>
+            <li><a href="#">Computers & Office</a></li>
+                <p>Laptop & Desktop</p>
+                <p>Computer Accessories</p>
+                <p>Software</p>
+                <p>PC Games</p>
+            <li><a href="#">Electronics</a></li>
+                <p>Video Players</p>
+                <p>Home Appliance</p>
+                <p>Cell PHone & Accessories</p>
+                <p>Car Instruments & GPS</p>
+        </ul>
+    </nav>    
+    <main>
+        <section class="featured-product">
+            <img src="https://m.media-amazon.com/images/G/01/kindle/journeys/5xlDnKG94P0ryVnD8MqFmnIhMKBXE2F2BxyzUQHa63Hhs3D/MWU3ZTIwZTgt._CB641064199_.jpg" alt="Kindle">
+            <div class="product-info">
+                <h2>The All-New Kindle</h2>
+                <p>Kindle 3G <span>$189</span></p>
+                <p>Kindle <span>$139</span></p>
+                <a href="#">Order now</a>
+            </div>
+        </section>
+        <section class="customer-looks">
+            <h3>What Other Customers Are Looking At Right Now</h3>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/81xq7NHlTcL._AC_SL1500_.jpg" alt="Kindle Cover">
+                    <p>Kindle Lighted Leather Cover, Black</p>
+                    <p>$59.99</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.M_OF72j1e4_5uacycxqVuwHaHa&pid=Api&P=0&h=180" alt="Logitech Revue">
+                    <p>Logitech Revue Companion Box</p>
+                    <p>$299.99</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.M3AC-35bW4K8u6MMqZqRdwAAAA&pid=Api&P=0&h=180" alt="Kindle DX">
+                    <p>Kindle DX Wireless Reading Device</p>
+                    <p>$379.00</p>
+                </div>
+            </div>
+        </section>
+        <section class="digital-bestsellers">
+            <h3>Digital Cameras Bestsellers</h3>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/61m90-PSx0L.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Canon EOS Rebel T2i">
+                    <p>Canon EOS Rebel T2i 18 MP CMOS</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/81-DLqNlOTL.__AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Fujifilm FinePix S1800">
+                    <p>Fujifilm FinePix S1800 12.2 MP</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/611l2ooQReL._AC_UY327_FMwebp_QL65_.jpg" alt="Panasonic Lumix DMC-ZS7">
+                    <p>Panasonic Lumix DMC-ZS7 12.1 MP</p>
+                </div>
+            </div>
+        </section>
+        <section class="digital-bestsellers">
+            <h3>Best Price On The Most Laptops</h3>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/61zPIXTGuyL._AC_SL1500_.jpg" alt="Canon EOS Rebel T2i">
+                    <p>Dell Inspiron 3520</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/6131ZgIFn1L.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Fujifilm FinePix S1800">
+                    <p>Samsung Galaxy Book 4 Pro</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/61RJn0ofUsL._AC_UY327_FMwebp_QL65_.jpg" alt="Panasonic Lumix DMC-ZS7">
+                    <p>MacBook M3 Max</p>
+                </div>
+            </div>
+        </section>
+        <section class="digital-bestsellers">
+            <h3>Mobile Section</h3>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/71NngboUC6L.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Canon EOS Rebel T2i">
+                    <p>Samsung S24</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/615rI0PoyOL._AC_UY327_FMwebp_QL65_.jpg" alt="Fujifilm FinePix S1800">
+                    <p>Google Pixel</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/71j9N0Zr6vL._AC_UY327_FMwebp_QL65_.jpg" alt="Panasonic Lumix DMC-ZS7">
+                    <p>iphone</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+            <div class="foot001">
+                <div class="opacitycolor"></div>
+                <div class="foot001text">
+                    <h3>YOUR RECENT HISTORY</h3>
+                    <a>(what's this?)</a>
+                </div>
+                    <p>After Viewing product detail pages on search results, look here to find an easy way to navigate back to pages you are intrested in.</p>
+                    <span> > View and edit your browsing history</span> 
+            </div>
+            <div class="foot002">
+                <div class="foot002text">
+                    <ul>
+                        <h3>Get to Know Us</h3>
+                        <li><a>Careers</a></li>
+                        <li><a>Investor Relations</a></li>
+                        <li><a>Press Releases</a></li>
+                        <li><a>Amazon and Our Planet</a></li>
+                    </ul>
+                </div>
+                <div class="foot002text">
+                    <ul>
+                        <h3>Make Money with Us</h3>
+                       <li><a>Sell on Amazon</a></li>
+                       <li><a>Join Associates</a></li>
+                       <li><a>Advertise Your Products</a></li>
+                       <li><a>Self-publish with Us</a></li>
+                       <li><a>See all</a></li>
+                    </ul>
+                </div>
+                <div class="foot002text">
+                    <ul>
+                        <h3>Let Us Help You</h3>
+                        <li><a>Shipping Rates & Policies</a></li>
+                        <li><a>Amazon Prime</a></li>
+                        <li><a>Returns</a></li>
+                        <li><a>Help</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot03">
+                <div class="foot03logo">
+                    <img src="http://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo.png" alt="">
+                </div>
+            <div class="foot03text">
+                    <p>Canada</p>
+                    <p>China</p>
+                    <p>France</p>
+                    <p>Germany</p>
+                    <p>Japan</p>
+                    <p>United Kingdom</p>
+            </div>
+            </div>
+            <div class="foot04">
+                <div class="foot04text">
+                    <ul>
+                        <p>AmazonWireless</p>
+                        <li><a href="">Cellphones &</a></li>
+                        <li><a href="">Wireless Plans</a></li>
+                    </ul>
+                </div>
+                <div class="foot04text">
+                    <ul>
+                        <p>AmazonWireless</p>
+                        <li><a href="">Cellphones &</a></li>
+                        <li><a href="">Wireless Plans</a></li>
+                    </ul>
+                </div>
+                <div class="foot04text">
+                    <ul>
+                        <p>AmazonWireless</p>
+                        <li><a href="">Cellphones &</a></li>
+                        <li><a href="">Wireless Plans</a></li>
+                    </ul>
+                </div>
+                <div class="foot04text">
+                    <ul>
+                        <p>AmazonWireless</p>
+                        <li><a href="">Cellphones &</a></li>
+                        <li><a href="">Wireless Plans</a></li>
+                    </ul>
+                </div>
+                <div class="foot04text">
+                    <ul>
+                        <p>AmazonWireless</p>
+                        <li><a href="">Cellphones &</a></li>
+                        <li><a href="">Wireless Plans</a></li>
+                    </ul>
+                </div>
+                <div class="foot04text">
+                    <ul>
+                        <p>AmazonWireless</p>
+                        <li><a href="">Cellphones &</a></li>
+                        <li><a href="">Wireless Plans</a></li>
+                    </ul>
+                </div>
+                <div class="foot04text">
+                    <ul>
+                        <p>AmazonWireless</p>
+                        <li><a href="">Cellphones &</a></li>
+                        <li><a href="">Wireless Plans</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot04last">
+                <p>Conditions of Use </p><p> Privacy Notice</p>
+                <a href=""><i class="fa-regular fa-copyright"></i> 1996-2010, Amazon.com, Inc. or its affiliates</a>
+            </div>
+        
+    </footer>
+    
+</body>
+<script src="https://kit.fontawesome.com/e77df793c7.js" crossorigin="anonymous"></script>
+</html>
+
