@@ -1770,7 +1770,7 @@ video {
     justify-content: center;
   }
 
-  .hw-grid {
+  .active-hw-grid {
     display: flex;
   }
 }
