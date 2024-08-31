@@ -37,7 +37,8 @@
             margin-left: 330px;
         }
 
-        #upper-buttons button, #extra-buttons button {
+        #upper-buttons button,
+        #extra-buttons button {
             background-color: #eeeecc;
             color: #333;
             padding: 8px 12px;
@@ -70,73 +71,83 @@
         #nav-bar i {
             color: orange;
         }
-
+        .bodycontainer{
+            display: flex;
+        }
         .container {
             display: flex;
             margin: 20px;
+            flex-direction: column;
+            width: 25%;
         }
 
         .left-sidebar {
-    width: 20%;
-    padding: 10px;
-    background-color: #f3f3f3;
-    color: #333;
-    margin-right: 10px;
-}
+            width: 70%;
+            background-color: #f3f3f3;
+            color: #333;
+            margin-right: 10px;
+            height: 200px;
+            padding: 0;
+            border: 1px solid black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow: hidden;
+        }
 
-.search-container {
-    display: flex;
-    flex-direction: column;
-}
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(240, 212, 89);
+        }
 
-.search-section {
-    background-color: #004b91; /* Blue background */
-    padding: 10px;
-    color: white;
-    margin-bottom: 10px;
-}
+        .search-section {
+            background-color: #004b91;
+            color: white;
+            margin-bottom: 10px;
+            justify-content: center;
+        }
 
-.search-section h3 {
-    margin: 0;
-}
+        .search-section h3 {
+            margin: 0;
+        }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
 
-.search-bar select,
-.search-bar button {
-    padding: 5px;
-    margin-right: 5px;
-}
+        .search-bar select,
+        .search-bar button {
+            margin-right: 5px;
+        }
 
-.search-bar button {
-    background-color: orange;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
+        .search-bar button {
+            background-color: orange;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 50%;
+        }
 
-.search-info {
-    margin-top: 10px;
-}
+        .search-info {
+            margin-top: 50px;
+        }
 
-.search-info p {
-    margin: 0;
-}
+        .search-info p {
+            font-size: 10px;
+            margin: 0;
+        }
 
-.search-info a {
-    color: blue;
-}
-
+        .search-info a {
+            color: blue;
+            font-size: 10px;
+        }
 
         .sidebar {
-            width: 20%;
-            padding: 10px;
+            width: 70%;
             background-color: #f3f3f3;
-            margin-right: 10px;
+            margin-top: 20px;
         }
 
         .sidebar .search {
@@ -146,41 +157,54 @@
         .sidebar .search-heading {
             background-color: #004b91;
             color: white;
-            padding: 8px;
             margin: 0;
         }
 
         .sidebar select {
-            padding: 5px;
+            padding: 0px;
             margin-top: 5px;
         }
 
-        .sidebar button {
-            padding: 5px;
-            background-color: orange;
-            border: none;
-            cursor: pointer;
+        .sidebar input {
             margin-top: 5px;
+            width: 80%;
+            margin-right: 5px;
         }
 
-        .sidebar .browse {
-            margin-top: 10px;
+        .browse h3 {
+            background-color: #004b91;
+            color: white;
+            font-size: 14px;
+            margin: 0;
+            font-weight: 800;
+            padding: 10px;
+            border: 1px solid #01090f;
+            border-top-left-radius:  10px;
+            border-top-right-radius: 10px;
         }
 
-        .sidebar .browse h3 {
+        .browse ul {
+            list-style-type: disc;
+            margin: 0;
+            border: 2px solid #004b91;
+        }
+
+        .browse ul li {
+            color: blue;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .lcolumn3{
+            border: 1px solid black;
+            width: 70%;
+            margin-top: 20px;
+        }
+        .lcolumn3 li{
             color: #004b91;
         }
-
-        .sidebar .browse ul {
-            list-style-type: none;
-            padding: 0;
+        .lcolumn3 h3, li{
+            margin-left: 5px;
         }
-
-        .sidebar .browse ul li {
-            margin: 5px 0;
-            color: orange; /* Color for Browse items */
-        }
-
         main {
             width: 50%;
             padding: 10px;
@@ -198,41 +222,101 @@
             height: 500px;
             width: auto;
         }
-
-        .price-list {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 10px;
+        .promotiontxt h3{
+            color: orange;
+        }
+        .promotion h4{
+            font-weight: 700;
+        }
+        .promotion li{
+            color: #004b91;   
+        }
+        .right-sidebar {
+            width: 25%;
+            background-color: #f3f3f3;
+            margin-left: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 100%;
         }
 
-        .price-item {
+        .right-sidebar .header {
+            background-color: #004b91;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
-        .top-sellers h3 {
-            margin-top: 30px;
+        .right-sidebar .header h3 {
+            margin: 0;
+            font-size: 18px;
         }
 
-        .right-sidebar {
-            width: 25%;
-            padding: 10px;
-            background-color: #f3f3f3;
-            margin-left: 10px;
+        .right-sidebar .section {
+            margin-bottom: 20px;
+            padding: 10px 0;
         }
 
-        .right-sidebar h3 {
-            color: #004b91;
+        .right-sidebar .section h4 {
+            background-color: #004b91;
+            color: white;
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
         }
 
-        .right-sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .right-sidebar ul li {
+        .right-sidebar .section p {
+            font-size: 14px;
             margin: 5px 0;
+            margin-left: 5px;
         }
 
+        .right-sidebar .section a {
+            font-size: 14px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        .right-sidebar .section a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-box {
+            display: flex;
+            justify-content: space-between;
+            width: 80%; 
+            margin: 0 auto;
+            border: 1px solid black; 
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 0 20px; 
+            text-align: left; 
+        }
+
+        .footer-column h3 {
+            margin-bottom: 10px;
+            font-size: 18px; 
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            margin-bottom: 8px; 
+        }
+
+        .footer-column p span {
+            color: blue; 
+            text-decoration: underline; 
+            cursor: pointer; 
+        }
+        .lastline{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -268,86 +352,138 @@
             <button>Free E-Cards</button>
         </div>
     </header>
-    <div class="container">
-        <aside class="left-sidebar">
-            <div class="search-container">
-                <div class="search-section">
-                    <h3>Search</h3>
+    <div class="bodycontainer">
+        <div class="container">
+            <aside class="left-sidebar">
+                <div class="search-container">
+                    <div class="search-section">
+                        <h3>Search</h3>
+                        <div class="search-bar">
+                            
+                        </div>
+                    </div>
+                    <select>
+                        <option>All Products</option>
+                    </select>
                     <div class="search-bar">
-                        <select>
-                            <option>All Products</option>
-                        </select>
+                        <input type="text" placeholder="Search products...">
                         <button>Go</button>
                     </div>
-                </div>
-                <div class="search-info">
-                    <p>Search of the day:</p>
-                    <a href="">travel guide</a>
-                </div>
-            </div>
-        </aside>
-        
-
-        <main>
-            <section class="promotion">
-                <span><span class="hello">Hello</span>. Sign in to get <a href="">personalized recommendations.</a> New customer? <a href="#">Start here</a>.</span>
-                <img src="https://1.bp.blogspot.com/-d1U7couLhDE/X3xO_QwSIQI/AAAAAAAAAD4/KGYKZs4Adm4WGpzXYCNlA0fNcpTPf-R6ACLcBGAsYHQ/s1000/amazonup%2Bcoming%2B%2Bpost.jpg" alt="">
-                <div class="price-list">
-                    <div class="price-item">
-                        <p>List Price $20</p>
-                        <p>Save $6</p>
-                    </div>
-                    <div class="price-item">
-                        <p>List Price $30</p>
-                        <p>Save $9</p>
-                    </div>
-                    <div class="price-item">
-                        <p>List Price $40</p>
-                        <p>Save $12</p>
+                    <div class="search-info">
+                        <p>Search of the day:</p>
+                        <a href="">travel guide</a>
                     </div>
                 </div>
-            </section>
-
-            <section class="top-sellers">
-                <h3>Top Sellers in Electronics</h3>
-                <h4>Linksys BEFSR41 Etherfast 4-Port Cable/DSL Router</h4>
-                <p>Linksys is fast making a name for itself in the networking world...</p>
-                <a href="#">Read more</a>
-            </section>
-        </main>
-
-        <aside class="sidebar">
-            <div class="search">
-                <h3 class="search-heading">Search</h3>
-                <select>
-                    <option>All Products</option>
-                </select>
-                <button>Go</button>
+            </aside>
+            <aside class="sidebar">
+                <div class="browse">
+                    <h3>Browse</h3>
+                    <ul>
+                        <li>Books</li>
+                        <li>Electronics</li>
+                        <li>Music</li>
+                        <li>DVD & Videos</li>
+                        <li>Toys & Games</li>
+                        <li>Health & Beauty</li>
+                        <li>Software</li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="lcolumn3">
+                <h3>Shopping Service</h3>
+                <li>Buy or Redeem a gift Cards and certificate</li>
+                <li>Get E-mail recommnedations</li>
             </div>
-            <div class="browse">
-                <h3>Browse</h3>
-                <ul>
-                    <li>Your Favorites</li>
-                    <li>Books</li>
-                    <li>Electronics</li>
-                    <li>Music</li>
-                    <li>Camera & Photo</li>
-                    <li>Health & Beauty</li>
-                    <li>Software</li>
-                    <li>Kitchen & Housewares</li>
-                    <li>Tools & Hardware</li>
-                    <li>In Theaters</li>
-                    <li>DVD</li>
-                    <li>Computer & Video Games</li>
-                    <li>Baby & Baby Registry</li>
-                    <li>Toys & Games</li>
-                    <li>Cell Phones & Service</li>
-                    <li>Video</li>
-                </ul>
+            <div class="lcolumn3">
+                <h3>Special Features</h3>
+                <li>Earn Gift and certificate</li>
+                <li>Purchase circle</li>
+                <li>Help a Charity</li>
             </div>
-        </aside>
-        
+            <div class="lcolumn3">
+                <h3>Associates</h3>
+                <li>Sell books, music, videos and more from your Website</li>
+            </div>
+        </div>   
+            <main>
+                <section class="promotion">
+                    <span><span class="hello">Hello</span>. Sign in to get <a href="">personalized recommendations.</a> New customer? <a href="#">Start here</a>.</span>
+                    <img src="https://web.archive.org/web/20000510004050im_/http://www.amazon.com/g/homepages/gateway-collages/0005/mothersday3.jpg" alt="">
+                    <div class="promotiontxt">
+                        <h3>Give the Gift of Choice</h3>
+                        <p>Mother's Day is May 14. Feel like you're running behind? Can't figure out what to buy? Don't panic. We have e-mail gift certificates that will reach Mom quickly and let her decide on a present. Plus, check out our free e-Cards--a fast and simple way to say thanks.</p>
+                        <h4>And Don't Forget:</h4>
+                        <li> Gifts for Sports-Minded Dads</li>
+                        <li>Gifts for Brainy Grads</li>
+                        <li>Gifts for Soon-to-Be-Marrieds </li>
+                    </div>
+                    <div class="promotiontxt">
+                        <h3>Get Ready for Summer</h3>
+                        <p>Our new Health & Beauty store has every fair-weather product under the sun to help you keep that healthy glow. You'll also find a full range of personal-care items, from antioxidants to zinc. Step inside Health & Beauty and get a free beach kit with your first purchase!</p>
+                        <h4>More to Explore:</h4>
+                        <li> Toys for Outdoor Play</li>
+                        <li>Grills and Outdoor Cooking Accessories</li>
+                    </div>
+                </section>
+            </main>
+            <aside class="right-sidebar">
+                <div class="header">
+                    <h3>What's New at Amazon</h3>
+
+                </div>
+                <div class="section new-releases">
+                    <h4>New Releases</h4>
+                    <p><img src="https://web.archive.org/web/20000510004050im_/http://www.amazon.com/g/icons/small-blue-books-icon.gif" alt="Icon"> Business & Investing</p>
+                    <p><img src="https://web.archive.org/web/20000510004050im_/http://www.amazon.com/g/icons/small-blue-music-icon.gif" alt="Icon"> Alternative, Indie & Punk</p>
+                    <p><img src="https://web.archive.org/web/20000510004050im_/http://www.amazon.com/g/icons/small-blue-video-icon.gif" alt="Icon"> Classics</p>
+                    <p><img src="https://web.archive.org/web/20000510004050im_/http://www.amazon.com/g/icons/small-blue-toys-icon.gif" alt="Icon"> Action Figures</p>
+                    <p><img src="https://web.archive.org/web/20000510004050im_/http://www.amazon.com/g/icons/small-blue-electronics-icon.gif" alt="Icon"> PDAs & Organizers</p>
+                    <a href="#">More New Releases</a>
+                </div>
+                <div class="section movers-shakers">
+                    <h4>Movers & Shakers</h4>
+                    <p><img src="https://web.archive.org/web/20000510004050im_/http://www.amazon.com/g/icons/small-blue-books-icon.gif" alt=""> The Onion's Finest News Reporting by Scott Dikkers (Editor) - Up 14,900%</p>
+                    <p> <img src="https://web.archive.org/web/20000510004050im_/http://www.amazon.com/g/icons/small-blue-music-icon.gif" alt="">Voice to Hold in the Dark by Jeff Buckley - Up 856%</p>
+                    <p><img src="https://web.archive.org/web/20000510004050im_/http://www.amazon.com/g/icons/small-blue-vhs-icon.gif" alt=""> Body Control/Weekly Workout 2-Pack VHS by Lynne Robinson - Up 2,879%</p>
+                    <p><img src="https://web.archive.org/web/20000510004050im_/http://www.amazon.com/g/icons/small-blue-dvd-icon.gif" alt=""> North By Northwest DVD - Up 20,550%</p>
+                    <a href="#">See the Movers & Shakers in Books, Music, Video, and DVD</a>
+                </div>
+                <div class="section your-account">
+                    <h4>Your Account</h4>
+                    <p><a href="#">Wish Lists</a></p>
+                    <p><a href="#">Shopping Cart</a> - View your Shopping Cart.</p>
+                </div>
+                <div class="section new-for-you">
+                    <h4>New For You</h4>
+                    <p>Auctions: Beverly Hills 90210, Computer SuperAuctions, Sci-Fi Dollar Deals, Amazon.com Outlet</p>
+                </div>
+            </aside>
+            
+    </div>    
+    <footer>
+        <div class="footer-box">
+            <div class="footer-column">
+                <h3>Where's my stuff</h3>
+                <p>-Track Your recent orders</p>
+                <p>-Use your account to view or change your orders</p>
+            </div>
+            <div class="footer-column">
+                <h3>Gift Certificates</h3>
+                <p>-Get help redemming a gift certificates</p>
+                <p>Order a Gift Certificates</p>
+            </div>
+            <div class="footer-column">
+                <h3>Need Help?</h3>
+                <p>Forgot Your Password <span>Click here</span></p>
+                <p>Visit the <span>Help Desk</span></p>
+            </div>
+        </div>
+    </footer>
+    <div class="lastline">
+        <a href="">1-Click Settings  |  Shopping Cart  |  Your Account  |  Help  |  Site Guide  |  Our Privacy Policy</a><br>
+        <a href="">Join Associates  |  About Amazon.com  |  Join Our Staff</a><br>
+        <a href="">Legal Notices <p>© 1996-2000, Amazon.com, Inc.</p></a>
     </div>
 </body>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </html>
