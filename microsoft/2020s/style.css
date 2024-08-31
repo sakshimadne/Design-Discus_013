@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply m-0 p-0 box-border;
+}
+
+.wrapper {
+    @apply w-full;
+}
+
+/* navbar-section */
+/* ===================================================== */
+
+.navbar-section-wrapper {
+    @apply w-full px-4 py-[0.8rem] flex justify-center items-center;
+}
+
+.navbar-section {
+    @apply w-full max-w-[1360px] flex justify-between items-center;
+}
+
+/* hover-effects */
+.navlink,
+.microsoft-search-text,
+.cart-text,
+.all-microsoft span {
+    @apply border-b-2 border-transparent;
+}
+
+.navlink:hover,
+.microsoft-search-text:hover,
+.cart-text:hover,
+.all-microsoft span:hover {
+    @apply border-b-2 border-black cursor-pointer;
+}
+
+/* hamburger-search */
+/* ----------------------------- */
+
+.hamburger-icon {
+    @apply text-lg scale-x-[135%] text-gray-600 cursor-pointer;
+}
+
+.search-icon {
+    @apply text-gray-600 text-sm cursor-pointer;
+}
+
+.search-icon:hover {
+    @apply text-gray-500;
+}
+
+.hamburger-search {
+    @apply flex justify-center items-center gap-7;
+}
+
+/* microsoft-logo-navlinks */
+/* ------------------------------ */
+
+.microsoft-logo-navlinks {
+    @apply flex justify-center items-center gap-8;
+}
+
+.microsoft-logo-img {
+    @apply w-[108px] cursor-pointer;
+}
+
+/* navlinks- */
+
+.navlinks-wrapper {
+    @apply hidden;
+}
+
+/* all-microsoft-search-cart-dp */
+/* ------------------------------ */
+
+.all-microsoft-search-cart-dp {
+    @apply flex justify-center items-center gap-5;
+}
+
+.all-microsoft {
+    @apply text-[13px] flex justify-center items-center gap-1;
+}
+
+.all-microsoft,
+.microsoft-search {
+    @apply hidden;
+}
+
+.microsoft-search-text,
+.cart-text {
+    @apply hidden;
+}
+
+.cart-and-dp {
+    @apply flex justify-center items-center gap-4;
+}
+
+.cart-icon {
+    @apply text-gray-600 text-sm cursor-pointer;
+}
+.cart-icon:hover {
+    @apply text-gray-500;
+}
+
+.dp-wrapper {
+    @apply flex justify-center items-center border-[1px] border-black h-7 w-7 rounded-full cursor-pointer;
+}
+
+.dp-icon {
+    @apply text-sm;
+}
+
+.darrow-navlink-icon {
+    @apply text-[10px];
+}
+
+/* **********   media-queries (navbar-section)   ********** */
+
+@media screen and (min-width: 860px) {
+    /* increase left & right padding */
+    .navbar-section-wrapper {
+        @apply px-8;
+    }
+
+    /* hamburger-hidden */
+    .hamburger-search {
+        @apply hidden;
+    }
+
+    /* 5 navbar-links */
+    .navlinks-wrapper {
+        @apply flex justify-center gap-4 text-[13px];
+    }
+
+    .navlink-surface,
+    .navlink-xbox,
+    .navlink-support {
+        @apply hidden;
+    }
+
+    .all-microsoft,
+    .microsoft-search {
+        @apply inline-flex;
+    }
+}
+
+@media screen and (min-width: 890px) {
+    /* 6 navbar-links */
+    .navlink-surface {
+        @apply inline-flex;
+    }
+}
+
+@media screen and (min-width: 937px) {
+    /* 7 navbar-links */
+    .navlink-xbox,
+    .navlink-support {
+        @apply inline-flex;
+    }
+    .navlink-more {
+        @apply hidden;
+    }
+}
+
+@media screen and (min-width: 1083px) {
+    .navbar-section-wrapper {
+        @apply px-14 lg:px-0;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    /* Search , Cart texts */
+    .microsoft-search-text,
+    .cart-text {
+        @apply inline-flex text-[13px];
+    }
+
+    .microsoft-search {
+        @apply flex justify-center items-center gap-1;
+    }
+}
