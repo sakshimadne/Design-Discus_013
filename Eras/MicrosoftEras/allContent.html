@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microsoft Eras Overview</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: #0078d4;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+
+      header p {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      h2 {
+        color: #0078d4;
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        color: #333;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      p {
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+      }
+
+      /* Era Sections */
+      .era {
+        background-color: white;
+        margin-bottom: 40px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .era-content {
+        flex: 1 1 60%;
+        min-width: 300px;
+      }
+
+      .era-image {
+        flex: 1 1 35%;
+        max-width: 300px;
+        margin-left: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .era-content {
+          flex: 1 1 55%;
+        }
+
+        .era-image {
+          flex: 1 1 40%;
+          max-width: 250px;
+          margin-left: 10px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .era {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .era-image {
+          margin-left: 0;
+          margin-top: 20px;
+          width: 100%;
+          max-width: 400px;
+        }
+
+        .era-content {
+          width: 100%;
+        }
+
+        header h1 {
+          font-size: 2em;
+        }
+
+        header p {
+          font-size: 1em;
+        }
+
+        h2 {
+          font-size: 1.8em;
+        }
+
+        h3 {
+          font-size: 1.3em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.5em;
+        }
+
+        header p {
+          font-size: 0.9em;
+        }
+
+        h2 {
+          font-size: 1.5em;
+        }
+
+        h3 {
+          font-size: 1.1em;
+        }
+
+        .era-image {
+          max-width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Microsoft Eras Overview</h1>
+      <p>
+        Explore the evolution of Microsoft's software, services, and interface
+        across different eras.
+      </p>
+    </header>
+
+    <main>
+      <!-- Microsoft in the 1990s to 2000 -->
+      <section class="era" id="microsoft-1990s">
+        <div class="era-content">
+          <h2>Microsoft in the 1990s to 2000</h2>
+          <p>
+            <strong>Overview:</strong> The 1990s were a period of significant
+            growth and innovation for Microsoft. During this time, the company
+            established itself as a dominant force in the personal computer
+            industry, with the launch of Windows 95 and subsequent versions.
+          </p>
+          <h3>Key Developments (1990-2000):</h3>
+          <ul>
+            <li>
+              <strong>1990: Launch of Windows 3.0</strong> - Windows 3.0 was
+              released, becoming a commercial success with its improved user
+              interface and memory management.
+            </li>
+            <li>
+              <strong>1995: Windows 95 Released</strong> - Windows 95 introduced
+              the Start menu, taskbar, and a new file management system, setting
+              a new standard for desktop operating systems.
+            </li>
+            <li>
+              <strong>1998: Windows 98 Released</strong> - Windows 98 improved
+              upon its predecessor with better hardware support, Internet
+              Explorer integration, and USB device compatibility.
+            </li>
+            <li>
+              <strong>2000: Launch of Windows 2000</strong> - Windows 2000
+              targeted business users, offering enhanced stability and support
+              for new hardware standards.
+            </li>
+          </ul>
+          <p>
+            <strong>Design:</strong> Microsoft's design during the 1990s focused
+            on creating a user-friendly interface for the masses, characterized
+            by the introduction of the Start button and taskbar, which became
+            iconic elements of Windows.
+          </p>
+        </div>
+        <img
+          src="../../images/microsoft-1994.png"
+          alt="Microsoft in the 1990s"
+          class="era-image"
+        />
+      </section>
+
+      <!-- Microsoft in the 2000s to 2010 -->
+      <section class="era" id="microsoft-2000s">
+        <div class="era-content">
+          <h2>Microsoft in the 2000s to 2010</h2>
+          <p>
+            <strong>Overview:</strong> The 2000s were a decade of both success
+            and challenges for Microsoft. While Windows XP became one of the
+            most popular operating systems of all time, the company also faced
+            increased competition from new players in the technology industry.
+          </p>
+          <h3>Key Developments (2001-2010):</h3>
+          <ul>
+            <li>
+              <strong>2001: Windows XP Launched</strong> - Windows XP became an
+              instant success, known for its stability, user-friendly interface,
+              and widespread adoption.
+            </li>
+            <li>
+              <strong>2007: Launch of Windows Vista</strong> - Windows Vista
+              introduced a new visual style but faced criticism for its
+              performance and hardware requirements.
+            </li>
+            <li>
+              <strong>2009: Windows 7 Released</strong> - Windows 7 was widely
+              praised for its performance improvements and usability, quickly
+              becoming a favorite among users.
+            </li>
+            <li>
+              <strong>2001: Xbox Launched</strong> - Microsoft entered the
+              gaming console market with the launch of the Xbox, setting the
+              stage for its future success in the gaming industry.
+            </li>
+          </ul>
+          <p>
+            <strong>Design:</strong> The design focus during this period shifted
+            towards modernizing the Windows interface, with the introduction of
+            features like the Aero Glass interface in Windows Vista and the
+            streamlined design of Windows 7.
+          </p>
+        </div>
+        <img
+          src="../../images/microsoft-2010.png"
+          alt="Microsoft in the 2000s"
+          class="era-image"
+        />
+      </section>
+
+      <!-- Microsoft in the 2010s to 2024 -->
+      <section class="era" id="microsoft-2010s">
+        <div class="era-content">
+          <h2>Microsoft in the 2010s to 2024</h2>
+          <p>
+            <strong>Overview:</strong> The 2010s were a transformative decade
+            for Microsoft, marked by its transition to cloud computing, the
+            introduction of Windows 10, and the acquisition of LinkedIn and
+            GitHub.
+          </p>
+          <h3>Key Developments (2010-2024):</h3>
+          <ul>
+            <li>
+              <strong>2012: Windows 8 Released</strong> - Windows 8 introduced a
+              touch-centric interface with the Start screen, which received
+              mixed reviews from users.
+            </li>
+            <li>
+              <strong>2013: Xbox One Launched</strong> - The Xbox One was
+              released, offering an all-in-one entertainment system with
+              advanced gaming features.
+            </li>
+            <li>
+              <strong>2015: Windows 10 Launched</strong> - Windows 10 aimed to
+              unify the user experience across devices, with a return to the
+              Start menu and the introduction of Cortana.
+            </li>
+            <li>
+              <strong>2016: Acquisition of LinkedIn</strong> - Microsoft
+              acquired LinkedIn, expanding its reach in the professional
+              networking space.
+            </li>
+            <li>
+              <strong>2018: Acquisition of GitHub</strong> - Microsoft acquired
+              GitHub, solidifying its commitment to the developer community.
+            </li>
+            <li>
+              <strong>2021: Windows 11 Announced</strong> - Windows 11
+              introduced a refreshed design, new productivity features, and
+              better support for gaming and hybrid work environments.
+            </li>
+          </ul>
+          <p>
+            <strong>Design:</strong> The design language evolved significantly
+            during this period, with the introduction of Fluent Design, focusing
+            on creating a coherent and visually appealing experience across
+            devices and platforms.
+          </p>
+        </div>
+        <img
+          src="../../images/microsoft-2020.jpg"
+          alt="Microsoft in the 2010s"
+          class="era-image"
+        />
+      </section>
+
+      <!-- Microsoft in the 2020s to 2030 -->
+      <section class="era" id="microsoft-2020s">
+        <div class="era-content">
+          <h2>Microsoft in the 2020s to 2024</h2>
+          <p>
+            <strong>Overview:</strong> The early 2020s continued to be a period
+            of growth and innovation for Microsoft. The company focused on
+            advancing its cloud computing, AI, and productivity tools while
+            embracing new work-from-home trends spurred by global events.
+          </p>
+          <h3>Key Developments (2020-2024):</h3>
+          <ul>
+            <li>
+              <strong>2020: Launch of Windows 11</strong> - Windows 11 was
+              introduced with a refreshed user interface, new productivity
+              tools, and enhanced gaming capabilities.
+            </li>
+            <li>
+              <strong>2021: Azure Quantum Goes Public</strong> - Microsoft made
+              its Azure Quantum cloud service available to the public, enabling
+              enterprises to experiment with quantum computing.
+            </li>
+            <li>
+              <strong>2022: AI-Enhanced Office Suite</strong> - Microsoft
+              introduced AI-driven features across its Office 365 suite,
+              significantly improving productivity through smart suggestions and
+              automation.
+            </li>
+            <li>
+              <strong>2023: Integration of Mesh for Teams</strong> - Microsoft
+              integrated its mixed reality platform Mesh into Microsoft Teams,
+              offering immersive collaboration experiences for remote teams.
+            </li>
+            <li>
+              <strong>2024: Introduction of Windows Cloud OS</strong> -
+              Microsoft launched Windows Cloud OS, a lightweight, cloud-based
+              operating system designed for flexibility and scalability in
+              enterprise environments.
+            </li>
+          </ul>
+          <p>
+            <strong>Design:</strong> The design language in the early 2020s
+            emphasized simplicity, with a focus on creating seamless user
+            experiences across devices. Dark mode became standard, and
+            Microsoft's Fluent Design System continued to evolve, enhancing
+            visual consistency and accessibility.
+          </p>
+        </div>
+        <img
+          src="../../images/microsoft-2024.jpg"
+          alt="Microsoft in the 2020s"
+          class="era-image"
+        />
+      </section>
+
+      <!-- Microsoft in the 2030s -->
+      <section class="era" id="microsoft-2030s">
+        <div class="era-content">
+          <h2>Microsoft in the 2030s</h2>
+          <p>
+            <strong>Overview:</strong> By the 2030s, Microsoft is expected to
+            continue leading the way in technology innovation, particularly in
+            the areas of AI, quantum computing, and immersive experiences. The
+            company will likely focus on creating more adaptive and personalized
+            user experiences, driven by AI and machine learning.
+          </p>
+          <h3>Speculative Developments (2025-2030):</h3>
+          <ul>
+            <li>
+              <strong>2025: Integration of Quantum Computing into Azure</strong>
+              - Microsoft integrates quantum computing capabilities directly
+              into its Azure cloud platform, making quantum computing more
+              accessible to enterprises.
+            </li>
+            <li>
+              <strong>2027: Launch of Microsoft AI OS</strong> - A new operating
+              system, Microsoft AI OS, is released, which uses advanced AI to
+              adapt and optimize itself based on user behavior and preferences.
+            </li>
+            <li>
+              <strong
+                >2028: Full Immersive Mixed Reality with HoloLens 4</strong
+              >
+              - Microsoft introduces HoloLens 4, offering a fully immersive
+              mixed reality experience that seamlessly blends the physical and
+              digital worlds.
+            </li>
+            <li>
+              <strong>2029: Microsoft EcoCloud Initiative</strong> - Microsoft
+              launches the EcoCloud initiative, focusing on creating
+              sustainable, carbon-neutral cloud solutions that help companies
+              reduce their environmental impact.
+            </li>
+            <li>
+              <strong>2030: AI-Driven Personalized Workspaces</strong> -
+              Microsoft introduces AI-driven personalized workspaces that adjust
+              to individual preferences and work habits in real-time, enhancing
+              productivity and well-being.
+            </li>
+          </ul>
+          <p>
+            <strong>Design:</strong> The design in the 2030s is expected to
+            focus on hyper-minimalism, with adaptive interfaces that change
+            based on user context and preferences. Sustainable design practices
+            will also play a significant role, ensuring that products are not
+            only user-friendly but also environmentally responsible.
+          </p>
+        </div>
+        <img
+          src="images/microsoft-2030s.png"
+          alt="Microsoft in the 2030s"
+          class="era-image"
+        />
+      </section>
+    </main>
+  </body>
+</html>
