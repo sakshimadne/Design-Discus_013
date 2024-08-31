@@ -28,7 +28,20 @@
       #heading {
         width: 100%;
         height: 105px;
-        background: linear-gradient(0.25turn, #e5e8ec, #3b5998);
+        background-image: url("/Design-Discus_013/img-file/image.png");
+        background-size: cover;
+      }
+      #heading > div > ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        position: relative;
+        left: 60vw;
+        top: 80px;
+      }
+      #heading > div > ul > li {
+        /* color: #3b5998; */
+        color: white;
       }
 
       #main-container-left {
@@ -36,6 +49,8 @@
         height: 150px;
         margin: 5px;
         width: 20%;
+        position: relative;
+        z-index: 1;
       }
       #main-container-left > p {
         text-align: end;
@@ -100,7 +115,15 @@
     </style>
   </head>
   <body>
-    <div id="heading"></div>
+    <div id="heading">
+      <div>
+        <ul>
+          <li>login</li>
+          <li>register</li>
+          <li>about</li>
+        </ul>
+      </div>
+    </div>
     <section>
       <div id="main-container-left">
         <p>Email</p>
