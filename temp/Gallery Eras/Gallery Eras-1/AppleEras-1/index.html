@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple UI Evolution</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: #000000; /* Apple's sleek black background */
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        letter-spacing: 1px;
+        font-weight: bold;
+      }
+
+      header p {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+        color: #888888;
+      }
+
+      #era-container {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 20px;
+      }
+
+      #era-container a {
+        display: block;
+        width: 180px;
+        padding: 12px;
+        text-align: center;
+        background-color: #1d1d1f; /* Dark gray buttons consistent with Apple design */
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      #era-container a:hover {
+        background-color: #333333; /* Slightly lighter gray on hover */
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2em;
+        }
+
+        header p {
+          font-size: 1em;
+        }
+
+        #era-container a {
+          width: 100%;
+          max-width: 200px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.5em;
+        }
+
+        header p {
+          font-size: 0.9em;
+        }
+
+        #era-container a {
+          width: 100%;
+          max-width: 180px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Apple UI Evolution</h1>
+      <p>Select an era to see how Apple's interface has evolved over time.</p>
+    </header>
+
+    <div id="era-container">
+      <a href="./Apple1990.html">Apple in 1990</a>
+      <a href="./Apple2000.html">Apple in 2000</a>
+      <a href="./Apple2010.html">Apple in 2010</a>
+      <a href="./Apple2020.html">Apple in 2020</a>
+    </div>
+
+    <div id="content-container" class="my-8"></div>
+  </body>
+</html>

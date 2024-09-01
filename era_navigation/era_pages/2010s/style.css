@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply m-0 p-0 box-border;
+}
+
+:root {
+    --dark-brown: #1e201e;
+    --light-brown: #3c3d37;
+    --olive-green: #697565;
+    --cream: #ecdfcc;
+}
+
+.dark-mode-colors {
+    --dark-brown: #ecdfcc;
+    --cream: #1e201e;
+}
+
+body {
+    @apply bg-[var(--dark-brown)] text-[var(--cream)];
+}
+
+.wrapper {
+    @apply w-full;
+}
+
+/* navbar-wrapper */
+/* ----------------------------------------- */
+
+.navbar-wrapper {
+    @apply w-full flex justify-center items-center;
+}
+
+.navbar {
+    @apply pt-5 w-full flex justify-between items-center max-w-[1180px] text-2xl px-5;
+}
+
+.logo-img {
+    @apply h-[4rem] md:h-[5rem] lg:h-[6rem] opacity-80;
+}
+
+.mode-btn {
+    @apply hidden;
+}
+
+.active-mode-btn {
+    @apply flex cursor-pointer;
+}
+
+.active-mode-btn:hover {
+    @apply scale-110;
+}
+
+/* heading */
+/* ----------------------------------------- */
+
+.era-heading-wrapper {
+    @apply w-full flex justify-center items-center text-3xl md:text-[2rem] lg:text-[2.5rem] font-bold mt-10;
+}
+
+/* layout-wrapper */
+/* ----------------------------------------- */
+
+.layout-wrapper {
+    @apply w-full flex justify-center items-center my-10 mb-20;
+}
+
+.layout-grid {
+    @apply grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-8 w-[90%] max-w-[1180px];
+}
+
+.layout {
+    @apply flex flex-col justify-center items-center gap-10 md:col-span-2;
+}
+
+.layout-apple {
+    @apply lg:col-start-2;
+}
+
+.layout-google {
+    @apply md:col-start-2 lg:col-start-4;
+}
+
+.layout-img {
+    @apply rounded-md px-1 border-x-4 border-transparent;
+}
+
+.layout-label-wrapper {
+    @apply w-full flex justify-center items-center;
+}
+
+.layout-label {
+    @apply border-b-2 border-transparent;
+}
+
+.layout:hover {
+    .layout-img {
+        @apply border-x-4 px-1 border-solid;
+        border-image: linear-gradient(
+                to right,
+                rgb(0, 135, 148),
+                rgb(50, 204, 135)
+            )
+            1;
+    }
+    .layout-label {
+        @apply border-b-2 border-solid;
+        border-image: linear-gradient(
+                to right,
+                rgb(0, 135, 148),
+                rgb(50, 204, 135)
+            )
+            1;
+    }
+}
