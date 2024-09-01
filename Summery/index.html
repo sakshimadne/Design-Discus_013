@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolution of Web Design</title>
+  <link rel="stylesheet" href="styles.css">
+
+
+  <style>
+
+    html {
+    scroll-behavior: smooth;
+}
+
+    /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Early 90s Section Styles */
+#early-90s {
+    background-color: #f4f4f4;
+    font-family: "Courier New", Courier, monospace;
+    color: #000;
+}
+
+#early-90s .era-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    text-align: left;
+}
+
+#early-90s img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border: 1px solid #ccc;
+}
+
+#early-90s a {
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+#early-90s p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#early-90s .era-content p {
+    overflow: hidden;
+    border-right: .15em solid #000; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+/* Late 90s Section Styles */
+#late-90s {
+    background-color: #ffdf00; /* Bright yellow background */
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Popular font of the era */
+    color: #000;
+    text-align: center;
+}
+
+#late-90s .era-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 5px dotted #ff00ff; /* Dotted border for retro feel */
+    background-color: #fff;
+}
+
+#late-90s img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border: 2px solid #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#late-90s .marquee {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+#late-90s a {
+    color: #0000EE;
+    text-decoration: underline;
+    background-color: #00ff00; /* Flashy background for links */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#late-90s a:hover {
+    background-color: #ff00ff;
+    color: #fff;
+}
+
+#late-90s p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* Early 2000s Section Styles */
+#early-2000s {
+    background-color: #e0e0e0; /* Light gray background */
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#early-2000s .era-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#early-2000s .layout-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#early-2000s .layout-table td {
+    padding: 20px;
+    vertical-align: top;
+}
+
+#early-2000s .sidebar {
+    width: 30%;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ccc;
+}
+
+#early-2000s .main-content {
+    width: 70%;
+    text-align: left;
+}
+
+#early-2000s .footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+#early-2000s img {
+    display: block;
+    margin: 20px 0;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners were a new trend */
+}
+
+#early-2000s a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+#early-2000s a:hover {
+    text-decoration: underline;
+}
+
+/* Late 2000s Section Styles */
+#late-2000s {
+    background-color: #f7f7f7; /* Light gray background */
+    font-family: Verdana, Geneva, sans-serif;
+    color: #333;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#late-2000s .era-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#late-2000s .intro img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#late-2000s .features {
+    text-align: left;
+    margin-top: 20px;
+}
+
+#late-2000s .features h3 {
+    margin-bottom: 15px;
+}
+
+#late-2000s .features ul {
+    list-style: none;
+    padding: 0;
+}
+
+#late-2000s .features ul li {
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#late-2000s .cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#late-2000s .cta-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Modern Era Section Styles */
+#modern-era {
+    background-color: #f0f0f0; /* Light gray background for modern feel */
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#modern-era .era-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+#modern-era .hero img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#modern-era .features {
+    text-align: left;
+    margin-top: 20px;
+}
+
+#modern-era .features h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+#modern-era .features ul {
+    list-style: none;
+    padding: 0;
+}
+
+#modern-era .features ul li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#modern-era .features ul li:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-3px);
+}
+
+#modern-era .cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#modern-era .cta-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 10px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Future Era Section Styles */
+#future-era {
+    background-color: #0f0f0f; /* Dark background for futuristic feel */
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#future-era .era-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1c1c1c;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+#future-era .hero {
+    position: relative;
+}
+
+#future-era .vr-demo {
+    margin-top: 20px;
+}
+
+#future-era .vr-demo img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    transform: rotateY(10deg); /* Slight 3D effect */
+    transition: transform 0.3s ease;
+}
+
+#future-era .vr-demo img:hover {
+    transform: rotateY(0deg) scale(1.05); /* Hover effect for 3D feel */
+}
+
+#future-era .features {
+    text-align: left;
+    margin-top: 20px;
+}
+
+#future-era .features h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+#future-era .features ul {
+    list-style: none;
+    padding: 0;
+}
+
+#future-era .features ul li {
+    background-color: #292929;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#future-era .features ul li:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+}
+
+#future-era .cta-button {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 188, 212, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#future-era .cta-button:hover {
+    background-color: #0097a7;
+    box-shadow: 0 6px 10px rgba(0, 188, 212, 0.5);
+}
+
+
+/* Apply Fade-in Animation */
+#modern-era .era-content, #future-era .era-content {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Add 3D Hover Effect to Images */
+#future-era .vr-demo img {
+    transform-style: preserve-3d;
+}
+
+/* Add Parallax Effect to a Background Section */
+.parallax {
+    background-image: url('images/parallax-bg.jpg');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Evolution of Web Design</h1>
+    <nav>
+      <ul>
+        <li><a href="#early-90s">Early 90s</a></li>
+        <li><a href="#late-90s">Late 90s</a></li>
+        <li><a href="#early-2000s">Early 2000s</a></li>
+        <li><a href="#mid-2000s">Mid 2000s</a></li>
+        <li><a href="#modern">Modern Web</a></li>
+        <li><a href="#future">Future Web</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Era Sections -->
+  <section id="early-90s">
+    <h2>Early 90s - The Birth of the Web</h2>
+    <div class="era-content">
+      <p>The early 90s marked the birth of the World Wide Web, with websites being simple, text-based pages with minimal
+        styling.</p>
+      <img src="https://ceblog.s3.amazonaws.com/wp-content/uploads/2012/02/mcdonalds.png" alt="Early 90s Website">
+      <p>This era was characterized by basic HTML structures, limited use of images, and links that were blue and
+        underlined.</p>
+      <a href="#">Click here to explore an early website!</a>
+    </div>
+  </section>
+
+
+  <section id="late-90s">
+    <h2>Late 90s - The GeoCities Era</h2>
+    <div class="era-content">
+      <p>Welcome to the late 90s, where websites were filled with bright colors, animated GIFs, and lots of scrolling
+        text!</p>
+      <div class="marquee">
+        <marquee>Flashing text and scrolling messages were all the rage!</marquee>
+      </div>
+      <img src="https://miro.medium.com/v2/resize:fit:1400/0*WT45ysX4N0SozZ0D.jpeg" alt="Late 90s Website Style">
+      <p>Web design was still in its infancy, but creativity was boundless!</p>
+      <a href="#">Click here to see a classic GeoCities site!</a>
+    </div>
+  </section>
+
+
+  <section id="early-2000s">
+    <h2>Early 2000s - The Rise of CSS and Table Layouts</h2>
+    <div class="era-content">
+      <table class="layout-table">
+        <tr>
+          <td rowspan="2" class="sidebar">
+            <p>Navigation Menu</p>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </td>
+          <td class="main-content">
+            <p>Welcome to the early 2000s! This era marked the transition from table-based layouts to the use of CSS for
+              layout purposes.</p>
+            <img src="https://miro.medium.com/v2/resize:fit:1400/0*O1Jzkf83oaog0w_r.jpg" alt="Early 2000s Website Style">
+            <p>Web design became more structured and organized, with cleaner layouts and better use of images.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="footer">
+            <p>Footer Area - © 2000s Web Inc.</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+
+  <section id="late-2000s">
+    <h2>Late 2000s - The Web 2.0 Era</h2>
+    <div class="era-content">
+      <div class="intro">
+        <p>Welcome to the late 2000s! Web 2.0 brought a wave of interactivity, social media, and user-generated content.
+          Websites became cleaner, with a focus on user experience.</p>
+        <img src="https://www.hubspot.com/hs-fs/hubfs/history%20of%20web%20design%20(update).webp?width=650&height=591&name=history%20of%20web%20design%20(update).webp" alt="Late 2000s Web Design">
+      </div>
+      <div class="features">
+        <h3>Key Features of Web 2.0:</h3>
+        <ul>
+          <li>Interactive and user-centered design</li>
+          <li>Social media integration</li>
+          <li>Extensive use of CSS for layout and design</li>
+          <li>Rounded corners, gradients, and drop shadows</li>
+        </ul>
+      </div>
+      <a href="#" class="cta-button">Explore a Web 2.0 Site!</a>
+    </div>
+  </section>
+
+
+  <section id="modern-era">
+    <h2>Modern Era (2020s) - Minimalism and Interactivity</h2>
+    <div class="era-content">
+      <div class="hero">
+        <h3>Welcome to the Modern Web</h3>
+        <p>Experience the sleek, interactive, and responsive designs of today. Modern websites focus on performance,
+          accessibility, and a clean user experience.</p>
+        <img src="https://cdn.educba.com/academy/wp-content/uploads/2016/05/Web-Design-Trends-3.jpg" alt="Modern Web Design">
+      </div>
+      <div class="features">
+        <h3>Features of Modern Websites:</h3>
+        <ul>
+          <li>Responsive design for all devices</li>
+          <li>Minimalist design with high-quality visuals</li>
+          <li>Advanced CSS animations and transitions</li>
+          <li>Focus on performance and accessibility</li>
+        </ul>
+      </div>
+      <a href="#" class="cta-button">Explore Modern Design!</a>
+    </div>
+  </section>
+
+
+  <section id="future-era">
+    <h2>Future Era - Immersive and Interactive Experiences</h2>
+    <div class="era-content">
+      <div class="hero">
+        <h3>Step into the Future</h3>
+        <p>Explore the possibilities of the future web—where augmented reality, virtual reality, and immersive
+          interactions redefine the digital experience.</p>
+        <div class="vr-demo">
+          <p>Imagine interacting with 3D content and holographic interfaces.</p>
+          <img src="https://i.pinimg.com/736x/5a/bb/00/5abb00e2ee9dac552033ec1fd38a2b2c.jpg" alt="Future Web Design">
+        </div>
+      </div>
+      <div class="features">
+        <h3>Possible Features of Future Websites:</h3>
+        <ul>
+          <li>Augmented Reality (AR) and Virtual Reality (VR) experiences</li>
+          <li>Interactive 3D elements and holographic displays</li>
+          <li>AI-driven personalized content and interfaces</li>
+          <li>Seamless integration with physical devices and environments</li>
+        </ul>
+      </div>
+      <a href="#" class="cta-button">Experience the Future!</a>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Evolution of Web Design</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const fadeInElements = document.querySelectorAll('.fade-in');
+        const windowHeight = window.innerHeight;
+
+        function checkVisibility() {
+          fadeInElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight) {
+              element.classList.add('fade-in-visible');
+            }
+          });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // Initial check
+      });
+
+  </script>
+
+  
+</body>
+
+</html>
