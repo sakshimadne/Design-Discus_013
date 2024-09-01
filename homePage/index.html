@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            font-family: sans-serif;
+            /* background: linear-gradient(135deg, #12819d, #d8d52eb2, #fd982d9b); */
+        
+        }
+
+
+        .container{
+
+            width: 80vw;
+            margin: auto;
+            /* background-color: yellow; */
+        }
+
+
+        .header{
+
+            position: sticky;
+            top: 0;
+            z-index: 1000000;
+
+
+        }
+        
+
+/* nav */
+
+
+nav {
+        display: flex;
+        padding: 0% 6%;
+        justify-content: space-between;
+        align-items: center;
+        color: #FDF0F0;
+        width: 80%;
+        margin: auto;
+        position: sticky;
+        top: 0;
+        background: rgba(2, 67, 101, 0.087);
+        border-radius: 20px;
+        backdrop-filter: blur(1000px);
+        -webkit-backdrop-filter: blur(1000px);
+        box-shadow: 0 4px 30px rgba(20, 20, 20, 0.452);
+        border: 1px solid rgba(150, 114, 114, 0.236);
+        padding: 0.5% 2%;
+        z-index: 1000000;
+        width: 93vw;
+        margin: auto;
+
+
+        background: rgba(227, 220, 220, 0.844); /* White color with transparency */
+    box-shadow: -10 -14px -10px rgba(241, 235, 235, 0.821); /* Subtle shadow */
+    backdrop-filter: blur(-10px); /* Background blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    background-image: linear-gradient(right, white, pink);
+      }
+
+      nav img {
+        width: 75px;
+        height: 68px;
+        border-radius: px;
+      }
+
+      .nav-links {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        overflow: hidden;
+        
+      }
+
+      .nav-links ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 17px;
+      }
+
+      .nav-links ul li {
+        list-style: none;
+        padding: 8px 12px;
+        position: relative;
+      }
+
+      .nav-links ul li a {
+        
+        color: rgba(255, 192, 203, 0.965);
+        text-decoration: none;
+        display: inline-block;
+                color: lightseagreen;
+
+      }
+
+      .nav-links ul li::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: #ff0000;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+        color: rgb(230, 11, 11)
+        
+
+      }
+
+      
+
+      .nav-links ul li:hover::after {
+
+        width: 100%;
+      }
+
+      .nav-links ul li a:hover {
+        
+        color: #f603de;
+        font-weight: 900;
+      }
+
+      nav .fa {
+        display: none;
+      }
+
+      .logo-container a {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-container a span {
+        color: lightseagreen;
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        border-bottom: 2px solid red;
+        border-radius: 0 0 10px 10px;
+        padding-bottom: 10px;
+        
+        
+      
+      }
+
+      .nav-links .login {
+        width: 100px;
+        height: 35px;
+        margin-left: 35px;
+        background-color: green;
+        border-radius: 15px;
+        border: none;
+        color: white;
+        /* padding: 10px;  */
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .nav-links .login:hover {
+        background-color: rgb(39, 202, 39);
+        font-size: 17px;
+      }
+
+      /* Hamburger */
+
+       .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+            transition: 0.4s;
+        }
+
+        .hamburger.open div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 5px);
+        }
+
+        .hamburger.open div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -5px);
+        }
+
+@media (max-width: 950px){
+  .nav-links ul li a{
+    font-size: 15px;
+    /* padding: 5px; */
+  }
+}
+@media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                right: 0;
+                height: 100vh;
+                top: 0;
+                background-color: rgb(19, 32, 67);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in;
+                
+            }
+
+            
+
+            .nav-links ul {
+                flex-direction: column;
+                margin-top: 0;
+            }
+
+            .nav-links ul li a{
+                font-size: 15px;
+            }
+
+            .nav-links.open {
+                transform: translateX(0%);
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                /* flex-direction: column; */
+            }
+            /* .code-collab{
+              display: none;
+            } */
+
+            .nav-links ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links ul li {
+                padding: 8px 0;
+                font-size: 25px;
+            }
+        }
+
+        nav:hover{
+            box-shadow: white;
+        }
+
+        
+
+        /* cube */
+
+        .cube-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotateCube 10s infinite linear;
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+
+        .cube-face-front {
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        .cube-face-back {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .cube-face-left {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .cube-face-right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .cube-face-top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .cube-face-bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        @keyframes rotateCube {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+
+        /* 1990 t0 2030 */
+
+        .text-container {
+            perspective: 2000px;
+        }
+
+        .perspective-text {
+            font-size: 9em;
+            color: white;
+            transform-style: preserve-3d;
+            animation: textAnimation 5s infinite ease-in-out;
+        }
+
+        @keyframes textAnimation {
+
+            0%,
+            100% {
+                background-image: linear-gradient(to right, #ff5f92, rgb(95, 69, 228), rgb(24, 195, 233));
+                transform: rotateX(0deg) rotateY(0deg) translateZ(30px);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            25% {
+                background-image: linear-gradient(to right, #5f6fff, rgb(24, 185, 89), rgb(183, 255, 0), #fed47b);
+                transform: rotateX(15deg) rotateY(15deg) translateZ(45px);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            50% {
+                background-image: linear-gradient(to right, rgb(24, 195, 233), rgb(24, 185, 89), rgb(183, 255, 0), #fe917b);
+                transform: rotateX(0deg) rotateY(0deg) translateZ(90px);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            75% {
+                background-image: linear-gradient(to right, rgb(95, 69, 228), rgb(24, 195, 233), rgb(24, 185, 89), #feb47b);
+                transform: rotateX(-15deg) rotateY(-15deg) translateZ(75px);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .main-text {
+    font-size: 5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    transform: translateZ(150px) rotateX(15deg);
+    animation: float 6s ease-in-out infinite;
+    text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.subtext {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    opacity: 0.8;
+    transform: translateZ(100px) rotateX(15deg);
+    animation: floatSubtext 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateZ(150px) rotateX(15deg) translateY(0);
+    }
+    50% {
+        transform: translateZ(150px) rotateX(15deg) translateY(-20px);
+    }
+}
+
+@keyframes floatSubtext {
+    0%, 100% {
+        transform: translateZ(100px) rotateX(15deg) translateY(0);
+    }
+    50% {
+        transform: translateZ(100px) rotateX(15deg) translateY(-10px);
+    }
+}
+
+
+/* flip cards */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 20px;
+            margin-top: 8%;
+            height: 200%;
+            width: 83%;
+            background-image: url(./logo1.png);
+            background-size: 100%;
+            border-radius: 20px;
+
+            background-repeat: no-repeat;
+
+
+        }
+
+        .card2 {
+            perspective: 400px;
+        }
+
+        .card2-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card2:hover .card2-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card2-front,
+        .card2-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .card2-front {
+            background-color: #fff;
+        }
+
+        .card2-back {
+            background-color: #f8f8f8;
+            transform: rotateY(180deg);
+        }
+
+        .card2-front img,
+        .card2-back img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: fill;
+            border-radius: 10px;
+        }
+
+        /* feedback */
+
+        .feedback-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 60px auto;
+            padding: 0px;
+            width: 80vw;
+            border-top: 2px solid #0f0e0e09;
+            border-bottom: 2px solid #0f0e0e0a;
+            height: 450px;
+            overflow: hidden;
+
+
+        }
+
+        .feedback-section {
+            display: flex;
+            align-items: center;
+            width: 50vw;
+            position: relative;
+            height: auto;
+            border: 2ps solid red;
+
+        }
+
+        .feedback-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 80vw;
+            margin: 0 60px;
+            height: auto;
+            overflow: visible;
+            position: relative;
+        }
+
+        .feedback-item {
+            flex: 0 0 33.33%;
+            text-align: center;
+            padding-right: 10px;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out,
+                transform-origin 0.5s ease-in-out;
+            opacity: 1;
+            visibility: visible;
+            overflow: visible;
+            margin-right: 10px;
+        }
+
+        .feedback-item:hover {
+            opacity: 1;
+            transform: scale(0.8);
+            transform-origin: center;
+        }
+
+        .feedback-item img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feedback-item img:hover {
+            box-shadow: 13px 10px 19px #1F4172;
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .feedback-item blockquote:hover {
+            box-shadow: 13px 10px 19px #1F4172;
+            transform: rotate(360deg) scale(1.1);
+        }
+
+
+
+        .feedback-item blockquote {
+            font-family: "Georgia", serif;
+            font-style: italic;
+            quotes: "“" "”" "‘" "’";
+            color: antiquewhite;
+        }
+
+        .feedback-item blockquote:before {
+            content: open-quote;
+        }
+
+        .feedback-item blockquote:after {
+            content: close-quote;
+        }
+
+        @media (max-width: 1024px) {
+            .feedback-item {
+                flex: 0 0 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .feedback-item {
+                flex: 0 0 100%;
+                margin-right: 40px;
+            }
+
+            .feedback-item img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .feedback-wrapper {
+                height: auto;
+            }
+
+            .feedback-container {
+                width: calc(100% - 40px);
+                margin: 0 20px;
+            }
+
+            .feedback-item {
+                flex: 0 0 100%;
+                margin-right: 20px;
+            }
+
+            .feedback-item img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        
+
+        #sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    perspective: 1000px; /* Perspective for 3D effect */
+}
+
+.carousel {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    opacity: 0.9;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-item:nth-child(1) { transform: rotateY(  0deg) translateZ(400px); }
+.carousel-item:nth-child(2) { transform: rotateY( 72deg) translateZ(400px); }
+.carousel-item:nth-child(3) { transform: rotateY(144deg) translateZ(400px); }
+.carousel-item:nth-child(4) { transform: rotateY(216deg) translateZ(400px); }
+.carousel-item:nth-child(5) { transform: rotateY(288deg) translateZ(400px); }
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.footer-container-p {
+       margin: auto;
+         max-width: 1580px;
+    }
+
+    footer {
+      background-color: black;
+      height: auto;
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .pages, .category, .resources {
+      margin: 10px 0;
+    }
+
+    .common-footer {
+      color: white;
+      flex-direction: column;
+      font-weight: 300;
+      font-size: 14px;
+      margin: 10px;
+      display: flex;
+    }
+
+    .common-footer a {
+      color: rgb(82, 94, 122);
+      padding: 5px;
+      text-decoration: none;
+      margin-top: 5px;
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    .footer-with-main-logo {
+      background-color: black;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-border-bottom {
+      width: 100%;
+      background-color: rgb(130, 130, 130);
+      height: 1px;
+    }
+
+    .license-text {
+      color: rgb(70, 80, 106);
+      font-size: 15px;
+      text-align: center;
+      flex: 1;
+      margin-top: 10px;
+      text-align: end;
+      
+    }
+
+    .socials {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .socials .icons {
+      display: flex;
+      color: white;
+      padding: 20px;
+    }
+
+    .socials .icons i {
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .socials .icons .fa-x-twitter:hover {
+      color: rgb(45, 45, 73);
+    }
+
+    .socials .icons .fa-instagram:hover {
+      color: rgb(231, 19, 142);
+    }
+
+    .socials .icons .fa-youtube:hover {
+      color: rgb(211, 0, 0);
+    }
+
+    .socials .icons .fa-facebook:hover {
+      color: rgb(0, 0, 238);
+    }
+
+    .socials .icons .fa-github:hover {
+      color: rgb(94, 94, 94);
+    }
+
+    .info {
+      color: rgb(82, 94, 122);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .advertise a {
+      width: 15em;
+      max-width: 350px;
+      height: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      text-decoration: none;
+      justify-content: space-between;
+      color: black;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .advertise a:hover {
+      transform: scale(1.02);
+      background-color: wheat;
+      text-decoration: none;
+      color: black;
+    }
+    .advertise a p{
+      margin: 0;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      footer {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .common-footer {
+        margin: 10px 0;
+      }
+
+      .footer-with-main-logo {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .license-text {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .socials {
+        margin-top: 20px;
+      }
+
+      .advertise a {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      footer {
+        padding: 20px;
+      }
+
+      .footer-with-main-logo {
+        padding: 10px;
+      }
+
+      .license-text {
+        font-size: 13px;
+      }
+
+      .socials .icons i {
+        font-size: 20px;
+        padding: 8px;
+      }
+
+      .advertise a {
+        width: 100%;
+        max-width: 250px;
+        padding: 8px;
+      }
+    }
+
+ 
+     
+/* Media Queries */
+
+@media (width <= 950px){
+        .container2 {
+        animation: co 2s ease-in-out;
+        animation-timeline: scroll();
+        width: 90%;
+        display: block;
+      
+        margin: auto;
+      }
+      
+      .container2 > div:nth-of-type(1) {
+        width: 90%;
+        height: 500px;
+        margin: auto;
+      }
+
+      .container2 > div:nth-of-type(2) {
+        margin: auto;
+        width: 90%;
+        padding: 20px;
+        height: 550px;
+margin-top: 100px;
+        align-items: center;
+        text-align: center;
+        color: white;
+        margin-bottom: 100px;
+      }
+      
+      }
+
+     
+      @media (width <= 750px){
+        .section1 {
+        margin: auto;
+        
+        height: 500px;
+        max-width: 1518px;
+        
+       margin-top:-100px;
+        padding-top: 100px;
+       
+      }
+      .hide{
+        display: block;
+      }
+        .glass-panel {
+        color: #fff;
+        margin: 30px auto;
+
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        width: 400px;
+        border-radius: 15px;
+        padding: 12px;
+      
+        border-width: 3px;
+  border-style: solid;
+ 
+      }
+      .glass-button {
+        display: inline-block;
+        padding: 14px 22px;
+        border: 0;
+        text-decoration: none;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(30px);
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 10px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+      .glass-button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .glass-panel {
+        max-width: 500px;
+      }
+
+      .glass-button {
+        margin: 15px;
+        margin-top: 15px;
+      }
+
+      .glass-panel > h1,
+      .glass-panel > h1 a {
+        min-height: 20px;
+        width: 90%;
+        max-width: 700px;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0 auto;
+        text-decoration: none;
+        color: #fff;
+        font-size: 80px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .glass-panel > h3 {
+        font-size: 15px;
+      }
+
+      .glass-panel > p {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 22px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .section2 {
+        max-width:  1418px;
+        margin-top: -100px;
+       
+      }
+      .where {
+        margin-left: 5px;
+        font-size: 15px;
+        
+      }
+      .right2 .about-event {
+         font-weight: 550;
+        font-size: 40px;
+        text-align: center;
+        color:rgb(233, 217, 254);
+        margin-bottom: 15px;
+        padding:5px;
+        text-shadow: 10px 10px 10px rgba(80, 80, 80, 0.5);
+        
+      }
+      .right2 h1 {
+        text-align: center;
+        margin-bottom: 0px;
+        color: var(--colorMain);
+        font-size: 35px;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        text-shadow: var(--brShadow), var(--tlShadow);
+        position: relative;
+
+        &::before,
+        &::after {
+          position: absolute;
+          background: var(--colorMain);
+
+          border-radius: 10%;
+        }
+      }
+
+      }
+
+      @media (width <= 450px){
+        .glass-panel {
+        color: #fff;
+        margin: 10px auto;
+
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        width: 300px;
+        border-radius: 15px;
+        padding: 2px;
+      
+        border-width: 3px;
+  border-style: solid;
+ 
+      }
+      .section2{
+        margin-bottom: 80px;
+      }
+      .section21 {
+        margin: auto;
+        height: auto;
+        margin-top: 100px;
+        max-width: 1518px;
+      
+      }
+      .event2>div>h1{
+        font-size: 10px;
+      }
+      .event2>div>img{
+        width: 10px;
+      }
+      .event2{
+        display: block;
+      }
+      
+      .container21 {
+        margin: auto;
+        width: 90%;
+        align-items: center;
+        display: block;
+        
+      }
+
+
+
+      }
+
+
+      button {
+  position: relative;
+  padding: 12px 35px;
+  background: #fec195;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid #fec195;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 0 #0cf145eb;
+  box-shadow: 0 0 0 #08ee55d5;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 0 #fffdef);
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  -webkit-transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 0 #fffdef);
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  -webkit-transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 0 #fffdef);
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  -webkit-transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 50px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 0 #fffdef);
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  -webkit-transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 0 #fffdef);
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  -webkit-transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 0 #fffdef);
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+button:hover {
+  background: transparent;
+  color: #fec195;
+  -webkit-box-shadow: 0 0 25px #fec1958c;
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 35px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 10px #fffdef);
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 25px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 10px #fffdef);
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 15px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 10px #fffdef);
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 18px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 10px #fffdef);
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 25px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 10px #fffdef);
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  -webkit-filter: drop-shadow(0 0 10px #fffdef);
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #fffdef;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav>
+            <div class="container"
+                style=" display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div class="logo-container"
+                    style=" display: flex; justify-content: space-between; align-items: center; flex-wrap:wrap;">
+                    <a href="index.html">
+                        <img width="100em" src="logo_1.png" alt="Logo" />
+                    </a>
+                </div>
+                <div class="nav-links" id="navLinks"
+                    style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; font-size: 22px; font-weight: 500; ">
+                    <ul>
+                        <li><a href="#">Gallery</a></li>
+                        <li class="dropdown">
+                            <a href="./about.html">Choose Your Era</a>
+                            <!-- <ul class="dropdown-menu">
+                                <li><a href="#era1">Era 1</a></li>
+                                <li><a href="#era2">Era 2</a></li>
+                                <li><a href="#era3">Era 3</a></li>
+                            </ul> -->
+                        </li>
+                        <li><a href="./course.html">Blogs</a></li>
+                        <li><a href="./blog.html">About</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <a href="./loginpage.html">
+                    <i class=".login fa-regular fa-user fa-xl" style="color: lightseagreen;"></i>
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <spline-viewer url="https://prod.spline.design/LjILX5x0NokF3waq/scene.splinecode" style="position: relative; top: 20; height: 90vh; width: 100vw;"></spline-viewer>
+
+    <div class="container" style="position: absolute; top:60%; width: 60vw; ">
+        <h1 style="color: white; font-size: 55px; font-weight: 500; margin-left: 5%;"> THE WORLDs WEBSITE EVOLUTION: 1990's-2030's.</h1>
+        <p style="color: white; margin-left: 5%;" >LAST UPDATED: AUG 23, 2024</p>
+    </div>
+
+    <button style="position: absolute; top:100%; left: 40%; padding:15px 60px; border-radius: 20px;"> 
+        <h2>EXPLORE MORE</h2>
+        <div class="star-1">
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                </g>
+            </svg>
+        </div>
+        <div class="star-2">
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                </g>
+            </svg>
+        </div>
+        <div class="star-3">
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                </g>
+            </svg>
+        </div>
+        <div class="star-4">
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                </g>
+            </svg>
+        </div>
+        <div class="star-5">
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                </g>
+            </svg>
+        </div>
+        <div class="star-6">
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path class="fil0"
+                        d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                    </path>
+                </g>
+            </svg>
+        </div>
+    </button>
+
+            <div class="container" style="position: absolute; top:80%; width: 30%; left:65%;  ">
+                <div class="cube-container">
+                    <div class="cube">
+                        <div class="cube-face cube-face-front"><img src="Screenshot 2024-08-29 at 7.50.56 PM.png"
+                                width="100%" height="100%" alt=""></div>
+                        <div class="cube-face cube-face-back"><img
+                                src="https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338507_1280.png"
+                                width="100%" height="100%" alt=""></div>
+                        <div class="cube-face cube-face-left"><img
+                                src="https://static.vecteezy.com/system/resources/previews/014/018/561/non_2x/amazon-logo-on-transparent-background-free-vector.jpg"
+                                width="100%" height="100%" alt=""></div>
+                        <div class="cube-face cube-face-right"><img
+                                src="https://miro.medium.com/v2/resize:fit:1400/1*MxZpRFN3hnZrCC05s1q73A.png" alt=""
+                                width="100%" height="100%"></div>
+                        <div class="cube-face cube-face-top"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png"
+                                alt="" width="100%" height="100%"></div>
+                        <div class="cube-face cube-face-bottom"><img
+                                src="https://www.eatthis.com/wp-content/uploads/sites/4/2019/02/mcdonalds-logo.jpg?quality=82&strip=1"
+                                alt="" width="100%" height="100%"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- <div class="container" style="position: absolute; top:120%; width: 20%; left:-5%;  height: 5%; ">
+                <div class="cube-container">
+                    <div class="cube" >
+                        <div class="cube-face cube-face-front" style="border-radius: 900% 900% ;  background-color: rgba(32, 178, 171, 0.399);"></div>
+                        <div class="cube-face cube-face-back" style="border-radius: 5% 600%; background-color: rgba(47, 32, 178, 0.495);"></div>
+                        <div class="cube-face cube-face-left" style="border-radius: 7% 880%; background-color: rgba(178, 120, 32, 0.498);"></div>
+                        <div class="cube-face cube-face-right" style="border-radius: 8% 900%; background-color: rgba(115, 178, 32, 0.49);"></div>
+                        <div class="cube-face cube-face-top" style="border-radius: 7% 200%;  background-color: rgba(149, 32, 178, 0.472);"></div>
+                        <div class="cube-face cube-face-bottom" style="border-radius: 9% 400%; background-color: rgba(32, 178, 171, 0.546);"></div>
+                    </div>
+                </div>
+            </div> -->
+
+            <spline-viewer url="https://prod.spline.design/t0eWqC-PDZvwjgma/scene.splinecode" style="position: relative;z-index: -1;  top: 0vh; height: 100vh; width: 100vw;"></spline-viewer>
+
+            <div class="container text-container" style="position: absolute; top: 128vh;  width: 100%; z-index: 1;">
+                <p class="subtext" style="text-align: center; color: white;">Where Creativity Meets Technology</p>
+      
+                <h1 class="perspective-text" style="text-align: center;" >1990s TO 2030s</h1>
+                        
+            </div>
+
+            <spline-viewer url="https://prod.spline.design/UOjI4zUk20hQZwnS/scene.splinecode" style="position: relative;z-index: -1;  top: 22vh; height: 110vh; width: 100vw;"></spline-viewer>
+
+            
+            <h1 style=" position: absolute; top: 208vh;text-align: center; width: 100%; font-size: 55px;background-image: linear-gradient(to right, #ff5f92,rgb(95, 69, 228), rgb(24, 195, 233),rgb(24, 185, 89), rgb(183, 255, 0),  #feb47b);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                            HOW FAR WE HAVE COME ?</h1>
+
+
+            <div class="container" style="position: absolute; top: 222vh;  width: 100%; z-index: 1; display: flex; justify-content: center;">
+
+                <div class="grid-container" >
+                    <div class="card2">
+                        <div class="card2-inner">
+                            <div class="card2-front">
+                                <img src="https://media.licdn.com/dms/image/D5622AQFsa4mcCuOx6A/feedshare-shrink_800/0/1722709593637?e=2147483647&v=beta&t=G6AKQf7DrMyTdUTSXjl3UGnEVYPDaggeZjLqQcTbKDY"
+                                    alt="Front 1" height="100%" width="100%">
+                            </div>
+                            <div class="card2-back">
+                                <img src="https://qph.cf2.quoracdn.net/main-qimg-40d3d268e781210cd0ddb3dc449529e3-lq" alt="Back 1"
+                                    height="100%" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="card2-inner">
+                            <div class="card2-front">
+                                <img src="https://imgk.timesnownews.com/story/1568888752-download.jpg?tr=w-1200,h-900" alt="Front 2"
+                                    height="100%" width="100%">
+                            </div>
+                            <div class="card2-back">
+                                <img src="https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2023/02/bezos_2.png"
+                                    alt="Back 2" height="100%" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="card2-inner">
+                            <div class="card2-front">
+                                <img src="https://ishadeed.com/assets/fb-login/fb-new-login.png" alt="Front 3" height="100%"
+                                    width="100%">
+                            </div>
+                            <div class="card2-back">
+                                <img src="https://live.staticflickr.com/3012/2982646566_8c6294f853_b.jpg" alt="Back 3" height="100%"
+                                    width="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="card2-inner">
+                            <div class="card2-front">
+                                <img src="https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2021/06/windows_11_generic_hero_1.jpg"
+                                    alt="Front 4" height="100%" width="100%">
+                            </div>
+                            <div class="card2-back">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9b76WRmilqeEDfjM_fas959JOqppqxthKJg&s"
+                                    alt="Back 4" height="100%" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    <section style="position: absolute; top: 330vh;  width: 100%; z-index: 0;">
+    
+        <div class="" style="background-image: radial-gradient(circle, teal, white);">
+            <section class="feedback-wrapper" style="width: 100%;">
+                <div class="feedback-section">
+                    <div class="feedback-container">
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1406197730/photo/portrait-of-a-young-handsome-indian-man.webp?b=1&s=170667a&w=0&k=20&c=KtmKHyOE6MJV0w2DiGX8P4399KHNbZ3p8lCjTEabGcY="
+                                alt="User 1" />
+                            <blockquote>
+                                The app made navigating the conference a breeze!
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://t3.ftcdn.net/jpg/06/20/53/68/360_F_620536814_v0h5OzfuAMjJL9of1MRnZAjYgAje8Y0z.jpg"
+                                alt="User 2" />
+                            <blockquote>
+                                Loved the real-time updates and speaker bios!
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://www.shutterstock.com/image-photo/close-head-shot-portrait-preppy-600nw-1433809418.jpg"
+                                alt="User 3" />
+                            <blockquote>
+                                Great user interface, very intuitive and user-friendly.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1398385392/photo/happy-young-millennial-indian-business-woman-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=e6MjwnLEgtkh_noLuMP5t9yHzTMN7XrrRq_KIfFYy38="
+                                alt="User 4" />
+                            <blockquote>
+                                The schedule feature kept me on track all day.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1721001600&semt=ais_user"
+                                alt="User 5" />
+                            <blockquote>
+                                Excellent design, everything was right at my fingertips.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1313849152/photo/photo-of-young-happy-cheerful-positive-smiling-girl-with-crossed-hands-wear-yellow-jumper.webp?b=1&s=170667a&w=0&k=20&c=3N9iaJiVl1iD-3svAibGq3V6ZBohn0Rsi4iY0RMEU5Y="
+                                alt="User 6" />
+                            <blockquote>The live streaming quality was top-notch.</blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.webp?b=1&s=170667a&w=0&k=20&c=cVdVl-0bpliZ0Sduc7ZDkMPwLnbxaMXZONllS39oeFc="
+                                alt="User 7" />
+                            <blockquote>
+                                Fantastic way to enhance the conference experience!
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToYh-qNAWSEBt5WfrovDg1Dc0K1a5KyZnt-2SjC8n7bKdIMXKiJ0GDF5-nC1bxrwxf7qI&usqp=CAU"
+                                alt="User 8" />
+                            <blockquote>
+                                I appreciated the personalized session recommendations.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://www.shutterstock.com/image-photo/happy-cheerful-45-year-old-600nw-2353012797.jpg"
+                                alt="User 9" />
+                            <blockquote>
+                                I appreciated the personalized session recommendations.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1406197730/photo/portrait-of-a-young-handsome-indian-man.webp?b=1&s=170667a&w=0&k=20&c=KtmKHyOE6MJV0w2DiGX8P4399KHNbZ3p8lCjTEabGcY="
+                                alt="User 1" />
+                            <blockquote>
+                                The app made navigating the conference a breeze!
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://t3.ftcdn.net/jpg/06/20/53/68/360_F_620536814_v0h5OzfuAMjJL9of1MRnZAjYgAje8Y0z.jpg"
+                                alt="User 2" />
+                            <blockquote>
+                                Loved the real-time updates and speaker bios!
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://www.shutterstock.com/image-photo/close-head-shot-portrait-preppy-600nw-1433809418.jpg"
+                                alt="User 3" />
+                            <blockquote>
+                                Great user interface, very intuitive and user-friendly.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1398385392/photo/happy-young-millennial-indian-business-woman-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=e6MjwnLEgtkh_noLuMP5t9yHzTMN7XrrRq_KIfFYy38="
+                                alt="User 4" />
+                            <blockquote>
+                                The schedule feature kept me on track all day.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1721001600&semt=ais_user"
+                                alt="User 5" />
+                            <blockquote>
+                                Excellent design, everything was right at my fingertips.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1313849152/photo/photo-of-young-happy-cheerful-positive-smiling-girl-with-crossed-hands-wear-yellow-jumper.webp?b=1&s=170667a&w=0&k=20&c=3N9iaJiVl1iD-3svAibGq3V6ZBohn0Rsi4iY0RMEU5Y="
+                                alt="User 6" />
+                            <blockquote>The live streaming quality was top-notch.</blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.webp?b=1&s=170667a&w=0&k=20&c=cVdVl-0bpliZ0Sduc7ZDkMPwLnbxaMXZONllS39oeFc="
+                                alt="User 7" />
+                            <blockquote>
+                                Fantastic way to enhance the conference experience!
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToYh-qNAWSEBt5WfrovDg1Dc0K1a5KyZnt-2SjC8n7bKdIMXKiJ0GDF5-nC1bxrwxf7qI&usqp=CAU"
+                                alt="User 8" />
+                            <blockquote>
+                                I appreciated the personalized session recommendations.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://www.shutterstock.com/image-photo/happy-cheerful-45-year-old-600nw-2353012797.jpg"
+                                alt="User 9" />
+                            <blockquote>
+                                I appreciated the personalized session recommendations.
+                            </blockquote>
+                        </div>
+
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1406197730/photo/portrait-of-a-young-handsome-indian-man.webp?b=1&s=170667a&w=0&k=20&c=KtmKHyOE6MJV0w2DiGX8P4399KHNbZ3p8lCjTEabGcY="
+                                alt="User 1" />
+                            <blockquote>
+                                The app made navigating the conference a breeze!
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://t3.ftcdn.net/jpg/06/20/53/68/360_F_620536814_v0h5OzfuAMjJL9of1MRnZAjYgAje8Y0z.jpg" alt="User 2" />
+                            <blockquote>
+                                Loved the real-time updates and speaker bios!
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://www.shutterstock.com/image-photo/close-head-shot-portrait-preppy-600nw-1433809418.jpg"
+                                alt="User 3" />
+                            <blockquote>
+                                Great user interface, very intuitive and user-friendly.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1398385392/photo/happy-young-millennial-indian-business-woman-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=e6MjwnLEgtkh_noLuMP5t9yHzTMN7XrrRq_KIfFYy38="
+                                alt="User 4" />
+                            <blockquote>
+                                The schedule feature kept me on track all day.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1721001600&semt=ais_user"
+                                alt="User 5" />
+                            <blockquote>
+                                Excellent design, everything was right at my fingertips.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1313849152/photo/photo-of-young-happy-cheerful-positive-smiling-girl-with-crossed-hands-wear-yellow-jumper.webp?b=1&s=170667a&w=0&k=20&c=3N9iaJiVl1iD-3svAibGq3V6ZBohn0Rsi4iY0RMEU5Y="
+                                alt="User 6" />
+                            <blockquote>The live streaming quality was top-notch.</blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.webp?b=1&s=170667a&w=0&k=20&c=cVdVl-0bpliZ0Sduc7ZDkMPwLnbxaMXZONllS39oeFc="
+                                alt="User 7" />
+                            <blockquote>
+                                Fantastic way to enhance the conference experience!
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToYh-qNAWSEBt5WfrovDg1Dc0K1a5KyZnt-2SjC8n7bKdIMXKiJ0GDF5-nC1bxrwxf7qI&usqp=CAU"
+                                alt="User 8" />
+                            <blockquote>
+                                I appreciated the personalized session recommendations.
+                            </blockquote>
+                        </div>
+                        <div class="feedback-item">
+                            <img src="https://www.shutterstock.com/image-photo/happy-cheerful-45-year-old-600nw-2353012797.jpg" alt="User 9" />
+                            <blockquote>
+                                I appreciated the personalized session recommendations.
+                            </blockquote>
+                        </div>
+                        <!-- Add more feedback items as needed -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+    </section>
+
+
+    <div style="display: flex; justify-content: center; z-index: -10;">
+        <h1 style="background-image: radial-gradient(circle,rgb(209, 26, 99), rgb(10, 93, 131)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 4rem;position: absolute;display: flex; z-index: 10; top: 412vh; text-align: center;">
+            TRANSFORMING
+            UI/UX</h1>
+    
+    </div>
+    
+
+    <section  id="sec" style="position: relative; top: 110vh; z-index: -1;">
+        <div class="carousel" >
+            <div class="carousel-item"><img src="https://www.marketing91.com/wp-content/uploads/2018/04/website-responsiveness-4.jpg" style="object-fit:unset; opacity: 1;"  alt="Image 1"></div>
+            <div class="carousel-item"><img src="https://krify.co/wp-content/uploads/2019/11/Best-Web-Animation-Types-and-Technologies-used-in-Web-Apps.jpg"style="object-fit:unset; opacity: 1;"  alt="Image 2"></div>
+            <div class="carousel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDukxp9-9FPOkbPB9Cb7mZGebA1bKq07wdYIF2LqAv2BzGm9WFJ7fTE7RUE7P2JkOxL5o&usqp=CAU" style="object-fit:unset; opacity: 1;" alt="Image 3"></div>
+            <div class="carousel-item"><img src="https://web.dev/static/learn/css/flexbox/image/a-labelled-diagram-the-a-a9bf061b5d5b2.svg" style="object-fit:cover; opacity: 1;" alt="Image 4"></div>
+            <div class="carousel-item"><img src="https://www.creative-tim.com/blog/content/images/2022/07/soft-ui-dashboard-tailwind--1-.jpg" style="object-fit:unset; opacity: 1;" alt="Image 5"></div>
+        </div>
+    </section>
+
+
+
+    <spline-viewer url="https://prod.spline.design/WnCcf7pPoQrKQhvr/scene.splinecode" style="position: relative; top: 120vh; z-index: -1;"></spline-viewer>
+    <div style="position: absolute; top: 540vh; z-index: 5; display: flex; flex-direction: column;justify-content: start; align-items: baseline; margin-left: 10px; gap: 10px; flex-wrap: wrap; flex-basis: 20px; flex-shrink: 1;">
+        <h1  style="display: flex; flex-wrap: wrap; flex-shrink: 1; color: rgba(255, 255, 255, 0.563);">PLAYGROUND</h1>
+        <h2 style="color: rgba(255, 255, 255, 0.563);">SPOT THE SUN</h2>
+        <h3 style="color: rgba(255, 255, 255, 0.563);">PINCH TO ZOOM-OUT</h3>
+        <h3 style="color: rgba(255, 255, 255, 0.563);">1 FINGURE TO SCROLL</h3>
+    </div>
+
+
+
+
+     
+        <footer style="position: relative; top: 122vh; display: flex; justify-content: center; width: 95vw; ">
+
+            <div class="footer-container-p">
+                <footer>
+                    <div class="pages common-footer">
+                        <h3>Pages</h3>
+                        <a href="">About us</a>
+                        <a href="">News</a>
+                        <a href="">Authors</a>
+                        <a href="">Newsletters Plans</a>
+                        <a href="">Contact us</a>
+                        <a href="">Sign up</a>
+                    </div>
+                    <div class="category common-footer">
+                        <h3>Category</h3>
+                        <a href="">Health</a>
+                        <a href="">Politics</a>
+                        <a href="">Sports</a>
+                        <a href="">World News</a>
+                        <a href="">Business</a>
+                        <a href="">Technology</a>
+                    </div>
+                    <div class="resources common-footer">
+                        <h3>Resources</h3>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Advertise</a>
+                        <a href="">Terms & Conditions</a>
+                        <a href="">License</a>
+                        <a href="">Style Guide</a>
+                    </div>
+                    <div class="socials">
+                        <div class="icons">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="info">DesignTimeline@example.com</div>
+                        <div class="advertise">
+                            <a href="./register.html">
+                                <p>Start a Timeline Journey</p>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+                <div class="footer-border-bottom"></div>
+                <div class="footer-with-main-logo">
+                    <div class="logo-container">
+                        <a href="index.html"><img src="logo_1.png" alt="Logo" width="70px"
+                                height="70px" style="border-radius: 50px;" />
+            
+                    </div>
+                    <div class="license-text">
+                        © 2024 Design Timeline. Designed by Design Discuss 013. Powered by Masai.
+                    </div>
+                </div>
+                     
+                    
+            </div>
+        </footer>
+            
+            
+    
+        
+   
+
+    
+
+
+
+
+
+
+
+            
+
+</body>
+
+<script>
+    let scrollPosition = 0;
+    let intervalId;
+
+    function autoScroll() {
+        const container = document.querySelector(".feedback-container");
+        const itemWidth = container.querySelector(".feedback-item").clientWidth;
+        const maxScroll = container.scrollWidth - container.clientWidth;
+
+        scrollPosition = (scrollPosition + itemWidth) % (maxScroll + itemWidth);
+
+        container.style.transform = `translateX(-${scrollPosition}px)`;
+    }
+
+    function startAutoScroll() {
+        intervalId = setInterval(autoScroll, 1000); // Scrolls every 3 seconds
+    }
+
+    function stopAutoScroll() {
+        clearInterval(intervalId);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        startAutoScroll();
+
+        const items = document.querySelectorAll(".feedback-item img");
+        items.forEach((item) => {
+            item.addEventListener("mouseenter", () => {
+                stopAutoScroll();
+                item.parentElement.style.transform = "scale(1.3) rotate(0deg)";
+                item.parentElement.style.zIndex = "10";
+            });
+
+            item.addEventListener("mouseleave", () => {
+                startAutoScroll();
+                item.parentElement.style.transform = "scale(1)";
+                item.parentElement.style.zIndex = "1";
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+
+
+<script src="https://kit.fontawesome.com/0b7f141f42.js" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        if (window.scrollY > 10) {
+            header.style.backgroundColor = "black";
+            header.style.opacity = "0.3";
+        } else {
+            header.style.backgroundColor = "  rgb(19, 32, 67)";
+            header.style.opacity = "1";
+        }
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+    });
+</script>
+
+<script>
+    window.addEventListener('scroll', function () {
+            // Get the scroll position
+            let scrollPosition = window.scrollY;
+
+            // Calculate the blur intensity based on scroll position
+            let blurValue = Math.min(scrollPosition / 50, 10); // Cap the blur value at 10px
+
+            // Apply the blur value to the body or specific content
+            document.querySelector('.content').style.filter = `blur(${blurValue}px)`;
+        });
+
+</script>
+</html>
