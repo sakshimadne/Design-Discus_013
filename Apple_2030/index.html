@@ -1,425 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+      }
 
-        .container {
-            margin: auto;
-            width: 100vw;
-            height: 80%;
+      .container {
+        margin: auto;
+        width: 100vw;
+        height: 80%;
 
-            /* background-color: yellow; */
+        /* background-color: yellow; */
+      }
 
+      .div5 {
+        position: relative;
+        top: 90vh;
+        background-color: rgb(245, 244, 247);
+        margin-top: -2%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+      }
 
+      span {
+        color: white;
+      }
 
+      a {
+        text-decoration: none;
+        color: rgb(7, 114, 229);
+      }
 
-        }
+      .video-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        /* Full viewport height */
+        overflow: hidden;
+      }
 
-        .div5{
-            position: relative;
-            top: 90vh;
-            background-color: rgb(245, 244, 247);
-            margin-top: -2%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+      /* Video styling */
+      #background-video {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        max-width: 50%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        /* Place video behind content */
+      }
 
-        span {
-            color: white;
-        }
+      /* Overlay text styling */
+      .overlay-text {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        z-index: 1;
+      }
 
-        a {
-            text-decoration: none;
-            color: rgb(7, 114, 229);
-        }
+      /* Text styling */
+      .overlay-text h1 {
+        font-size: 3.5em;
+        font-weight: bold;
+        margin: 0;
+      }
 
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            /* Full viewport height */
-            overflow: hidden;
-        }
+      .overlay-text p {
+        font-size: 1.5em;
+        margin: 10px 0 0;
+        letter-spacing: 0.5px;
+      }
 
-        /* Video styling */
-        #background-video {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            max-width: 50%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            /* Place video behind content */
-        }
-
-        /* Overlay text styling */
-        .overlay-text {
-            position: absolute;
-            top: 65%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            z-index: 1;
-        }
-
-        /* Text styling */
+      /* Media queries for responsiveness */
+      @media (max-width: 768px) {
         .overlay-text h1 {
-            font-size: 3.5em;
-            font-weight: bold;
-            margin: 0;
+          font-size: 2em;
         }
 
         .overlay-text p {
-            font-size: 1.5em;
-            margin: 10px 0 0;
-            letter-spacing: 0.5px;
+          font-size: 1em;
         }
+      }
 
-        /* Media queries for responsiveness */
-        @media (max-width: 768px) {
-            .overlay-text h1 {
-                font-size: 2em;
-            }
-
-            .overlay-text p {
-                font-size: 1em;
-            }
-        }
-
-        .card {
+      .card {
         width: 150px;
         height: 250px;
         transition: transform 0.6s ease, box-shadow 0.6s ease;
         transform-style: preserve-3d;
         position: relative;
-        
+
         box-shadow: 0 15px 30px rgba(40, 110, 223, 0.725);
         border-radius: 15px;
-    }
+      }
 
-    .card img {
+      .card img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 15px;
-    }
+      }
 
-    .card:hover {
+      .card:hover {
         transform: rotateY(0deg) scale(1.5) rotateX(5deg) rotateY(5deg);
         z-index: 2;
         box-shadow: 0 25px 45px rgba(52, 190, 236, 0.496);
-    }
+      }
 
+      .container .card:nth-child(1):hover {
+        transform: rotateY(60deg) scale(1.7) rotateX(5deg) rotateY(5deg);
+      }
 
-    .container .card:nth-child(1):hover {
-        transform: rotateY(60deg) scale(1.7)rotateX(5deg) rotateY(5deg);
-    }
-
-    .container .card:nth-child(2):hover {
-        transform: rotateY(45deg) scale(1.7)rotateX(5deg) rotateY(5deg);
-    }
-
-    .container .card:nth-child(3):hover {
-        transform: rotateY(45deg) scale(1.7)rotateX(5deg) rotateY(5deg);
-    }
-
-    .container .card:nth-child(4):hover {
+      .container .card:nth-child(2):hover {
         transform: rotateY(45deg) scale(1.7) rotateX(5deg) rotateY(5deg);
-    }
+      }
 
-    .container .card:nth-child(5):hover {
+      .container .card:nth-child(3):hover {
+        transform: rotateY(45deg) scale(1.7) rotateX(5deg) rotateY(5deg);
+      }
+
+      .container .card:nth-child(4):hover {
+        transform: rotateY(45deg) scale(1.7) rotateX(5deg) rotateY(5deg);
+      }
+
+      .container .card:nth-child(5):hover {
         transform: rotateY(30deg) scale(1.7) rotateX(5deg) rotateY(5deg);
-
-    }
-    .container .card:nth-child(6):hover {
+      }
+      .container .card:nth-child(6):hover {
         transform: rotateY(0deg) scale(1.7) rotateX(5deg) rotateY(5deg);
-
-    }
-    .container .card:nth-child(7):hover {
+      }
+      .container .card:nth-child(7):hover {
         transform: rotateY(-30deg) scale(1.7) rotateX(5deg) rotateY(5deg);
-
-    }
-    .container .card:nth-child(8):hover {
+      }
+      .container .card:nth-child(8):hover {
         transform: rotateY(-45deg) scale(1.7) rotateX(5deg) rotateY(5deg);
-
-    }
-    .container .card:nth-child(9):hover {
+      }
+      .container .card:nth-child(9):hover {
         transform: rotateY(-45deg) scale(1.7) rotateX(5deg) rotateY(5deg);
-
-    }
-    .container .card:nth-child(10):hover {
+      }
+      .container .card:nth-child(10):hover {
         transform: rotateY(-60deg) scale(1.7) rotateX(5deg) rotateY(5deg);
+      }
 
-    }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 300px);
+        gap: 20px;
+        margin-top: 8%;
+        height: 200%;
+        width: 83%;
+        background-image: url(./logo1.png);
+        background-size: 100%;
+        border-radius: 20px;
 
+        background-repeat: no-repeat;
+      }
 
+      .card2 {
+        perspective: 400px;
+      }
 
-    .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 300px);
-    gap: 20px;
-    margin-top: 8%;
-    height: 200%;
-    width: 83%;
-    background-image: url(./logo1.png);
-    background-size: 100%;
-    border-radius: 20px;
-    
-    background-repeat: no-repeat;
+      .card2-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
+      .card2:hover .card2-inner {
+        transform: rotateY(180deg);
+      }
 
-}
+      .card2-front,
+      .card2-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
 
-.card2 {
-    perspective: 400px;
-}
+      .card2-front {
+        background-color: #fff;
+      }
 
-.card2-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.8s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+      .card2-back {
+        background-color: #f8f8f8;
+        transform: rotateY(180deg);
+      }
 
-.card2:hover .card2-inner {
-    transform: rotateY(180deg);
-}
-
-.card2-front, .card2-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.card2-front {
-    background-color: #fff;
-}
-
-.card2-back {
-    background-color: #f8f8f8;
-    transform: rotateY(180deg);
-}
-
-.card2-front img, .card2-back img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit:fill;
-    border-radius: 10px;
-}
-
+      .card2-front img,
+      .card2-back img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: fill;
+        border-radius: 10px;
+      }
     </style>
+  </head>
 
-    
-
-    
-
-
-</head>
-
-<body>
-
+  <body>
     <header>
-        <div class="container">
-            <div>
-                <h1 style="text-align: center;">APPLE IN 2030's</h1>
-            </div>
+      <div class="container">
+        <div>
+          <h1 style="text-align: center">APPLE IN 2030's</h1>
         </div>
-
+      </div>
     </header>
 
     <header>
-
-        <div class="container">
-            <div id="div1"
-                style="display: flex; flex-wrap: wrap;justify-content: center;gap:2%; font-weight: 50; font-size: 15px; align-items: center; background-color: rgb(69, 69, 69); padding: 1%;">
-                <span><i class="fa-brands fa-apple fa-xl" style="color: #ffffff;"></i></span>
-                <span>Store</span>
-                <span>Mac</span>
-                <span>iPad</span>
-                <span>iPhone</span>
-                <span>Watch</span>
-                <span>AirPods</span>
-                <span>TV & Home</span>
-                <span>Entertainment</span>
-                <span>Accessories</span>
-                <span>Support</span>
-                <span><i class="fa-solid fa-magnifying-glass " style="color: #ffffff;"></i></span>
-                <span><i class="fa-solid fa-bag-shopping " style="color: #ffffff;"></i></span>
-            </div>
+      <div class="container">
+        <div
+          id="div1"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2%;
+            font-weight: 50;
+            font-size: 15px;
+            align-items: center;
+            background-color: rgb(69, 69, 69);
+            padding: 1%;
+          "
+        >
+          <span
+            ><i class="fa-brands fa-apple fa-xl" style="color: #ffffff"></i
+          ></span>
+          <span>Store</span>
+          <span>Mac</span>
+          <span>iPad</span>
+          <span>iPhone</span>
+          <span>Watch</span>
+          <span>AirPods</span>
+          <span>TV & Home</span>
+          <span>Entertainment</span>
+          <span>Accessories</span>
+          <span>Support</span>
+          <span
+            ><i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i
+          ></span>
+          <span
+            ><i class="fa-solid fa-bag-shopping" style="color: #ffffff"></i
+          ></span>
         </div>
+      </div>
     </header>
     <section>
-        <div class="container">
-            <div id="div2"
-                style="display: flex; flex-wrap: wrap;justify-content: center;gap:2%; font-weight: 50; font-size: 15px; align-items: center; background-color: rgb(29, 29, 31); padding: 0.5%;">
-                <p style="color: white; word-spacing: 2px; font-size: 15px; font-weight: 100;">Get up to 8000.00 instant
-                    cashback on selected products with eligible American Express, Axis Bank and ICICI Bank cards.
-                    <sup>*</sup> <a href="#">Shop ›</a></p>
-            </div>
+      <div class="container">
+        <div
+          id="div2"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2%;
+            font-weight: 50;
+            font-size: 15px;
+            align-items: center;
+            background-color: rgb(29, 29, 31);
+            padding: 0.5%;
+          "
+        >
+          <p
+            style="
+              color: white;
+              word-spacing: 2px;
+              font-size: 15px;
+              font-weight: 100;
+            "
+          >
+            Get up to 8000.00 instant cashback on selected products with
+            eligible American Express, Axis Bank and ICICI Bank cards.
+            <sup>*</sup> <a href="#">Shop ›</a>
+          </p>
         </div>
+      </div>
     </section>
 
     <section>
-        <div class="container" style="background-color: rgb(0, 0, 0); z-index: -2; position: absolute; ">
-            <div class="video-container">
-                <video autoplay muted loop id="background-video">
-                    <source src="./Assets/video1.mp4" type="video/mp4">
+      <div
+        class="container"
+        style="background-color: rgb(0, 0, 0); z-index: -2; position: absolute"
+      >
+        <div class="video-container">
+          <video autoplay muted loop id="background-video">
+            <source src="./Assets/video1.mp4" type="video/mp4" />
 
-                    Your browser does not support the video tag.
-                </video>
+            Your browser does not support the video tag.
+          </video>
 
-                <div class="overlay-text">
-                    <h1>Apple Event</h1>
-                    <p>Watch Online on 9 September at 10:30 PM IST.</p>
-                    <button
-                        style="padding: 2% 3%;border-radius: 50px; margin-top: 2%; font-size: 18px;color: white; background-color: rgb(0, 117, 221);">Learn
-                        More</button>
-                </div>
-            </div>
+          <div class="overlay-text">
+            <h1>Apple Event</h1>
+            <p>Watch Online on 9 September at 10:30 PM IST.</p>
+            <button
+              style="
+                padding: 2% 3%;
+                border-radius: 50px;
+                margin-top: 2%;
+                font-size: 18px;
+                color: white;
+                background-color: rgb(0, 117, 221);
+              "
+            >
+              Learn More
+            </button>
+          </div>
         </div>
+      </div>
     </section>
 
-    
-    <div class="div5"  >
-        <div style="display: flex; justify-content: center; align-items: start; padding-bottom: 3%;">
-        <img src="./Assets/Screenshot 2024-08-30 at 5.11.16 AM.png" height="30%" width="60%" alt="">
-
+    <div class="div5">
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          padding-bottom: 3%;
+        "
+      >
+        <img
+          src="./Assets/Screenshot 2024-08-30 at 5.11.16 AM.png"
+          height="30%"
+          width="60%"
+          alt=""
+        />
+      </div>
+      <div
+        class="container"
+        style="
+          display: flex;
+          gap: 20px;
+          display: flex;
+          gap: 20px;
+          perspective: 1000px;
+        "
+      >
+        <div class="card">
+          <img
+            src="./Assets/generative_images__cvc8v0qvkvgy_large_2x.png"
+            alt="Image 1"
+          />
         </div>
-        <div class="container" style="display: flex; gap: 20px;display: flex;gap: 20px;perspective: 1000px; ">
-            <div class="card">
-                <img src="./Assets/generative_images__cvc8v0qvkvgy_large_2x.png" alt="Image 1">
-            </div>
-            <div class="card">
-                <img src="./Assets/siri_flight__ed2jh470vcuq_large_2x.png" alt="Image 2">
-            </div>
-            <div class="card">
-                <img src="./Assets/playground__e7s5lcg9xb2i_large_2x.png" alt="Image 3">
-            </div>
-            <div class="card">
-                <img src="./Assets/genmoji__fp35gdyh38mu_large_2x.png" alt="Image 4">
-            </div>
-            <div class="card">
-                <img src="./Assets/text_assistant__fh1mulzekeem_large_2x.png" alt="Image 5">
-            </div>
-            <div class="card">
-                <img src="./Assets/photo_memories__bstogyrwybhy_large_2x.png" alt="Image 1">
-            </div>
-            <div class="card">
-                <img src="./Assets/siri_personal_knowledge__ftom7cze6y6a_large_2x.png" alt="Image 2">
-            </div>
-            <div class="card">
-                <img src="./Assets/smart_reply__ee77cafsn5me_large_2x.png" alt="Image 3">
-            </div>
-            <div class="card">
-                <img src="./Assets/text_assistant__fh1mulzekeem_large_2x.png" alt="Image 4">
-            </div>
-            <div class="card">
-                <img src="./Assets/siri_personal_knowledge__ftom7cze6y6a_large_2x (1).png" alt="Image 5">
-            </div>
+        <div class="card">
+          <img
+            src="./Assets/siri_flight__ed2jh470vcuq_large_2x.png"
+            alt="Image 2"
+          />
         </div>
-
-
-        <div class="grid-container">
-            <div class="card2">
-                <div class="card2-inner">
-                    <div class="card2-front">
-                        <img src="iphn2.jpg" alt="Front 1" height="100%" width="100%">
-                    </div>
-                    <div class="card2-back">
-                        <img src="iphn1.png" alt="Back 1" height="100%" width="100%">
-                    </div>
-                </div>
-            </div>
-            <div class="card2">
-                <div class="card2-inner">
-                    <div class="card2-front">
-                        <img src="iPod1.png" alt="Front 2" height="100%" width="100%">
-                    </div>
-                    <div class="card2-back">
-                        <img src="ipod2.png" alt="Back 2" height="100%" width="100%">
-                    </div>
-                </div>
-            </div>
-            <div class="card2">
-                <div class="card2-inner">
-                    <div class="card2-front">
-                        <img src="iwatch1.png" alt="Front 3" height="100%" width="100%">
-                    </div>
-                    <div class="card2-back">
-                        <img src="iwatch2.png" alt="Back 3" height="100%" width="100%">
-                    </div>
-                </div>
-            </div>
-            <div class="card2">
-                <div class="card2-inner">
-                    <div class="card2-front">
-                        <img src="mac1.png" alt="Front 4" height="100%" width="100%">
-                    </div>
-                    <div class="card2-back">
-                        <img src="maC2.png" alt="Back 4" height="100%" width="100%">
-                    </div>
-                </div>
-            </div>
+        <div class="card">
+          <img
+            src="./Assets/playground__e7s5lcg9xb2i_large_2x.png"
+            alt="Image 3"
+          />
         </div>
+        <div class="card">
+          <img
+            src="./Assets/genmoji__fp35gdyh38mu_large_2x.png"
+            alt="Image 4"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="./Assets/text_assistant__fh1mulzekeem_large_2x.png"
+            alt="Image 5"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="./Assets/photo_memories__bstogyrwybhy_large_2x.png"
+            alt="Image 1"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="./Assets/siri_personal_knowledge__ftom7cze6y6a_large_2x.png"
+            alt="Image 2"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="./Assets/smart_reply__ee77cafsn5me_large_2x.png"
+            alt="Image 3"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="./Assets/text_assistant__fh1mulzekeem_large_2x.png"
+            alt="Image 4"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="./Assets/siri_personal_knowledge__ftom7cze6y6a_large_2x (1).png"
+            alt="Image 5"
+          />
+        </div>
+      </div>
 
-        <div style="margin-top: 5%; background-color: black; width:100vw; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div class="grid-container">
+        <div class="card2">
+          <div class="card2-inner">
+            <div class="card2-front">
+              <img src="iphn2.jpg" alt="Front 1" height="100%" width="100%" />
+            </div>
+            <div class="card2-back">
+              <img src="iphn1.png" alt="Back 1" height="100%" width="100%" />
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="card2-inner">
+            <div class="card2-front">
+              <img src="iPod1.png" alt="Front 2" height="100%" width="100%" />
+            </div>
+            <div class="card2-back">
+              <img src="ipod2.png" alt="Back 2" height="100%" width="100%" />
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="card2-inner">
+            <div class="card2-front">
+              <img src="iwatch1.png" alt="Front 3" height="100%" width="100%" />
+            </div>
+            <div class="card2-back">
+              <img src="iwatch2.png" alt="Back 3" height="100%" width="100%" />
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="card2-inner">
+            <div class="card2-front">
+              <img src="mac1.png" alt="Front 4" height="100%" width="100%" />
+            </div>
+            <div class="card2-back">
+              <img src="maC2.png" alt="Back 4" height="100%" width="100%" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <h1  style=" font-weight: 400; font-size: 50px; color: white; ">iPhone 20 ai Pro Max</h1>
-            
-            <video autoplay muted loop style="width: 100%; height: 50%;" >
-                <source src="large_2x.mp4" type="video/mp4">
-            
-                Your browser does not support the video tag.
-            </video>
+      <div
+        style="
+          margin-top: 5%;
+          background-color: black;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        "
+      >
+        <h1 style="font-weight: 400; font-size: 50px; color: white">
+          iPhone 20 ai Pro Max
+        </h1>
 
-            <button style="background-color: rgb(55, 142, 210); color: white; padding: 1% 1.5%; border-radius: 50px; font-size: 18px; border: 2px solid black;">Buy Now</button>
+        <video autoplay muted loop style="width: 100%; height: 50%">
+          <source src="large_2x.mp4" type="video/mp4" />
 
-        </div >
+          Your browser does not support the video tag.
+        </video>
 
-
-        
-
-
-        
-        
-
-        
+        <button
+          style="
+            background-color: rgb(55, 142, 210);
+            color: white;
+            padding: 1% 1.5%;
+            border-radius: 50px;
+            font-size: 18px;
+            border: 2px solid black;
+          "
+        >
+          Buy Now
+        </button>
+      </div>
     </div>
-
-
-
-
-</body>
-<script src="https://kit.fontawesome.com/0b7f141f42.js" crossorigin="anonymous"></script>
-
+  </body>
+  <script
+    src="https://kit.fontawesome.com/0b7f141f42.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
-
