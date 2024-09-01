@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Timeline</title>
+    <link rel="stylesheet" href="../dist/styles.css" />
+    <style>
+      /* Additional styles for the blog options container */
+      #content-container {
+        display: none; /* Initially hidden */
+        background-color: #2d3748;
+        color: white;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+      }
+
+      #content-container a {
+        display: block;
+        padding: 8px 0;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid #4a5568;
+      }
+
+      #content-container a:hover {
+        color: #cbd5e0; /* Lighter gray on hover */
+      }
+
+      @media (max-width: 768px) {
+        .hidden.md\\:flex {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #content-container {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-900 font-sans">
+    <nav class="bg-gray-800 text-white px-4 py-3">
+      <div class="container mx-auto flex items-center justify-between">
+        <!-- Logo or Branding -->
+        <div class="text-3xl font-bold underline">
+          <img
+            src="./images/logo-6.png"
+            alt=""
+            style="width: 60px; height: 60px"
+          />
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-6">
+          <a href="#" class="hover:text-gray-400">Home</a>
+          <a href="./Eras/Era's.html" class="hover:text-gray-400">Era Of</a>
+          <a href="#" class="hover:text-gray-400" id="blogs-link">Blogs</a>
+          <a href="./Gallery Eras/Era's.html" class="hover:text-gray-400">Gallery</a>
+          <a href="#" class="hover:text-gray-400">Contact Us</a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="bg-gray-700 text-white rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
+          />
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content Container -->
+    <div id="content-container" class="container mx-auto my-8">
+      <!-- Links to different blogs or pages -->
+      <a href="././Eras/googleEras/allContent.html">Google</a>
+      <a href="././Eras/AmazonEras/allContent.html">Amazon</a>
+      <a href="././Eras/FacebookEras/allContent.html">Facebook</a>
+      <a href="././Eras/AppleEras/allContent.html">Apple</a>
+      <a href="././Eras/MicrosoftEras/allContent.html">Microsoft</a>
+    </div>
+
+    <script>
+      document
+        .getElementById('blogs-link')
+        .addEventListener('click', function (event) {
+          event.preventDefault() // Prevent the default link behavior
+
+          var contentContainer = document.getElementById('content-container')
+
+          // Toggle the display of the content container
+          if (
+            contentContainer.style.display === 'none' ||
+            contentContainer.style.display === ''
+          ) {
+            contentContainer.style.display = 'block'
+          } else {
+            contentContainer.style.display = 'none'
+          }
+        })
+    </script>
+  </body>
+</html>
