@@ -1,0 +1,720 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply m-0 p-0 box-border;
+    box-sizing: border-box;
+}
+
+:root {
+    --small-nav-bg-blue: #1570a6;
+    --nav-text-blue: #1570a6;
+    --small-navbar-top-bg-grey: #eeeeee;
+    --cortana-bg-grey: #333333;
+    --follow-us-dark-blue: #125e8b;
+}
+
+body {
+    width: 100vw;
+}
+
+/* navbar-section */
+/* =================================================== */
+
+/* small-navbar */
+/* --------------------------------- */
+
+.small-navbar-wrapper {
+    @apply mb-2;
+}
+
+.small-navbar-link-wrapper {
+    @apply w-[100vw] text-right bg-[var(--small-navbar-top-bg-grey)] text-sm px-2 py-[0.1rem];
+}
+
+.small-nav-link {
+    @apply text-[var(--nav-text-blue)] cursor-pointer;
+}
+
+.small-nav-link:hover {
+    @apply text-black;
+}
+
+.sn-top-link:hover {
+    @apply underline;
+}
+
+.small-navbar {
+    @apply flex justify-between items-center py-3 pl-3;
+}
+
+.small-nav-logo {
+    @apply w-[71.875%];
+}
+
+.small-nav-right {
+    @apply flex justify-center items-center gap-5 text-lg;
+}
+
+.small-navigation {
+    @apply flex flex-col justify-center items-start;
+}
+
+.small-nav-card {
+    @apply flex justify-start items-baseline gap-1 text-white bg-[var(--small-nav-bg-blue)] w-full my-[0.02rem] py-2 pl-3;
+}
+
+.small-nav-darrow {
+    @apply text-xs;
+}
+
+/* medium-navbar */
+/* --------------------------------- */
+
+.medium-navbar {
+    @apply hidden;
+}
+
+.medium-nav-link-wrapper {
+    @apply text-right text-[var(--nav-text-blue)] pr-3 py-3;
+}
+
+.medium-nav-link {
+    @apply text-sm;
+}
+
+.medium-nav-link:hover {
+    @apply underline cursor-pointer;
+}
+
+.nav-logo-search-wrapper {
+    @apply flex justify-center items-center w-[100vw];
+}
+
+.nav-logo-search {
+    @apply flex justify-between items-start max-w-[1180px] w-full px-4 pt-1 pb-4 xl:px-0;
+}
+
+.nav-search-input {
+    @apply w-[90%];
+}
+
+.nav-search {
+    @apply border-[1px] border-gray-500 w-[34.74%];
+}
+
+.nav-search-input {
+    width: calc(100% - 25px);
+    @apply cursor-text outline-none pl-2;
+}
+
+.nav-search-input::selection {
+    @apply border-transparent;
+}
+
+.nav-search-icon {
+    @apply text-[var(--nav-text-blue)] w-5;
+}
+
+.medium-navigation {
+    @apply flex items-center justify-start gap-8 pl-4 pb-3 xl:pl-0;
+}
+
+.medium-nav-darrow {
+    @apply text-[0.6rem] font-bold;
+}
+
+/* large-navbar */
+/* --------------------------------- */
+
+.large-navbar {
+    @apply hidden;
+}
+
+.large-nav-logo-search-wrapper {
+    @apply pt-7 flex justify-center items-center w-[100vw] xl:mx-0 xl:px-0;
+}
+
+.large-navigation-link-wrapper {
+    @apply w-full flex justify-center items-center;
+}
+
+.large-navigation-link {
+    @apply flex justify-between items-start pr-4 w-full max-w-[1180px];
+}
+
+.large-nav-link {
+    @apply text-[var(--nav-text-blue)] cursor-pointer;
+}
+
+.large-nav-link:hover {
+    @apply underline;
+}
+
+.m-navigate-item:hover {
+    @apply cursor-pointer text-[var(--nav-text-blue)];
+}
+
+/* *************     media-queries (navbar-section)     ************** */
+
+@media screen and (min-width: 539px) {
+    .small-navbar-wrapper {
+        @apply hidden;
+    }
+
+    .medium-navbar {
+        @apply block;
+    }
+}
+
+@media screen and (min-width: 899px) {
+    .medium-navbar {
+        @apply hidden;
+    }
+
+    .large-navbar {
+        @apply block;
+    }
+}
+
+/* cortana-section */
+/* =================================================== */
+
+/* small-cortana */
+/* --------------------------------- */
+
+.small-cortana-text {
+    @apply flex flex-col bg-[var(--cortana-bg-grey)] text-white pl-10 pr-7 gap-1 pt-3 pb-10;
+}
+
+.cortana-header {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    @apply text-[1.18rem] font-extralight leading-5;
+}
+
+.cortana-footer {
+    @apply flex justify-start items-center gap-5 text-sm font-normal;
+}
+
+.cortana-footer p:hover {
+    @apply underline cursor-pointer;
+}
+
+/* medium-cortana */
+/* ---------------------------------- */
+.medium-cortana {
+    @apply hidden;
+}
+
+.medium-cortana-text {
+    @apply flex flex-col bg-[var(--cortana-bg-grey)] text-white pl-10 pr-7 gap-1 pt-3 pb-6;
+}
+
+/* large-cortana */
+/* ---------------------------------- */
+.large-cortana {
+    @apply hidden bg-[url(media/cortana.png)] bg-cover h-[33.4vw] relative cursor-pointer justify-center items-center;
+}
+
+.large-cortana-text-wrapper {
+    @apply w-full h-full max-w-[1180px];
+}
+
+.large-cortana-text {
+    @apply absolute text-white bg-[var(--cortana-bg-grey)] flex flex-col justify-between items-start gap-8 w-[270.4px] px-5 py-4 mt-5 ml-5 z-10 cursor-pointer lg:gap-12 lg:px-6 lg:py-6 lg:w-[300px] xl:mx-0;
+}
+
+.large-cortana-header {
+    @apply text-[1.2rem] leading-6 font-light lg:text-[27px] lg:leading-8;
+}
+
+.large-cortana-footer {
+    @apply flex flex-col justify-center items-start gap-1 text-sm lg:text-[1rem];
+}
+
+.large-cortana-footer p {
+    @apply cursor-pointer;
+}
+
+.large-cortana-footer p:hover {
+    @apply cursor-pointer underline;
+}
+
+/* *************     media-queries (cortana-section)     ************** */
+
+@media screen and (min-width: 540px) {
+    .small-cortana {
+        @apply hidden;
+    }
+    .medium-cortana {
+        @apply block;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .medium-cortana {
+        @apply hidden;
+    }
+    .large-cortana {
+        @apply flex;
+    }
+}
+
+@media screen and (min-width: 1230px) {
+    .large-cortana-text {
+        margin-left: calc((100vw-1180px) / 2);
+    }
+}
+
+/* discover-section */
+/* =================================================== */
+
+/* discover-top-grid */
+/* ------------------------------ */
+
+.discover-top-grid {
+    @apply flex flex-col justify-center items-start max-w-[436px] w-full px-2 py-5;
+}
+
+.dt-grid-card {
+    @apply flex flex-col justify-center items-start;
+}
+
+.dt-card-image:hover {
+    @apply cursor-pointer;
+}
+
+.dt-card-link {
+    @apply text-[var(--nav-text-blue)];
+}
+
+.dt-card-link:hover {
+    @apply cursor-pointer underline text-black;
+}
+
+/* discover-title-urls */
+/* ------------------------------ */
+
+.discover-content {
+    @apply hidden;
+}
+
+.discover-title-urls {
+    @apply px-3 flex flex-col justify-center items-start gap-3;
+}
+
+.discover-title {
+    @apply text-3xl font-light;
+}
+
+.dtitle-urls {
+    @apply flex gap-4 flex-wrap;
+}
+
+.dt-url {
+    @apply text-[var(--nav-text-blue)] h-[0.5rem];
+}
+
+.dt-url:hover {
+    @apply underline text-black cursor-pointer;
+}
+
+/* discover-home-work-urls */
+/* ----------------------------- */
+
+/* discover-home-work ------------- */
+
+.discover-home-work {
+    @apply flex flex-col items-start justify-center gap-2 mt-8 mb-12 px-3;
+}
+
+.home-work-btns {
+    @apply flex items-center justify-start pb-2;
+}
+
+.hw-btn {
+    @apply px-2 py-1;
+}
+
+.hw-btn:hover {
+    @apply text-[var(--small-nav-bg-blue)] cursor-pointer;
+}
+
+.active-btn {
+    @apply bg-[var(--small-nav-bg-blue)] text-white;
+}
+
+.active-btn:hover {
+    @apply bg-black text-white;
+}
+
+.hw-grid {
+    @apply hidden flex-col gap-10;
+}
+
+.hgrid-item {
+    @apply flex items-start justify-start;
+}
+
+.hgrid-image {
+    @apply w-[44.9%] pr-5;
+}
+
+.hgrid-image:hover {
+    @apply opacity-80 cursor-pointer;
+}
+
+.hgrid-img {
+    @apply w-full;
+}
+
+.hgrid-link,
+.durl {
+    @apply text-sm text-[var(--nav-text-blue)];
+}
+
+.hgrid-link:hover,
+.durl:hover {
+    @apply text-black underline cursor-pointer;
+}
+
+/* discover-urls --------------------- */
+
+.discover-urls {
+    @apply grid grid-cols-1 gap-12 px-3;
+}
+
+.discover-url-card {
+    @apply flex flex-col justify-center items-start gap-6;
+}
+
+.durl-list {
+    @apply flex flex-col justify-center items-start gap-2;
+}
+
+/* *************     media-queries (discover-section)     ************** */
+
+@media screen and (min-width: 539px) {
+    .discover-top-grid-wrapper {
+        @apply w-full flex justify-center items-center;
+    }
+
+    .discover-top-grid {
+        @apply flex-row gap-3 max-w-[1180px] px-3;
+    }
+
+    .discover-content-wrapper {
+        @apply mb-16;
+    }
+
+    .discover-content {
+        @apply flex flex-col items-start justify-center;
+    }
+
+    .dt-grid-card {
+        @apply flex flex-col justify-center items-start;
+    }
+
+    .active-hw-grid {
+        @apply flex;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .discover-top-grid {
+        @apply gap-4 px-4 py-6 xl:px-0 xl:gap-6;
+    }
+
+    .discover-title-urls {
+        @apply px-4 gap-4;
+    }
+
+    .dtitle-urls {
+        @apply gap-5;
+    }
+
+    .hw-grid {
+        @apply flex-row gap-4;
+    }
+
+    .hgrid-item {
+        @apply flex-col;
+    }
+
+    .hgrid-image {
+        @apply w-full pr-0;
+    }
+
+    .hgrid-link {
+        @apply text-[0.825rem];
+    }
+
+    .discover-urls {
+        @apply grid-cols-3 gap-4;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .discover-top-grid {
+        @apply py-7 lg:py-10;
+    }
+
+    .discover-title-urls {
+        @apply px-5 gap-7 lg:pl-0 lg:pr-24;
+    }
+
+    .discover-title {
+        @apply text-[2.4rem];
+    }
+
+    .dtitle-urls {
+        @apply flex-col text-xl font-light gap-8;
+    }
+
+    .discover-section-wrapper {
+        @apply flex justify-center items-center;
+    }
+
+    .discover-content {
+        @apply flex-row items-center justify-between gap-12 max-w-[1180px] lg:px-0;
+    }
+
+    .discover-home-work-urls {
+        @apply lg:pr-0 lg:mr-0;
+    }
+}
+
+/* follow-us-section */
+/* =================================================== */
+
+.follow-us-section-wrapper {
+    @apply hidden bg-[var(--nav-text-blue)] w-[100vw];
+}
+
+.follow-us-section {
+    @apply flex flex-col justify-center items-start text-white pb-6 px-4 lg:px-0 max-w-[1180px];
+}
+
+.follow-us-section:hover {
+    @apply bg-[var(--small-nav-bg-blue)];
+}
+
+/* follow-us-blog */
+/* ------------------------------- */
+
+.follow-us-blog {
+    @apply bg-[var(--follow-us-dark-blue)] my-4 px-6 py-6 flex justify-center items-center gap-6 lg:mx-0;
+}
+
+.follow-us-blog:hover {
+    @apply cursor-pointer bg-[#0a4d74];
+}
+
+.fu-blog-title {
+    @apply text-2xl font-light;
+}
+
+.fu-blog-date {
+    @apply text-[1rem];
+}
+
+/* follow-us */
+/* ------------------------------- */
+
+.follow-us {
+    @apply px-4 flex flex-col justify-center items-start gap-2 lg:px-0 lg:gap-5;
+}
+
+.follow-us-header {
+    @apply text-[1.7rem] font-light;
+}
+
+.follow-us-links {
+    @apply flex justify-start items-center gap-4 text-[1rem] lg:gap-2;
+}
+
+.fu-link:hover {
+    @apply underline cursor-pointer;
+}
+
+/* *************     media-queries (follow-us-section)     ************** */
+
+@media screen and (min-width: 680px) {
+    .follow-us-section-wrapper {
+        @apply flex justify-center items-center w-full;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .follow-us-section {
+        @apply flex-row-reverse justify-between items-center;
+    }
+
+    .follow-us {
+        @apply w-[33%];
+    }
+
+    .follow-us-links {
+        @apply flex-col items-start;
+    }
+
+    .follow-us-header {
+        @apply text-[2.35rem];
+    }
+}
+
+/* url-section */
+/* =================================================== */
+
+.url-section-wrapper {
+    @apply w-full px-3 mt-4 flex justify-center items-center;
+}
+
+.url-section {
+    @apply grid grid-cols-1 gap-6 mb-10 items-start w-full;
+}
+
+.url-product-sites {
+    @apply mb-6;
+}
+
+.url-card {
+    @apply flex flex-col justify-center items-start gap-2;
+}
+
+.product-site {
+    @apply flex justify-start items-center gap-1;
+}
+
+.product-sites-list {
+    @apply flex flex-col justify-center items-start gap-2;
+}
+
+.product-logo {
+    @apply w-6;
+}
+
+.product-logo-img {
+    @apply w-full;
+}
+
+.product-name:hover {
+    @apply underline cursor-pointer;
+}
+
+.url-list {
+    @apply flex flex-col justify-center items-start gap-0;
+}
+
+.url-li {
+    @apply text-[0.925rem] text-[var(--nav-text-blue)] gap-1;
+}
+
+.url-li:hover {
+    @apply cursor-pointer underline text-black;
+}
+
+/* *************     media-queries (follow-us-section)     ************** */
+
+@media screen and (min-width: 539px) {
+    .url-section-wrapper {
+        @apply px-4;
+    }
+    .url-section {
+        @apply grid-cols-2 gap-4;
+    }
+    .url-product-sites {
+        @apply row-span-2;
+    }
+    .url-support {
+        @apply row-start-3 row-span-1 col-start-1 col-span-1;
+    }
+    .url-popular-resources {
+        @apply col-start-2 col-span-1 row-start-3 row-span-2;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .url-section-wrapper {
+        @apply px-6 max-w-[1180px] lg:px-0 lg:items-center lg:mx-auto;
+    }
+    .url-section {
+        @apply grid-cols-4 md:mx-auto;
+    }
+    .url-product-sites {
+        @apply row-start-1 row-span-2 col-start-1 col-span-1;
+    }
+    .url-downloads {
+        @apply col-start-2 col-span-1 row-start-1 row-span-1;
+    }
+    .url-support {
+        @apply col-start-3 col-span-1 row-start-1 row-span-1;
+    }
+    .url-popular-resources {
+        @apply col-start-4 col-span-1 row-start-1 row-span-2;
+    }
+    .url-subscribe {
+        @apply row-start-2 row-span-1 col-start-2 col-span-1;
+    }
+    .url-about {
+        @apply col-start-3 col-span-2 row-start-2 row-span-1;
+    }
+}
+
+/* footer-section */
+/* =================================================== */
+
+.footer-section-wrapper {
+    @apply w-[100vw];
+}
+
+.footer-section {
+    @apply flex flex-col justify-center items-start gap-4 px-3 mb-12;
+}
+
+.footer-top {
+    @apply flex flex-col justify-center items-start gap-8;
+}
+
+.footer-us {
+    @apply flex justify-start items-center gap-2;
+}
+
+.footer-us-logo {
+    @apply text-2xl;
+}
+
+.footer-bottom {
+    @apply flex justify-start items-center gap-4 flex-wrap;
+}
+
+.footer-li {
+    @apply h-[0.5rem];
+}
+
+.f-link {
+    @apply text-[var(--nav-text-blue)] text-[0.9rem];
+}
+
+.f-link:hover {
+    @apply text-black underline cursor-pointer;
+}
+
+.f-copyright {
+    @apply text-[0.9rem];
+}
+
+@media screen and (min-width: 900px) {
+    .footer-section {
+        @apply w-full max-w-[1180px] mx-auto lg:px-0 items-end;
+    }
+
+    .footer-top {
+        @apply w-full flex-row justify-between lg:px-0;
+    }
+
+    .footer-bottom {
+        @apply justify-end flex-nowrap;
+    }
+}

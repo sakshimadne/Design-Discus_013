@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Open Sans", system-ui;
+      }
+      #nav-heading {
+        width: 100%;
+        height: 105px;
+        background: #3b5998;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        box-sizing: border-box;
+        padding: 0px 30px;
+      }
+      #nav-left h1 {
+        font-size: 50px;
+        font-weight: 700;
+      }
+      #nav-right {
+        display: flex;
+        gap: 9px;
+      }
+      #nav-right div {
+        display: block;
+      }
+      #nav-right div label {
+        display: flex;
+      }
+
+      #form-container label {
+        display: flex;
+      }
+      button {
+        margin-top: 10px;
+        background-color: #6a8cd4;
+        padding: 6px 20px;
+        color: white;
+      }
+      #main-container {
+        /* border: 1px solid red; */
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(white, rgba(155, 182, 206, 0.997));
+      }
+      #main-container > #main-left {
+        width: 55%;
+        height: 100%;
+        /* background-color: aqua; */
+
+        font-size: 22px;
+        color: #3b5998;
+        font-weight: 700;
+        padding-left: 60px;
+      }
+      #main-container > #main-left img {
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      #main-container > #main-right {
+        width: 45%;
+        height: 100%;
+        color: #3b5998;
+        /* background-color: brown; */
+        /* border: 1px solid red; */
+      }
+      #main-container > #main-right p {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      #form-container {
+        /* border: 1px solid red; */
+        width: 600px;
+        margin-left: 50px;
+        margin-top: 20px;
+        line-height: 25px;
+        font-size: 14px;
+      }
+      #form-container label {
+        /* border: 1px solid pink; */
+      }
+      #form-container label:nth-child(1) {
+        margin-left: 25px;
+      }
+      #form-container label:nth-child(2) {
+        margin-left: 27px;
+      }
+      #form-container label:nth-child(3) {
+        margin-left: 27px;
+      }
+      #form-container label:nth-child(5) {
+        margin-left: 67px;
+      }
+      #form-container label:nth-child(6) {
+        margin-left: 40px;
+      }
+      #form-container label:nth-child(7) {
+        margin-left: 110px;
+        font-size: 10px;
+      }
+      #temp {
+        border: 1px solid #3b5998;
+        position: relative;
+        left: -50px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+      }
+      #temp + button {
+        padding: 3px 5px;
+        background-color: #6aa84f;
+        color: white;
+        border: none;
+        /* position: relative; */
+        /* left: 130px; */
+        font-weight: 600;
+      }
+      #form-container input {
+        width: 300px;
+      }
+      #main-container > #main-right > #form-container p {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      #footer-link {
+      }
+      #footer-link ul:nth-child(1) {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #6a8cd4;
+      }
+      #footer-link div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #footer-link div ul {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        color: #6a8cd4;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav-heading">
+      <div id="nav-left"><h1>facebook</h1></div>
+      <div id="nav-right">
+        <div>
+          <p>Email</p>
+          <input type="email" />
+          <label for="#"> <input type="checkbox" /> Keep me logged in </label>
+        </div>
+        <div>
+          <p>Password</p>
+          <input type="password" />
+          <label for="#"> Forget your password? </label>
+        </div>
+        <div>
+          <button>Login</button>
+        </div>
+      </div>
+    </div>
+    <div id="main-container">
+      <div id="main-left">
+        <p>Facebook helps you connect and share with the</p>
+        <p>people in your life.</p>
+        <img src="/img-file/map-removebg-preview.png" alt="" />
+      </div>
+      <div id="main-right">
+        <h1>Sign up</h1>
+        <p>It's free and anyone can join</p>
+        <div id="form-container">
+          <label for="#">First Name : <input type="text" /></label>
+          <label for="#">Last Name : <input type="text" /></label>
+          <label for="#">Your Email : <input type="text" /></label>
+          <label for="#">New Password : <input type="text" /></label>
+          <label for="#"
+            >I am :
+            <select name="" id="">
+              <option value="">select sex</option>
+              <option value="">Male</option>
+              <option value="">Female</option>
+            </select>
+          </label>
+          <label for="#"
+            >Birthday :
+            <select name="" id="">
+              <option value="">Day</option>
+            </select>
+            <select name="" id="">
+              <option value="">Month</option>
+            </select>
+            <select name="" id="">
+              <option value="">Year</option>
+            </select>
+          </label>
+          <label for="">why do I need to provide this?</label>
+          <div id="temp">
+            <button>Sign Up</button>
+          </div>
+          <p><a href="">Create a page</a> for celebrate, brand or business</p>
+        </div>
+      </div>
+    </div>
+    <div id="footer-link">
+      <ul>
+        <li>English (US)</li>
+        <li>Espanol</li>
+        <li>Portugues (Brasil)</li>
+        <li>Francais (Franch)</li>
+        <li>Deutsch</li>
+        <li>Italiano</li>
+        <li>اردو</li>
+        <li>हिन्दी</li>
+        <li>中国人</li>
+      </ul>
+      <hr />
+      <div>
+        <p>Facebook © 2010</p>
+        <ul>
+          <li>Mobile</li>
+          <li>Find Friends</li>
+          <li>Budget</li>
+          <li>Career</li>
+          <li>About</li>
+          <li>Advertising</li>
+          <li>Developers</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+          <li>Help</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
