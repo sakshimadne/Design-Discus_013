@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply m-0 p-0 box-border;
+}
+
+:root {
+    --dark-grey: #153448;
+    --light-grey: #3c5b6f;
+    --dark-brown: #948979;
+    --light-brown: #dfd0b8;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    @apply flex justify-center items-center h-[100vh] m-0 bg-[var(--dark-grey)] w-full;
+}
+
+.wrapper {
+    @apply w-full flex flex-col justify-center items-center;
+}
+
+.slider-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    @apply flex flex-col items-center p-5 bg-[var(--light-grey)] rounded-[10px] w-[80%] select-none;
+}
+
+.slider {
+    /* -webkit-appearance: none; */
+    transition: background 0.3s;
+    @apply w-[90%] my-5 mx-0 appearance-none bg-[var(--dark-brown)] h-[6px] rounded-[5px] outline-none;
+}
+
+.slider::-webkit-slider-thumb {
+    /* -webkit-appearance: none; */
+    @apply appearance-none w-5 h-5 bg-[var(--dark-brown)] rounded-[50%] cursor-pointer;
+}
+
+.slider::-moz-range-thumb {
+    @apply w-5 h-5 bg-[var(--dark-brown)] rounded-[50%] cursor-pointer;
+}
+
+.links-container {
+    @apply flex justify-between w-[95%];
+}
+
+.link {
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    @apply text-[var(--light-brown)] font-bold py-[5px] px-[10px] rounded-[5px] cursor-default opacity-30 pointer-events-none;
+}
+
+.link.active {
+    @apply text-[var(--light-brown)] bg-[var(--dark-brown)] cursor-pointer opacity-100 pointer-events-auto;
+}
+
+.link.active:hover {
+    @apply text-amber-700;
+}
+
+/* Redirect to Era */
+/* ========================================= */
+
+.era-redirect-btn-wrapper {
+    @apply mt-4;
+}
+
+@import url("https://fonts.googleapis.com/css2?Teko&display=swap");
+
+.era-btn {
+    @apply hidden;
+}
+
+.active-btn {
+    /* @apply px-3 py-2 bg-[var(--dark-brown)] text-[var(--dark-grey)] rounded-md; */
+    @apply flex justify-center items-center;
+    cursor: pointer;
+    border: solid rgb(187, 204, 0);
+    font-family: Teko;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    transition: 258ms;
+    width: 328px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 3px;
+    background: linear-gradient(
+        90deg,
+        rgb(169, 156, 73) 0%,
+        rgb(40, 103, 148) 100%
+    );
+    --hover-bgc: #05abbd;
+    --hover-color: #aacaeb;
+    --hover-borderSize: 0px;
+    --hover-width: 338px;
+}
+
+.active-btn:hover {
+    color: rgb(202, 225, 248);
+    width: 338px;
+    background: rgb(9, 78, 148) none repeat scroll 0% 0% / auto padding-box
+        border-box;
+    border-color: rgb(204, 0, 105);
+    border-width: 0px;
+    border-style: solid;
+}
+
+/* era - image */
+/* ========================================== */
+
+.era-image-container {
+    @apply w-[80%] md:w-[65%] lg:w-[50%] flex justify-center items-center  mb-10;
+}
+
+.era-img-link {
+    @apply hidden;
+}
+
+.active-era-img-link {
+    @apply flex flex-col justify-center items-center gap-3;
+}
+
+.era-img {
+    @apply w-full p-1 border-4 border-blue-500;
+}
+
+.era-img-label {
+    @apply text-gray-400 text-lg font-bold leading-3 py-2 border-b-4 border-dotted;
+    letter-spacing: 0.1rem;
+}

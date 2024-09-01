@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        header {
+            background-color: #f3f3f3;
+            padding: 10px 0;
+        }
+
+        #logo img {
+            text-align: center;
+            margin-left: 300px;
+            width: auto;
+            height: 80px;
+            margin-bottom: -50px;
+        }
+
+        #extra-buttons {
+            margin-left: 450px;
+            display: flex;
+        }
+
+        #upper-buttons {
+            display: flex;
+            margin-left: 330px;
+        }
+
+        #upper-buttons button, #extra-buttons button {
+            background-color: #eeeecc;
+            color: #333;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        #upper-buttons button:nth-child(1) {
+            background-color: #004b91;
+            color: white;
+        }
+
+        #nav-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #004b91;
+        }
+
+        #nav-bar button {
+            background-color: transparent;
+            color: white;
+            border-right: 0.5px solid white;
+            padding: 6px 10px;
+            cursor: pointer;
+            text-align: center;
+            max-width: 150px;
+        }
+
+        #nav-bar i {
+            color: orange;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .left-sidebar {
+    width: 20%;
+    padding: 10px;
+    background-color: #f3f3f3;
+    color: #333;
+    margin-right: 10px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-section {
+    background-color: #004b91; /* Blue background */
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.search-section h3 {
+    margin: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.search-bar select,
+.search-bar button {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    background-color: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.search-info {
+    margin-top: 10px;
+}
+
+.search-info p {
+    margin: 0;
+}
+
+.search-info a {
+    color: blue;
+}
+
+
+        .sidebar {
+            width: 20%;
+            padding: 10px;
+            background-color: #f3f3f3;
+            margin-right: 10px;
+        }
+
+        .sidebar .search {
+            margin-bottom: 10px;
+        }
+
+        .sidebar .search-heading {
+            background-color: #004b91;
+            color: white;
+            padding: 8px;
+            margin: 0;
+        }
+
+        .sidebar select {
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        .sidebar button {
+            padding: 5px;
+            background-color: orange;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .sidebar .browse {
+            margin-top: 10px;
+        }
+
+        .sidebar .browse h3 {
+            color: #004b91;
+        }
+
+        .sidebar .browse ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar .browse ul li {
+            margin: 5px 0;
+            color: orange; /* Color for Browse items */
+        }
+
+        main {
+            width: 50%;
+            padding: 10px;
+        }
+
+        .promotion .hello {
+            color: orange;
+        }
+
+        .promotion a {
+            color: blue;
+        }
+
+        .promotion img {
+            height: 500px;
+            width: auto;
+        }
+
+        .price-list {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .price-item {
+            text-align: center;
+        }
+
+        .top-sellers h3 {
+            margin-top: 30px;
+        }
+
+        .right-sidebar {
+            width: 25%;
+            padding: 10px;
+            background-color: #f3f3f3;
+            margin-left: 10px;
+        }
+
+        .right-sidebar h3 {
+            color: #004b91;
+        }
+
+        .right-sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .right-sidebar ul li {
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div id="logo">
+            <img src="http://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo.png" alt="Amazon Logo">
+        </div>
+        <div id="extra-buttons">
+            <button>Home</button>
+            <button>Offers</button>
+            <button>Customer Service</button>
+            <button>Gift Cards</button>
+            <button>Returns</button>
+            <button>Track Order</button>
+        </div>
+        <div id="upper-buttons">
+            <button>Welcome</button>
+            <button>Books</button>
+            <button>Music</button>
+            <button>DVD & videos</button>
+            <button>Electronics</button>
+            <button>Software</button>
+            <button>Toys & Games</button>
+            <button>Health & Beauty</button>
+        </div>
+        <div id="nav-bar">
+            <button>How to order</button>
+            <button><i class="fa-solid fa-gift"></i> Gift Ideas</button>
+            <button>Deals of the day</button>
+            <button>Friends And Favourites</button>
+            <button>Free E-Cards</button>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="left-sidebar">
+            <div class="search-container">
+                <div class="search-section">
+                    <h3>Search</h3>
+                    <div class="search-bar">
+                        <select>
+                            <option>All Products</option>
+                        </select>
+                        <button>Go</button>
+                    </div>
+                </div>
+                <div class="search-info">
+                    <p>Search of the day:</p>
+                    <a href="">travel guide</a>
+                </div>
+            </div>
+        </aside>
+        
+
+        <main>
+            <section class="promotion">
+                <span><span class="hello">Hello</span>. Sign in to get <a href="">personalized recommendations.</a> New customer? <a href="#">Start here</a>.</span>
+                <img src="https://1.bp.blogspot.com/-d1U7couLhDE/X3xO_QwSIQI/AAAAAAAAAD4/KGYKZs4Adm4WGpzXYCNlA0fNcpTPf-R6ACLcBGAsYHQ/s1000/amazonup%2Bcoming%2B%2Bpost.jpg" alt="">
+                <div class="price-list">
+                    <div class="price-item">
+                        <p>List Price $20</p>
+                        <p>Save $6</p>
+                    </div>
+                    <div class="price-item">
+                        <p>List Price $30</p>
+                        <p>Save $9</p>
+                    </div>
+                    <div class="price-item">
+                        <p>List Price $40</p>
+                        <p>Save $12</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="top-sellers">
+                <h3>Top Sellers in Electronics</h3>
+                <h4>Linksys BEFSR41 Etherfast 4-Port Cable/DSL Router</h4>
+                <p>Linksys is fast making a name for itself in the networking world...</p>
+                <a href="#">Read more</a>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="search">
+                <h3 class="search-heading">Search</h3>
+                <select>
+                    <option>All Products</option>
+                </select>
+                <button>Go</button>
+            </div>
+            <div class="browse">
+                <h3>Browse</h3>
+                <ul>
+                    <li>Your Favorites</li>
+                    <li>Books</li>
+                    <li>Electronics</li>
+                    <li>Music</li>
+                    <li>Camera & Photo</li>
+                    <li>Health & Beauty</li>
+                    <li>Software</li>
+                    <li>Kitchen & Housewares</li>
+                    <li>Tools & Hardware</li>
+                    <li>In Theaters</li>
+                    <li>DVD</li>
+                    <li>Computer & Video Games</li>
+                    <li>Baby & Baby Registry</li>
+                    <li>Toys & Games</li>
+                    <li>Cell Phones & Service</li>
+                    <li>Video</li>
+                </ul>
+            </div>
+        </aside>
+        
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</html>

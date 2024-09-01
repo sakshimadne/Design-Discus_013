@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Era Navigation</title>
+        <link rel="stylesheet" href="./output.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- era-image -->
+            <!-- =============================== -->
+            <div class="era-image-container">
+                <!-- Amazon - 1990s -->
+                <a
+                    href="./era_pages/1990s/layouts/amazon/amazon1990.html"
+                    class="era-img-link active-era-img-link"
+                >
+                    <img
+                        src="./era_pages/1990s/layouts/amazon/1990s.png"
+                        alt=""
+                        class="era-img"
+                    />
+                    <div class="era-img-label">Amazon in 1990s</div>
+                </a>
+
+                <!-- Google - 2000s -->
+                <a
+                    href="./era_pages/2000s/layouts/google/google2000/google2000.html"
+                    class="era-img-link"
+                >
+                    <img
+                        src="./era_pages/2000s/layouts/google/2000s.png"
+                        alt=""
+                        class="era-img"
+                    />
+                    <div class="era-img-label">Google in 2000s</div>
+                </a>
+
+                <!-- Microsoft - 2010s -->
+                <a
+                    href="./era_pages/2010s/layouts/microsoft/2010s/index.html"
+                    class="era-img-link"
+                >
+                    <img
+                        src="./era_pages/2010s/layouts/microsoft/2010s.png"
+                        alt=""
+                        class="era-img"
+                    />
+                    <div class="era-img-label">Microsoft in 2010s</div>
+                </a>
+
+                <!-- Facebook - 2020s -->
+                <a
+                    href="./era_pages/2020s/layouts/facebook/facebook-era3.html"
+                    class="era-img-link"
+                >
+                    <img
+                        src="./era_pages/2020s/layouts/facebook/2020s.png"
+                        alt=""
+                        class="era-img"
+                    />
+                    <div class="era-img-label">Facebook in 2020s</div>
+                </a>
+
+                <!-- Apple - 2030s -->
+                <a
+                    href="./era_pages/2030s/layouts/apple/Apple_2030/index.html"
+                    class="era-img-link"
+                >
+                    <img
+                        src="./era_pages/2030s/layouts/apple/2030s.png"
+                        alt=""
+                        class="era-img"
+                    />
+                    <div class="era-img-label">Apple in 2030s</div>
+                </a>
+            </div>
+
+            <!-- slider -->
+            <!-- =============================== -->
+            <div class="slider-container">
+                <input
+                    type="range"
+                    id="slider"
+                    min="0"
+                    max="4"
+                    value="0"
+                    step="1"
+                    class="slider"
+                    autocomplete="off"
+                />
+                <div class="links-container">
+                    <a
+                        href="./era_pages/1990s/index.html"
+                        id="link-0"
+                        class="link 1990s active"
+                        >1990s</a
+                    >
+                    <a
+                        href="./era_pages/2000s/index.html"
+                        id="link-1"
+                        class="link 2000s"
+                        >2000s</a
+                    >
+                    <a
+                        href="./era_pages/2010s/index.html"
+                        id="link-2"
+                        class="link 2010s"
+                        >2010s</a
+                    >
+                    <a
+                        href="./era_pages/2020s/index.html"
+                        id="link-3"
+                        class="link 2020s"
+                        >2020s</a
+                    >
+                    <a
+                        href="./era_pages/2030s/index.html"
+                        id="link-4"
+                        class="link 2030s"
+                        >2030s</a
+                    >
+                </div>
+            </div>
+
+            <!-- Redirect to Era -->
+            <!-- =============================== -->
+            <div class="era-redirect-btn-wrapper">
+                <!-- 1990s -->
+                <a
+                    href="./era_pages/1990s/index.html"
+                    class="era-btn active-btn"
+                    >Explore 1990s UI</a
+                >
+                <!-- 2000s -->
+                <a href="./era_pages/2000s/index.html" class="era-btn"
+                    >Explore 2000s UI</a
+                >
+                <!-- 2010s -->
+                <a href="./era_pages/2010s/index.html" class="era-btn"
+                    >Explore 2010s UI</a
+                >
+                <!-- 2020s -->
+                <a href="./era_pages/2020s/index.html" class="era-btn"
+                    >Explore 2020s UI</a
+                >
+                <!-- 2030s -->
+                <a href="./era_pages/2030s/index.html" class="era-btn"
+                    >Explore 2030s UI</a
+                >
+            </div>
+        </div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>

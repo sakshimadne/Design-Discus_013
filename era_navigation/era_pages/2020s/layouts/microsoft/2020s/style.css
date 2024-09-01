@@ -1,0 +1,485 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --dark: #333;
+    --light: #fff;
+    --lightgrey: #f4f4f4;
+    --Nero: #262626;
+    --grey: #f2f2f2;
+    --lightblack: #616161;
+    --Gray80: #ccc;
+}
+
+* {
+    @apply m-0 p-0 box-border;
+}
+
+/* general stylings -------------------- */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    @apply bg-[var(--light)] text-[var(--black)] text-[15px];
+}
+
+a {
+    text-decoration: none;
+    @apply text-[var(--Nero)];
+}
+
+ul {
+    list-style: none;
+    @apply list-none;
+}
+
+.btn {
+    @apply cursor-pointer inline-block border-0 font-bold py-[10px] px-5 bg-[var(--Nero)] text-[var(--light)] text-[15px];
+}
+.btn:hover {
+    @apply opacity-90;
+}
+
+.menu-btn {
+    @apply cursor-pointer absolute top-5 right-[30px] z-[2] hidden;
+}
+
+.dark {
+    @apply text-[var(--light)];
+}
+
+.dark .btn {
+    @apply bg-[var(--lightgrey)] text-[var(--dark)];
+}
+/* ------------------------------------- */
+
+/* #################################################### */
+/* wrapper & container */
+/* #################################################### */
+
+.wrapper {
+    @apply w-full;
+}
+
+.container {
+    @apply w-[90%] max-w-[1100px] m-auto;
+}
+
+/* navbar-section */
+/* ===================================================== */
+
+.navbar-section-wrapper {
+    @apply w-full px-4 py-[0.8rem] flex justify-center items-center;
+}
+
+.navbar-section {
+    @apply w-full max-w-[1360px] flex justify-between items-center;
+}
+
+/* hover-effects */
+.navlink,
+.microsoft-search-text,
+.cart-text,
+.all-microsoft span {
+    @apply border-b-2 border-transparent;
+}
+
+.navlink:hover,
+.microsoft-search-text:hover,
+.cart-text:hover,
+.all-microsoft span:hover {
+    @apply border-b-2 border-black cursor-pointer;
+}
+
+/* hamburger-search */
+/* ----------------------------- */
+
+.hamburger-icon {
+    @apply text-lg scale-x-[135%] text-gray-600 cursor-pointer;
+}
+
+.search-icon {
+    @apply text-gray-600 text-sm cursor-pointer;
+}
+
+.search-icon:hover {
+    @apply text-gray-500;
+}
+
+.hamburger-search {
+    @apply flex justify-center items-center gap-7;
+}
+
+/* microsoft-logo-navlinks */
+/* ------------------------------ */
+
+.microsoft-logo-navlinks {
+    @apply flex justify-center items-center gap-8;
+}
+
+.microsoft-logo-img {
+    @apply w-[108px] cursor-pointer;
+}
+
+/* navlinks- */
+
+.navlinks-wrapper {
+    @apply hidden;
+}
+
+/* all-microsoft-search-cart-dp */
+/* ------------------------------ */
+
+.all-microsoft-search-cart-dp {
+    @apply flex justify-center items-center gap-5;
+}
+
+.all-microsoft {
+    @apply text-[13px] flex justify-center items-center gap-1;
+}
+
+.all-microsoft,
+.microsoft-search {
+    @apply hidden;
+}
+
+.microsoft-search-text,
+.cart-text {
+    @apply hidden;
+}
+
+.cart-and-dp {
+    @apply flex justify-center items-center gap-4;
+}
+
+.cart-icon {
+    @apply text-gray-600 text-sm cursor-pointer;
+}
+.cart-icon:hover {
+    @apply text-gray-500;
+}
+
+.dp-wrapper {
+    @apply flex justify-center items-center border-[1px] border-black h-7 w-7 rounded-full cursor-pointer;
+}
+
+.dp-icon {
+    @apply text-sm;
+}
+
+.darrow-navlink-icon {
+    @apply text-[10px];
+}
+
+/* **********   media-queries (navbar-section)   ********** */
+
+@media screen and (min-width: 860px) {
+    /* increase left & right padding */
+    .navbar-section-wrapper {
+        @apply px-8;
+    }
+
+    /* hamburger-hidden */
+    .hamburger-search {
+        @apply hidden;
+    }
+
+    /* 5 navbar-links */
+    .navlinks-wrapper {
+        @apply flex justify-center gap-4 text-[13px];
+    }
+
+    .navlink-surface,
+    .navlink-xbox,
+    .navlink-support {
+        @apply hidden;
+    }
+
+    .all-microsoft,
+    .microsoft-search {
+        @apply inline-flex;
+    }
+}
+
+@media screen and (min-width: 890px) {
+    /* 6 navbar-links */
+    .navlink-surface {
+        @apply inline-flex;
+    }
+}
+
+@media screen and (min-width: 937px) {
+    /* 7 navbar-links */
+    .navlink-xbox,
+    .navlink-support {
+        @apply inline-flex;
+    }
+    .navlink-more {
+        @apply hidden;
+    }
+}
+
+@media screen and (min-width: 1083px) {
+    .navbar-section-wrapper {
+        @apply px-14 lg:px-0;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    /* Search , Cart texts */
+    .microsoft-search-text,
+    .cart-text {
+        @apply inline-flex text-[13px];
+    }
+
+    .microsoft-search {
+        @apply flex justify-center items-center gap-1;
+    }
+}
+
+/* navbar-additional-styles */
+/* ========================================================== */
+
+.main-nav {
+    @apply flex items-center justify-between h-[60px] py-20 px-0 text-[13px];
+}
+
+.main-nav .logo {
+    /* make the logo little bit small */
+    @apply w-[110px];
+}
+
+.main-nav ul {
+    @apply flex;
+}
+
+.main-nav ul li {
+    @apply px-[10px] py-0;
+}
+
+.main-nav ul li a:hover {
+    @apply border-b-2 border-solid border-[var(--Nero)];
+}
+
+.main-nav ul li a {
+    @apply pb-[2px];
+}
+
+.main-nav ul.main-menu {
+    flex: 1;
+    @apply ml-5 flex-1;
+}
+
+/* animation-section */
+/* ========================================================== */
+
+.showcase {
+    background: url("./imges/slide1.png") no-repeat center center/cover;
+    @apply w-full h-[400px] flex flex-col items-center text-center justify-end pb-[50px] mb-5;
+}
+
+.showcase h2,
+p {
+    @apply mb-[10px];
+}
+
+.showcase .btn {
+    @apply mt-5;
+}
+
+/* grid-1-section */
+/* ========================================================== */
+
+/* Home Cards1 */
+.home-cards {
+    @apply grid grid-cols-4 gap-5 mb-10;
+}
+
+.home-cards img {
+    @apply w-full h-[170px] mb-5;
+}
+
+.home-cards h3 {
+    @apply mb-[5px];
+}
+
+.home-cards a {
+    @apply inline-block pt-[10px] text-[var(--blue)] uppercase font-bold;
+}
+
+.home-cards a:hover i {
+    @apply ml-[10px];
+}
+
+/* star-wars-section */
+/* ========================================================= */
+
+.xbox {
+    background: url("./imges/xbox.png") no-repeat center center/cover;
+    @apply w-full h-[350px] mb-5;
+}
+
+.xbox .content {
+    @apply w-[40%] pt-[50px] pr-0 pb-0 pl-[30px];
+}
+
+.xbox p,
+.carbon p {
+    @apply mt-[10px] mb-[20px] mx-0;
+}
+
+/* business-grid */
+/* ========================================================= */
+
+/* same styling as grid-1-section (so not adding any different CSS) */
+
+/* follow-section */
+/* ========================================================= */
+
+.carbon {
+    background: url("./imges/carbon.jpg") no-repeat center center/cover;
+    @apply w-full h-[350px] mb-5;
+}
+
+.carbon .content {
+    @apply w-[45%] pt-[100px] pr-0 pb-0 pl-[30px] text-[var(--dark)];
+}
+
+.carbon .btn {
+    @apply bg-[var(--Nero)] text-[var(--light)];
+}
+
+/* follow-section-content  */
+/* --------------------------- */
+
+.fllow {
+    @apply flex items-center justify-start my-[30px] mx-0;
+}
+
+/* (.fllow * ) mean for every element in  .fllow give margin-right: 10px; */
+.fllow * {
+    @apply mr-[10px];
+}
+
+/* url-section */
+/* ============================================= */
+
+.links {
+    @apply bg-[var(--grey)] text-[var(--lightblack)] text-[12px] py-[35px];
+}
+
+.links-inner {
+    @apply max-w-[1100px] my-0 mx-auto py-0 px-5 grid grid-cols-6 gap-[10px] items-start justify-center;
+}
+
+.links li {
+    line-height: 2.8;
+}
+
+/* footer-section */
+/* ============================================= */
+
+.footer {
+    @apply bg-[var(--grey)] text-[var(--lightblack)] text-[12px] py-5 px-0;
+}
+
+.footer-inner {
+    @apply max-w-[1100px] my-0 mx-auto py-0 px-5 flex items-center justify-between;
+}
+
+.footer div {
+    @apply flex mb-5 items-center;
+}
+
+.footer div i {
+    @apply mr-[10px];
+}
+
+.footer ul {
+    @apply flex flex-wrap;
+}
+
+.footer li {
+    @apply mr-[30px] mb-[20px];
+}
+
+.footer-li:hover {
+    @apply border-b-2 border-black cursor-pointer;
+}
+
+/* #######################    media-queries    ######################## */
+
+@media screen and (max-width: 700px) {
+    .menu-btn {
+        @apply block;
+    }
+
+    .menu-btn:hover {
+        @apply opacity-50;
+    }
+
+    .main-nav ul.right-menu {
+        @apply mr-[50px];
+    }
+
+    .main-nav ul.main-menu {
+        transform: translateX(
+            -500px
+        ); /* go off the screen(like display:none) */
+        transition: transform 0.5s ease-in-out;
+        @apply block absolute top-0 bottom-0 w-1/2 h-full bg-[var(--grey)] border-r-[1px] border-solid border-[var(--Gray80)] opacity-90 p-[30px];
+    }
+
+    .main-nav ul.main-menu li {
+        @apply p-[10px] border-b-[1px] border-solid border-[var(--Gray80)] text-[15px];
+    }
+
+    .main-nav ul.main-menu li:last-child {
+        @apply border-b-0;
+    }
+
+    .main-nav ul.main-menu.show {
+        transform: translateX(-20px); /* show the menu on click */
+    }
+
+    .home-cards {
+        @apply grid-cols-2;
+    }
+
+    .xbox .content p {
+        @apply hidden;
+    }
+
+    .xbox .content h2 {
+        @apply mb-5;
+    }
+
+    .carbon .content {
+        @apply w-[85%];
+    }
+
+    .links .links-inner {
+        @apply grid-cols-2;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home-cards {
+        @apply grid-cols-1;
+    }
+
+    .links .links-inner {
+        @apply grid-cols-1;
+    }
+
+    .links .links-inner ul {
+        @apply mb-5;
+    }
+
+    .footer .footer-inner {
+        @apply grid;
+    }
+    .footer .footer-inner li {
+        @apply m-[10px];
+    }
+}
