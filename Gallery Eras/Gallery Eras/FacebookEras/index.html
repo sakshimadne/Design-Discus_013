@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook UI Evolution</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4; /* Light gray Facebook background */
+        color: #333;
+      }
+
+      header {
+        background-color: #3b5998; /* Facebook's primary blue color */
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        letter-spacing: 1px;
+      }
+
+      header p {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+        color: #dfe3ee;
+      }
+
+      #era-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .era-button {
+        background-color: #3b5998; /* Facebook's primary blue color */
+        color: white;
+        padding: 15px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.2em;
+        transition: background-color 0.3s ease;
+      }
+
+      .era-button:hover {
+        background-color: #29487d; /* Darker blue on hover */
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2em;
+        }
+
+        header p {
+          font-size: 1em;
+        }
+
+        .era-button {
+          font-size: 1em;
+          padding: 10px 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.5em;
+        }
+
+        header p {
+          font-size: 0.9em;
+        }
+
+        .era-button {
+          font-size: 0.9em;
+          padding: 8px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Facebook UI Evolution</h1>
+      <p>
+        Select an era to see how Facebook's interface has evolved over time.
+      </p>
+    </header>
+
+    <div id="era-container">
+      <a href="./Facebook2010.html" class="era-button">Facebook in 2009</a>
+      <a href="./Facebook2020.html" class="era-button">Facebook in 2020</a>
+      <a href="./Facebook2030.html" class="era-button">Facebook in 2030</a>
+    </div>
+  </body>
+</html>

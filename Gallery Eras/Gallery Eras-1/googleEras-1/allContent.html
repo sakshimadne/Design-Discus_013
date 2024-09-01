@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Eras Overview</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+
+      header {
+        background-color: #0057e7; /* Blue background */
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        margin-bottom: 30px;
+        border-radius: 5px;
+      }
+
+      header h1 {
+        margin-bottom: 10px;
+        font-size: 2.5em;
+      }
+
+      header p {
+        font-size: 1.2em;
+      }
+
+      main {
+        max-width: 1400px; /* Increase maximum width */
+        margin: 0 auto;
+      }
+
+      .era {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      .era-content {
+        flex: 2;
+        padding-right: 40px; /* More space between content and image */
+      }
+
+      .era h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: #0057e7; /* Blue color */
+        border-bottom: 2px solid #e4e4e4;
+        padding-bottom: 10px;
+      }
+
+      .era p {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        line-height: 1.8;
+      }
+
+      .era h3 {
+        font-size: 1.5em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #444;
+      }
+
+      .era ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .era ul li {
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
+
+      .era-image {
+        flex: 1;
+        max-width: 600px; /* Increase image width */
+      }
+
+      .era-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .era-image img:hover {
+        transform: scale(1.05);
+      }
+
+      footer {
+        background-color: #0057e7; /* Blue background */
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      footer p {
+        font-size: 1em;
+      }
+      /* Responsive Styles */
+      @media (max-width: 1024px) {
+        .era {
+          flex-direction: column;
+        }
+
+        .era-image {
+          margin: 20px 0;
+          width: 100%;
+          order: 1;
+        }
+
+        .era-content {
+          order: 2;
+          text-align: center;
+        }
+
+        .era h2 {
+          font-size: 1.8em;
+        }
+
+        .era p,
+        .era ul {
+          font-size: 1em;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .era {
+          padding: 15px;
+        }
+
+        .era h2 {
+          font-size: 1.6em;
+        }
+
+        .era p,
+        .era ul {
+          font-size: 0.95em;
+        }
+
+        .era-content {
+          text-align: left;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .era {
+          padding: 10px;
+        }
+
+        .era h2 {
+          font-size: 1.4em;
+        }
+
+        .era p,
+        .era ul {
+          font-size: 0.9em;
+        }
+
+        .era-content {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Google Eras Overview</h1>
+      <p>
+        Explore the evolution of Google's interface and services across
+        different eras.
+      </p>
+    </header>
+
+    <main>
+      <section class="era" id="google-1990s">
+        <div class="era-content">
+          <h2>Google in the 1990s</h2>
+          <p>
+            <strong>Overview:</strong> The 1990s marked the birth of Google as a
+            search engine. Founded by Larry Page and Sergey Brin in 1998, Google
+            began as a research project at Stanford University. The initial
+            version of Google was a simple search page with minimal design and a
+            focus on providing fast, relevant search results.
+          </p>
+          <h3>Key Developments:</h3>
+          <ul>
+            <li>
+              <strong>1996: The Beginning of BackRub</strong><br />
+              The project that eventually became Google started as "BackRub," a
+              research initiative led by Larry Page and Sergey Brin at Stanford
+              University. The name "BackRub" was chosen because the search
+              engine analyzed backlinks to understand the importance of web
+              pages. The focus of BackRub was to create a better search engine
+              by leveraging a new technology called PageRank, which ranked web
+              pages based on their link structure rather than just keyword
+              matching.
+            </li>
+            <li>
+              <strong>1997: The Birth of the Google Name</strong>
+              The domain name "google.com" was registered on September 15, 1997.
+              The name "Google" is a play on the word "googol," which is a
+              mathematical term for the number 1 followed by 100 zeros. This
+              name reflects Larry and Sergey's mission to organize a seemingly
+              infinite amount of information on the web. The project
+              transitioned from BackRub to Google, and it began to gain traction
+              as the search engine of choice among academics and researchers.
+            </li>
+            <li>
+              <strong>1998: Incorporation and the First Funding</strong>
+
+              Google was officially incorporated as a company on September 4,
+              1998. The incorporation took place in the garage of Susan Wojcicki
+              (now the CEO of YouTube), where Larry and Sergey had set up their
+              office. Google received its first significant funding of $100,000
+              from Andy Bechtolsheim, co-founder of Sun Microsystems. This
+              investment was critical in helping Google move out of the garage
+              and into its first office in Menlo Park, California. In the same
+              year, Google launched its first Doodle on its homepage,
+              celebrating the Burning Man Festival. This marked the beginning of
+              Google's tradition of using Doodles to commemorate special events.
+            </li>
+            <li>
+              <strong>1999: Rapid Growth and Moving to Mountain View</strong>
+              Google moved to its current headquarters in Mountain View,
+              California, famously known as the "Googleplex." The company also
+              secured additional funding of $25 million from venture capital
+              firms, including Sequoia Capital and Kleiner Perkins. This funding
+              fueled Google's rapid growth. Google introduced AdWords in 1999, a
+              self-service program that allows businesses to run ads on Google.
+              This was the beginning of Google's advertising empire.
+            </li>
+            <li>
+              <strong
+                >2000: International Expansion and Language Support</strong
+              >
+              Google began its international expansion by launching Google in
+              multiple languages, including French, German, Italian, Swedish,
+              Finnish, Spanish, Portuguese, Dutch, Norwegian, Danish, Chinese,
+              Japanese, and Korean. Google also launched its image search
+              feature in 2000, allowing users to search for images on the web,
+              which became a hugely popular feature. The Google Toolbar was
+              introduced, allowing users to search Google directly from their
+              web browsers without going to the Google homepage.
+            </li>
+          </ul>
+          <p>
+            <strong>Design:</strong> The early Google homepage was barebones,
+            featuring just a search box and two buttons: "Google Search" and
+            "I'm Feeling Lucky."
+          </p>
+        </div>
+        <div class="era-image">
+          <img src="../../images/google-1990.png" alt="Google in the 1990s" />
+        </div>
+      </section>
+
+      <!-- Google in the 2010s -->
+      <section class="era" id="google-2010s">
+        <div class="era-content">
+          <h2>Google in the 2010s</h2>
+          <p>
+            <strong>Overview:</strong> The 2010s saw Google expand its services
+            far beyond search. The company introduced numerous products like
+            Google Maps, Gmail, Google Docs, and the Android operating system.
+            The design of Google’s homepage evolved to become more modern, with
+            a focus on simplicity and user experience.
+          </p>
+          <h3>Key Developments:</h3>
+          <ul>
+            <li>
+              <strong>2001: Eric Schmidt Joins Google</strong> - Eric Schmidt
+              was hired as Google's CEO, bringing experienced leadership to the
+              rapidly growing company.
+            </li>
+            <li>
+              <strong>2002: Google News</strong> - Google News was launched,
+              aggregating headlines from various sources and making news more
+              accessible to users.
+            </li>
+            <li>
+              <strong>2003: Google AdSense</strong> - Google introduced AdSense,
+              a program that allowed website publishers to earn money by
+              displaying ads targeted to their site's content.
+            </li>
+            <li>
+              <strong>2004: Gmail</strong> - Gmail was launched with 1GB of free
+              storage, revolutionizing email with its generous storage capacity
+              and powerful search capabilities.
+            </li>
+            <li>
+              <strong>2005: Google Maps and YouTube Acquisition</strong> -
+              Google launched Google Maps, providing users with detailed maps
+              and driving directions, and acquired YouTube, a major
+              video-sharing platform.
+            </li>
+            <li>
+              <strong>2006: Google Calendar and Google Docs</strong> - Google
+              Calendar and Google Docs were introduced, offering powerful tools
+              for time management and document creation.
+            </li>
+            <li>
+              <strong>2007: Android</strong> - Google acquired Android Inc.,
+              laying the foundation for the Android operating system that would
+              become a dominant force in mobile computing.
+            </li>
+            <li>
+              <strong>2008: Chrome Browser</strong> - Google Chrome was
+              launched, offering a fast, simple, and secure web browsing
+              experience.
+            </li>
+            <li>
+              <strong>2009: Google Voice</strong> - Google Voice was introduced,
+              providing users with a free phone number and voicemail service
+              with advanced features.
+            </li>
+            <li>
+              <strong>2010: Google Instant</strong> - Launch of Google Instant,
+              showing search results as users type, speeding up the search
+              process.
+            </li>
+          </ul>
+          <p>
+            <strong>Design:</strong> The Google logo became sleeker, and the
+            interface was optimized for mobile devices. The homepage also
+            started incorporating more interactive elements.
+          </p>
+        </div>
+        <div class="era-image">
+          <img src="../../images/google-2010.png" alt="Google in the 2010s" />
+        </div>
+      </section>
+
+      <!-- Google in the 2020s -->
+      <section class="era" id="google-2020s">
+        <div class="era-content">
+          <h2>Google in the 2020s</h2>
+          <p>
+            <strong>Overview:</strong> The 2020s brought further innovations,
+            with Google focusing on AI and machine learning to enhance its
+            services. Privacy and data protection became significant themes, and
+            Google introduced various features to give users more control over
+            their data. The design continued to evolve towards minimalism, with
+            dark mode options becoming standard.
+          </p>
+          <h3>Key Developments:</h3>
+          <ul>
+            <li>
+              <strong>2011: Google+</strong> - Google+ was introduced as an
+              attempt to create a social network, although it struggled to
+              compete with Facebook.
+            </li>
+            <li>
+              <strong>2012: Google Drive</strong> - Google Drive was launched,
+              offering cloud storage and collaboration tools integrated with
+              Google Docs.
+            </li>
+            <li>
+              <strong>2013: Google Glass</strong> - Google Glass, an augmented
+              reality wearable, was introduced as a prototype, marking a push
+              into new forms of computing.
+            </li>
+            <li>
+              <strong>2014: Nest Acquisition</strong> - Google acquired Nest
+              Labs, signaling a move into the smart home market.
+            </li>
+            <li>
+              <strong>2015: Alphabet Inc.</strong> - Google underwent a major
+              corporate restructuring, forming Alphabet Inc. as the parent
+              company, with Google becoming a subsidiary.
+            </li>
+            <li>
+              <strong>2016: Google Assistant</strong> - Google Assistant was
+              launched, bringing AI-powered voice interaction to smartphones,
+              home devices, and more.
+            </li>
+            <li>
+              <strong>2017: Pixel Phones</strong> - The Pixel smartphone series
+              was introduced, emphasizing Google's commitment to integrating
+              hardware and software.
+            </li>
+            <li>
+              <strong>2018: Google Duplex</strong> - Google Duplex demonstrated
+              AI making phone calls on behalf of users, showcasing advancements
+              in natural language processing.
+            </li>
+            <li>
+              <strong>2019: Google Stadia</strong> - Google Stadia was launched,
+              entering the game streaming market, though it faced challenges.
+            </li>
+            <li>
+              <strong>2020: COVID-19 and Google Meet</strong> - The COVID-19
+              pandemic accelerated the adoption of Google Meet and other online
+              collaboration tools as work-from-home became the norm.
+            </li>
+          </ul>
+          <p>
+            <strong>Design:</strong> The interface became more refined, with a
+            focus on accessibility. Material Design was further developed to
+            provide a consistent look and feel across all Google services.
+          </p>
+        </div>
+        <div class="era-image">
+          <img src="../../images/google-2020.png" alt="Google in the 2020s" />
+          <img src="../../images/google2024.png" alt="Google in the 2020s" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2030 Google Evolution. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
