@@ -76,6 +76,7 @@
         flex-direction: column;
         justify-content: space-between;
         transition: transform 0.5s ease, box-shadow 0.3s ease;
+        
       }
       .boxcard:hover{
         cursor: pointer;
@@ -349,6 +350,7 @@
         display: flex;
         align-items: center;
         transition: color 0.3s;
+    
       }
 
       .cart a:hover {
@@ -438,7 +440,8 @@
         .navbar {
         padding: 5px;
         flex-direction: column;
-        align-items: flex-start;
+        /* align-items: flex-start; */
+        align-items: center;
     }
 
     .logo {
@@ -450,11 +453,12 @@
         order: 2;
         width: 100%;
         margin-bottom: 10px;
+        
     }
 
     .navbar-section {
         flex: 1 1 100%;
-        text-align: left;
+        text-align: center;
         margin: 5px 0;
     }
 
@@ -508,6 +512,9 @@
           grid-template-columns: 1fr;
           margin: 5px;
         }
+        .panel{
+          display: none;
+        }
 
         .paneloption p {
           margin: 5px;
@@ -517,20 +524,26 @@
           flex-direction: column;
           align-items: center;
           text-align: center;
+          height: auto;
         }
 
         .foot2 ul {
           margin-top: 10px;
+          height: auto;
+          /* display: none; */
         }
 
         .footlogo img {
           margin: 10px 0;
         }
 
-        .foot3,
-        .foot4 {
+        .foot3 {
           text-align: center;
-        }
+        } 
+        .foot4 {
+          text-align: center;  
+        } 
+        
       }
     </style>
   </head>
