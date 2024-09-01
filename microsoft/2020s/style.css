@@ -41,7 +41,7 @@ ul {
 }
 
 .menu-btn {
-    @apply cursor-pointer absolute top-5 right-[30px] z-2 hidden;
+    @apply cursor-pointer absolute top-5 right-[30px] z-[2] hidden;
 }
 
 .dark {
@@ -274,7 +274,7 @@ ul {
 /* ========================================================== */
 
 .showcase {
-    background: url("../imges/slide1.png") no-repeat center center/cover;
+    background: url("./imges/slide1.png") no-repeat center center/cover;
     @apply w-full h-[400px] flex flex-col items-center text-center justify-end pb-[50px] mb-5;
 }
 
@@ -315,7 +315,7 @@ p {
 /* ========================================================= */
 
 .xbox {
-    background: url("../imges/xbox.png") no-repeat center center/cover;
+    background: url("./imges/xbox.png") no-repeat center center/cover;
     @apply w-full h-[350px] mb-5;
 }
 
@@ -337,7 +337,7 @@ p {
 /* ========================================================= */
 
 .carbon {
-    background: url("../imges/carbon.jpg") no-repeat center center/cover;
+    background: url("./imges/carbon.jpg") no-repeat center center/cover;
     @apply w-full h-[350px] mb-5;
 }
 
