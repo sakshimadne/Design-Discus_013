@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google 2030 Layout</title>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #121212;
+        color: #e0e0e0;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #top-links {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 50px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      #top-links a {
+        color: #e0e0e0;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 14px;
+        transition: color 0.3s ease;
+      }
+
+      #top-links a:hover {
+        color: #e0e0e0;
+      }
+
+      #signin-button {
+        background-color: #4285f4;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      #signin-button:hover {
+        background-color: #357ae8;
+      }
+
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .google-logo {
+        width: 400px;
+        height: auto;
+        border-radius: 50%;
+        filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.3));
+        object-fit: cover;
+      }
+      .search-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        margin: 20px 0;
+      }
+
+      .search-bar {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: 50px;
+        outline: none;
+        background-color: #333333;
+        color: #e0e0e0;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .search-bar:focus {
+        background-color: #1e1e1e;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+      }
+
+      .search-buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .search-buttons button {
+        padding: 12px 25px;
+        margin: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+        border: 1px solid #333333;
+        border-radius: 50px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+      }
+
+      .search-buttons button:hover {
+        background-color: #333333;
+      }
+
+      .footer-links {
+        margin-top: 50px;
+        font-size: 14px;
+        color: #999999;
+        text-align: center;
+      }
+
+      .footer-links a {
+        color: #999999;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: #e0e0e0;
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #777777;
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer a {
+        color: #999999;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top-links">
+      <div>
+        <a href="#">About</a>
+        <a href="#">Store</a>
+      </div>
+      <div>
+        <a href="#">Gmail</a>
+        <a href="#">Images</a>
+        <a href="#"
+          ><img
+            src="./images/google_apps_icon.png"
+            src="./images/google_apps_icon.png"
+            alt="Apps"
+            style="vertical-align: middle"
+        /></a>
+        <a href="#" id="signin-button">Sign in</a>
+      </div>
+    </div>
+
+    <div class="logo-container">
+      <img
+        src="./images/google-2024-gif-for 2020.gif"
+        alt="Google Logo"
+        class="google-logo"
+      />
+    </div>
+
+    <div class="search-container">
+      <input
+        type="text"
+        class="search-bar"
+        placeholder="Search Google or type a URL"
+      />
+      <div class="search-buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">Advertising</a>
+      <a href="#">Business</a>
+      <a href="#">How Search works</a>
+    </div>
+
+    <div class="footer">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Settings</a>
+    </div>
+  </body>
+</html>
