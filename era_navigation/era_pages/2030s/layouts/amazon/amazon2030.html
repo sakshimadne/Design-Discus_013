@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMAZON</title>
+    <style>
+      * {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        border: border-box;
+      }
+      
+      body{
+        background-image: #C0C78C;
+        background-size: cover;
+      }
+      
+      .panel {
+        height: 40px;
+        /* background-color: #222f3d; */
+        display: flex;
+        color: white;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .paneloption p {
+        display: inline;
+        margin-left: 10px;
+      }
+      .hero {
+        background: url(https://m.media-amazon.com/images/I/71ve0pYz7uL._SX3000_.jpg);
+        height: 320px;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      /* 01-09 start */
+      canvas{
+        width: 100%;
+        height: 100%;
+      }
+      /* 01-09 end */
+      .heromsg {
+        background-color: white;
+        color: black;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+        width: 95%;
+      }
+      .heromsg a {
+        color: #007185;
+      }
+      .maincards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        margin: 20px;
+      }
+
+      .boxcard {
+        background-color: #fff;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.5s ease, box-shadow 0.3s ease;
+        
+      }
+      .boxcard:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(101, 125, 170, 0.3);
+      }
+      
+
+      .cardimg {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        
+      }
+      .cardimg:hover{
+        
+      }
+
+      .cardimg img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .cardimg img:hover{
+        scale: 1.1;
+        /* object-fit: none; */
+        
+      }
+
+      .boxcard h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .boxcard p {
+        color: #026969;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .boxcard p:hover {
+        text-decoration: underline;
+      }
+      .slider-container {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 250px;
+      }
+      .slider {
+        display: flex;
+        width: calc(100% * 6);
+        transition: transform 0.5s ease;
+        gap: 5px;
+        padding: 10px;
+        margin-left: 5px;
+      }
+      .slider img {
+        width: auto;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 25px;
+        transition: transform 0.04s ease, box-shadow 0.3s ease;
+      }
+
+      .slider img:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(101, 125, 170, 0.3);
+      }
+
+      footer {
+        margin-top: 15px;
+        flex-wrap: wrap;
+      }
+      .foot1 {
+        background-color: #374758;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        height: 50px;
+        min-width: 150px;
+      }
+      .foot2 {
+        background-color: #141f2c;
+        color: white;
+        height: 300px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      ul {
+        margin-top: 20px;
+      }
+      .foot2 ul a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 0.8rem;
+        color: rgb(203, 195, 195);
+        margin-top: 10px;
+      }
+      .foot3 {
+        background-color: #141f2c;
+        color: white;
+        border-top: 0.5px solid white;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .footlogo img {
+        background-size: cover;
+        height: 50px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+      .footbox {
+        margin-left: 10px;
+        /* font-size: 1rem; */
+        font-size: 14px;
+        border: 1px solid white;
+        width: 130px;
+        padding: 8px;
+        gap: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .footbox span {
+        margin: 5px;
+      }
+      .footbox p{
+        font-size: 14px;
+      }
+      .foot4 {
+        background-color: #141f2c;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        font-size: 0.7rem;
+        text-align: center;
+      }
+      .lastfoot {
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+      }
+      .lastfoot p {
+        margin-left: 5px;
+      }
+      .copyright p {
+        margin: 5px;
+      }
+
+      header{
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIEfbPbOaDG_FgRGRQ_qiRCwkyl0pGJ5vwKg&s");
+        background-size:cover;
+      }
+      .navbar {
+        
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        position: static;
+        top: 0;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar-section {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .logo img {
+        height: 30px;
+      }
+
+      .search-bar {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .category-select {
+        padding: 10px;
+        border-radius: 4px 0 0 4px;
+        border: none;
+        outline: none;
+        background-color: #ddd;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .search-bar input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+      }
+
+      .search-bar button {
+        padding: 10px 20px;
+        background-color: #febd69;
+        border-radius: 0 4px 4px 0;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .search-bar button:hover {
+        background-color: #f3a847;
+      }
+
+      .account,
+      .orders,
+      .cart {
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+      }
+
+      .account span,
+      .orders span {
+        font-size: 12px;
+        display: block;
+      }
+
+      .account div,
+      .orders div {
+        font-size: 14px;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      .account:hover div,
+      .orders:hover div {
+        color: #febd69;
+      }
+
+      .cart a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        transition: color 0.3s;
+    
+      }
+
+      .cart a:hover {
+        color: #febd69;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        min-width: 200px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        color: #232f3e;
+        background-color: white;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #febd69;
+        color: white;
+      }
+
+      .account:hover .dropdown-content {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          height: auto;
+          padding: 10px;
+        }
+
+        .nav-search {
+          margin-top: 10px;
+          width: 100%;
+        }
+
+        .maincards {
+          grid-template-columns: 1fr 1fr;
+          margin: 10px;
+        }
+
+        .panel {
+          flex-direction: column;
+          height: auto;
+        }
+        .navbar {
+        padding: 5px;
+    }
+
+    .search-bar input {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .search-bar button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .category-select {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .account div, .orders div {
+        font-size: 12px;
+    }
+
+    .cart a {
+        font-size: 16px;
+    }
+      }
+
+      @media (max-width: 480px) {
+        .navbar {
+        padding: 5px;
+        flex-direction: column;
+        /* align-items: flex-start; */
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        order: 1;
+    }
+
+    .search-bar {
+        order: 2;
+        width: 100%;
+        margin-bottom: 10px;
+        
+    }
+
+    .navbar-section {
+        flex: 1 1 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .account, .orders, .cart {
+        order: 3;
+        width: 100%;
+        text-align: left;
+    }
+
+    .cart {
+        order: 4;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .search-bar input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .search-bar button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .category-select {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .account div, .orders div {
+        font-size: 14px;
+    }
+
+    .cart a {
+        font-size: 16px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        font-size: 14px;
+        padding: 10px;
+    }
+        .maincards {
+          grid-template-columns: 1fr;
+          margin: 5px;
+        }
+        .panel{
+          display: none;
+        }
+
+        .paneloption p {
+          margin: 5px;
+        }
+
+        .foot2 {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          height: auto;
+        }
+
+        .foot2 ul {
+          margin-top: 10px;
+          height: auto;
+          /* display: none; */
+        }
+
+        .footlogo img {
+          margin: 10px 0;
+        }
+
+        .foot3 {
+          text-align: center;
+        } 
+        .foot4 {
+          text-align: center;  
+        } 
+        
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-section logo">
+              <a href="#">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+                  alt="Amazon Logo"
+                />
+              </a>
+            </div>
+            <div class="navbar-section search-bar">
+              <select class="category-select">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+                <option value="fashion">Fashion</option>
+              </select>
+              <input type="text" placeholder="Search Amazon" />
+              <button type="button">🔍</button>
+            </div>
+            <div class="navbar-section account dropdown">
+              <span></span>
+              <div>Hello, Sign in Accounts & Lists</div>
+              <div class="dropdown-content">
+                <a href="#">Your Account</a>
+                <a href="#">Your Orders</a>
+                <a href="#">Your Wish List</a>
+                <a href="#">Sign Out</a>
+              </div>
+            </div>
+            <div class="navbar-section orders">
+              <span></span>
+              <div>Returns & Orders</div>
+            </div>
+            <div class="navbar-section cart">
+              <a href="#">🛒 Cart</a>
+            </div>
+          </div>
+      <div class="panel">
+        <div class="paneloption">
+            <p class="border">All</p>
+          <p class="border">Fresh</p>
+          <p class="border">Sell</p>
+          <p class="border">Today's Deals</p>
+          <p class="border">Mobiles</p>
+          <p class="border">Customer Service</p>
+          <p class="border">Electronics</p>
+          <p class="border">Fashion</p>
+          <p class="border">New Releases</p>
+          <p class="border">Home & Kitchen</p>
+          <p class="border">Amazon Pay</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <canvas> </canvas>
+      </div>
+      <div class="maincards">
+        <div class="boxcard">
+          <h2>Gaming Accessories</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Chair_2x._SY232_CB667159060_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Deals in PC</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_2x_v1._SY608_CB573698005_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Toys under $25</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_2x_v3._SY608_CB573698005_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>School Supplies</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BTS24/Fuji_BTS_Dash_card_2x._SY608_CB583656338_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Smart Watches</h2>
+          <div class="cardimg">
+            <img
+              src="https://m.media-amazon.com/images/I/61gFrSlmofL._AC_SY400_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Personal Smart Care</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v10._SY304_CB573698005_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Health Care</h2>
+          <div class="cardimg">
+            <img
+              src="https://m.media-amazon.com/images/I/51JdQWimMaL._AC_UL480_FMwebp_QL65_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Players Paradise</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2023/img/Consumer_Electronics/XCM_CUTTLE_1546843_2940864_379x304_1X_en_US._SY304_CB613273467_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+      </div>
+      <div class="slider-container">
+        <div class="sliderheading"><h2>Best Seller In Books</h2></div>
+        <div class="slider">
+          <img
+            src="https://m.media-amazon.com/images/I/71KTwO53SnL._AC_SY200_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/71jfsEP8G4L._AC_SY200_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_SY200_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/813aV273-rL._AC_SY200_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/817BoUB6oNL._AC_SY200_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/91WcfatA2eL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/71EVPOrf8kL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/71KTwO53SnL._AC_SY200_.jpg"
+            alt=""
+          />
+          
+        </div>
+      </div>
+      <div class="slider-container">
+        <div class="sliderheading">
+          <h2>Best Seller In Computer & Accessories</h2>
+        </div>
+        <div class="slider">
+          <img
+            src="https://m.media-amazon.com/images/I/51nQJi7RvAL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/5164giE9fFL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/71G8rdQin3L._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/51-h2oz-PeL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/51vA-BFvyJL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/719zL67IK7L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/61QlflIWatL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="maincards">
+        <div class="boxcard">
+          <h2>Gaming Accessories</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Chair_2x._SY232_CB667159060_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Deals in PC</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_2x_v1._SY608_CB573698005_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Toys under $25</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_2x_v3._SY608_CB573698005_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>School Supplies</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BTS24/Fuji_BTS_Dash_card_2x._SY608_CB583656338_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Smart Watches</h2>
+          <div class="cardimg">
+            <img
+              src="https://m.media-amazon.com/images/I/61gFrSlmofL._AC_SY400_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Personal Smart Care</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v10._SY304_CB573698005_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Health Care</h2>
+          <div class="cardimg">
+            <img
+              src="https://m.media-amazon.com/images/I/51JdQWimMaL._AC_UL480_FMwebp_QL65_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+        <div class="boxcard">
+          <h2>Players Paradise</h2>
+          <div class="cardimg">
+            <img
+              src="https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2023/img/Consumer_Electronics/XCM_CUTTLE_1546843_2940864_379x304_1X_en_US._SY304_CB613273467_.jpg"
+              alt=""
+            />
+          </div>
+          <p>See more</p>
+        </div>
+      </div>
+      <div class="slider-container">
+        <div class="sliderheading"><h2>Best Seller In Books</h2></div>
+        <div class="slider">
+          <img
+            src="https://m.media-amazon.com/images/I/71KTwO53SnL._AC_SY200_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/71jfsEP8G4L._AC_SY200_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_SY200_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/813aV273-rL._AC_SY200_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/817BoUB6oNL._AC_SY200_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/91WcfatA2eL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/71EVPOrf8kL._AC_SY400_.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="slider-container">
+        <div class="sliderheading">
+          <h2>Best Seller In Computer & Accessories</h2>
+        </div>
+        <div class="slider">
+          <img
+            src="https://m.media-amazon.com/images/I/51nQJi7RvAL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/5164giE9fFL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/71G8rdQin3L._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/51-h2oz-PeL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/51vA-BFvyJL._AC_SY400_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/719zL67IK7L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            alt=""
+          />
+          <img
+            src="https://m.media-amazon.com/images/I/61QlflIWatL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="foot1">Back To Top</div>
+      <div class="foot2">
+        <ul>
+          <p>Get to Know Us</p>
+          <a href="">Careers</a>
+          <a href="">Blog</a>
+          <a href="">About Amazon</a>
+          <a href="">Investor Relations</a>
+          <a href="">Amazon Devices</a>
+          <a href="">Amazon Science</a>
+        </ul>
+        <ul>
+          <p>Make Money with Us</p>
+          <a href="">Sell products on Amazon</a>
+          <a href="">Sell on Amazon Business</a>
+          <a href="">Sell apps on Amazon</a>
+          <a href="">Become an Affiliate</a>
+          <a href="">Advertise Your Products</a>
+          <a href="">Self-Publish with Us</a>
+          <a href="">Host an Amazon Hub</a>
+          <a href="">›See More Make Money with Us</a>
+        </ul>
+        <ul>
+          <p>Amazon Payment Products</p>
+          <a href="">Amazon Business Card</a>
+          <a href="">Shop with Points</a>
+          <a href="">Reload Your Balance</a>
+          <a href="">Amazon Currency Converter</a>
+        </ul>
+        <ul>
+          <p>Let Us Help You</p>
+          <a href="">Amazon and COVID-19</a>
+          <a href="">Your Orders</a>
+          <a href="">Shipping Rates & Policies</a>
+          <a href="">Returns & Replacements</a>
+          <a href="">Manage Your Content and Devices</a>
+          <a href="">Help</a>
+        </ul>
+      </div>
+      <div class="foot3">
+        <div class="footlogo">
+          <img
+            src="https://i0.wp.com/www.dafontfree.co/wp-content/uploads/2021/11/Amazon-Logo-Font-1-scaled.jpg?resize=2560%2C1578"
+            alt=""
+          />
+        </div>
+        <div class="footbox">
+          <p>
+            <i class="fa-solid fa-earth-americas"></i><span>English</span
+            ><i class="fa-solid fa-arrows-up-down"></i>
+          </p>
+        </div>
+        <div class="footbox">
+          <p>
+            <i class="fa-solid fa-dollar-sign"></i><span>USD-U.S.Dollars</span>
+          </p>
+        </div>
+        <div class="footbox">
+          <p><i class="fa-regular fa-flag"></i><span>Country</span></p>
+        </div>
+      </div>
+      <div class="foot4">
+        <div class="lastfoot">
+          <p>Conditions of Use</p>
+          <p>Privacy Notice</p>
+          <p>Consumer Health Data Privacy Disclosure</p>
+          <p>Your Ads Privacy Choices</p>
+        </div>
+        <div class="copyright">
+          © 1996-2030, Amazon.com, Inc. or its affiliates
+        </div>
+      </div>
+    </footer>
+  </body>
+  <scriptsrc="https://kit.fontawesome.com/e77df793c7.js"
+  crossorigin="anonymous"></script>
+  <script>
+          const canvas = document.querySelector("canvas");
+          const ctx = canvas.getContext("2d");
+
+          // for intro motion
+          let mouseMoved = false;
+
+          const pointer = {
+            x: 0.5 * window.innerWidth,
+            y: 0.5 * window.innerHeight,
+          };
+          const params = {
+            pointsNumber: 40,
+            widthFactor: 0.3,
+            mouseThreshold: 0.6,
+            spring: 0.4,
+            friction: 0.5,
+          };
+
+          const trail = new Array(params.pointsNumber);
+          for (let i = 0; i < params.pointsNumber; i++) {
+            trail[i] = {
+              x: pointer.x,
+              y: pointer.y,
+              dx: 0,
+              dy: 0,
+            };
+          }
+
+          window.addEventListener("click", (e) => {
+            updateMousePosition(e.pageX, e.pageY);
+          });
+          window.addEventListener("mousemove", (e) => {
+            mouseMoved = true;
+            updateMousePosition(e.pageX, e.pageY);
+          });
+          window.addEventListener("touchmove", (e) => {
+            mouseMoved = true;
+            updateMousePosition(e.targetTouches[0].pageX, e.targetTouches[0].pageY);
+          });
+
+          function updateMousePosition(eX, eY) {
+            pointer.x = eX;
+            pointer.y = eY;
+          }
+
+          setupCanvas();
+          update(0);
+          window.addEventListener("resize", setupCanvas);
+
+          function update(t) {
+            // for intro motion
+            if (!mouseMoved) {
+              pointer.x =
+                (0.5 + 0.3 * Math.cos(0.002 * t) * Math.sin(0.005 * t)) *
+                window.innerWidth;
+              pointer.y =
+                (0.5 + 0.2 * Math.cos(0.005 * t) + 0.1 * Math.cos(0.01 * t)) *
+                window.innerHeight;
+            }
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            trail.forEach((p, pIdx) => {
+              const prev = pIdx === 0 ? pointer : trail[pIdx - 1];
+              const spring = pIdx === 0 ? 0.4 * params.spring : params.spring;
+              p.dx += (prev.x - p.x) * spring;
+              p.dy += (prev.y - p.y) * spring;
+              p.dx *= params.friction;
+              p.dy *= params.friction;
+              p.x += p.dx;
+              p.y += p.dy;
+            });
+
+            ctx.beginPath();
+            ctx.moveTo(trail[0].x, trail[0].y);
+
+            for (let i = 1; i < trail.length - 1; i++) {
+              const xc = 0.5 * (trail[i].x + trail[i + 1].x);
+              const yc = 0.5 * (trail[i].y + trail[i + 1].y);
+              ctx.quadraticCurveTo(trail[i].x, trail[i].y, xc, yc);
+              ctx.lineWidth = params.widthFactor * (params.pointsNumber - i);
+              ctx.stroke();
+            }
+            ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
+            ctx.strokeStyle = "#00fffc";
+            window.requestAnimationFrame(update);
+          }
+
+          function setupCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+          }
+  </script>
+</html>
