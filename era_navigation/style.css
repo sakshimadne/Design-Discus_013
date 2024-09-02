@@ -24,7 +24,7 @@ body {
 
 .slider-container {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    @apply flex flex-col items-center p-5 bg-[var(--light-grey)] rounded-[10px] w-[80%] select-none;
+    @apply flex flex-col items-center p-5 bg-[var(--light-grey)] rounded-[10px] w-[80%] select-none text-xs md:text-sm lg:text-lg;
 }
 
 .slider {
@@ -49,7 +49,7 @@ body {
 .link {
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
-    @apply text-[var(--light-brown)] font-bold py-[5px] px-[10px] rounded-[5px] cursor-default opacity-30 pointer-events-none;
+    @apply text-[var(--light-brown)] font-bold py-[5px] px-[3px] sm:px-[5px] md:px-[8px] lg:px-[10px] rounded-[5px] cursor-default opacity-30 pointer-events-none;
 }
 
 .link.active {
@@ -64,7 +64,7 @@ body {
 /* ========================================= */
 
 .era-redirect-btn-wrapper {
-    @apply mt-4;
+    @apply mt-4 w-full flex justify-center items-center;
 }
 
 @import url("https://fonts.googleapis.com/css2?Teko&display=swap");
@@ -74,37 +74,37 @@ body {
 }
 
 .active-btn {
-    /* @apply px-3 py-2 bg-[var(--dark-brown)] text-[var(--dark-grey)] rounded-md; */
-    @apply flex justify-center items-center;
-    cursor: pointer;
     border: solid rgb(187, 204, 0);
     font-family: Teko;
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    padding: 10px 30px;
     transition: 258ms;
-    width: 328px;
     box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
-    border-radius: 3px;
     background: linear-gradient(
         90deg,
         rgb(169, 156, 73) 0%,
         rgb(40, 103, 148) 100%
     );
+    @apply flex justify-center items-center text-center cursor-pointer text-sm sm:text-lg md:text-2xl lg:text-3xl w-[70%] rounded-[3px] py-[7px] md:py-[8px] lg:py-[10px] px-4 md:px-6 lg:px-8 text-white;
     --hover-bgc: #05abbd;
     --hover-color: #aacaeb;
     --hover-borderSize: 0px;
     --hover-width: 338px;
 }
 
+@media screen and (min-width: 390px) {
+    .active-btn {
+        @apply w-[45%];
+    }
+}
+
+.active-btn {
+    @apply sm:w-[30%] md:w-[30%] lg:w-[25%];
+}
+
 .active-btn:hover {
+    @apply scale-[100%] border-0 border-solid;
     color: rgb(202, 225, 248);
-    width: 338px;
     background: rgb(9, 78, 148) none repeat scroll 0% 0% / auto padding-box
         border-box;
-    border-color: rgb(204, 0, 105);
-    border-width: 0px;
-    border-style: solid;
 }
 
 /* era - image */

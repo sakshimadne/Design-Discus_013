@@ -1,628 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    
-    <title>Document</title>
-    <style>
-        @font-face {
-    font-family: FontRegular;
-    src: url(Assets/Fonts/sf-pro-display_regular.ttf);
-}
+        <title>Apple in 2020s | Design Timeline</title>
+        <link rel="icon" href="./logo_1.png" type="image/x-icon" />
+        <style>
+            @font-face {
+                font-family: FontRegular;
+                src: url(Assets/Fonts/sf-pro-display_regular.ttf);
+            }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: FontRegular;
-}
-html , body{
-    height: 100%;
-    width: 100%;
-}
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: FontRegular;
+            }
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+            }
 
-#main{
-    width: 100%;
-    min-height: 100vh;
-}
+            #main {
+                width: 100%;
+                min-height: 100vh;
+            }
 
-a {
-    text-decoration: none;
-    color: rgb(7, 114, 229);
-}
+            a {
+                text-decoration: none;
+                color: rgb(7, 114, 229);
+            }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2vw;
-    width: 100%;
-    height: 5vh;
-    background-color: #f2f2f2;
-    z-index: 50;
-}
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2vw;
+                width: 100%;
+                height: 5vh;
+                background-color: #f2f2f2;
+                z-index: 50;
+            }
 
-header a{
-    text-decoration: none;
-    color: #333;
-}
+            header a {
+                text-decoration: none;
+                color: #333;
+            }
 
-header i{
-    font-size: 1.1vw;
-}
+            header i {
+                font-size: 1.1vw;
+            }
 
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    /* Full viewport height */
-    overflow: hidden;
-}
+            .video-container {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                /* Full viewport height */
+                overflow: hidden;
+            }
 
-/* Video styling */
-#apple-logo {
-    position: absolute;
-    top: 1%;
-    left: 30%;
-    right: 50%;
-    max-width: 50%;
-    min-height: 50%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    animation: fadeInScale 2s ease-in-out forwards;
-    /* Place video behind content */
-}
+            /* Video styling */
+            #apple-logo {
+                position: absolute;
+                top: 1%;
+                left: 30%;
+                right: 50%;
+                max-width: 50%;
+                min-height: 50%;
+                width: auto;
+                height: auto;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                animation: fadeInScale 2s ease-in-out forwards;
+                /* Place video behind content */
+            }
 
-@keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
+            @keyframes fadeInScale {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
+                }
 
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
 
-/* .apple-logo.animate {
+            /* .apple-logo.animate {
     animation: fadeInScale 2s ease-in-out forwards;
 } */
 
-/* Overlay text styling */
-.overlay-text {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 1;
-}
+            /* Overlay text styling */
+            .overlay-text {
+                position: absolute;
+                top: 65%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                text-align: center;
+                z-index: 1;
+            }
 
-/* Text styling */
-.overlay-text h1 {
-    font-size: 3.5em;
-    font-weight: bold;
-    margin: 0;
-}
+            /* Text styling */
+            .overlay-text h1 {
+                font-size: 3.5em;
+                font-weight: bold;
+                margin: 0;
+            }
 
-.overlay-text p {
-    font-size: 1.5em;
-    margin: 10px 0 0;
-    letter-spacing: 0.5px;
-}
+            .overlay-text p {
+                font-size: 1.5em;
+                margin: 10px 0 0;
+                letter-spacing: 0.5px;
+            }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .overlay-text h1 {
-        font-size: 2em;
-    }
+            /* Media queries for responsiveness */
+            @media (max-width: 768px) {
+                .overlay-text h1 {
+                    font-size: 2em;
+                }
 
-    .overlay-text p {
-        font-size: 1em;
-    }
-}
+                .overlay-text p {
+                    font-size: 1em;
+                }
+            }
 
-.part-1{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 70vh;
-    background-image: url(Assets/hero_iphone15pro__i70z9oz3hj2i_largetall.jpg);
-    background-position: center;
-}
+            .part-1 {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 70vh;
+                background-image: url(Assets/hero_iphone15pro__i70z9oz3hj2i_largetall.jpg);
+                background-position: center;
+            }
 
-.div5{
-    position: relative;
-    top: 150%;
-}
+            .div5 {
+                position: relative;
+                top: 150%;
+            }
 
-.text-part-1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    gap: 1vh;
-    top: 10%;
-    color: #fff;
-}
+            .text-part-1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: absolute;
+                gap: 1vh;
+                top: 10%;
+                color: #fff;
+            }
 
-.text-part-1 h1{
-    font-size: 3vw;
-}
+            .text-part-1 h1 {
+                font-size: 3vw;
+            }
 
-.text-part-1 p{
-    font-size: 1.6vw;
-}
+            .text-part-1 p {
+                font-size: 1.6vw;
+            }
 
-.link{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2vw;
-}
+            .link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2vw;
+            }
 
-.link a{
-    text-decoration: none;
-    color: rgb(26, 141, 242);
-    font-size: 1.2vw;
-}
+            .link a {
+                text-decoration: none;
+                color: rgb(26, 141, 242);
+                font-size: 1.2vw;
+            }
 
-.link a:hover{
-    border-bottom: 1px solid rgb(26, 141, 242);
-}
+            .link a:hover {
+                border-bottom: 1px solid rgb(26, 141, 242);
+            }
 
-.part-2{
-    background-image: url(Assets/hero_iphone15_announce__uuemlcwczn6u_largetall.jpg);
-}
+            .part-2 {
+                background-image: url(Assets/hero_iphone15_announce__uuemlcwczn6u_largetall.jpg);
+            }
 
-.text-part-2{
-    color: #333;
-}
+            .text-part-2 {
+                color: #333;
+            }
 
-.part-3{
-    background-image: url(Assets/image3.jpg);
-}
+            .part-3 {
+                background-image: url(Assets/image3.jpg);
+            }
 
-.part-4{
-    display: flex;
-    width: 100%;
-}
+            .part-4 {
+                display: flex;
+                width: 100%;
+            }
 
-.part-4-1{
-    height: 60vh;
-    width: 50%;
-    background-repeat: no-repeat;
-    background-image: url(Assets/4-1.jpg);
-}
+            .part-4-1 {
+                height: 60vh;
+                width: 50%;
+                background-repeat: no-repeat;
+                background-image: url(Assets/4-1.jpg);
+            }
 
-.part-4-2{
-    height: 60vh;
-    width: 50%;
-    background-repeat: no-repeat;
-    background-image: url(Assets/4-2.jpg);
-}
+            .part-4-2 {
+                height: 60vh;
+                width: 50%;
+                background-repeat: no-repeat;
+                background-image: url(Assets/4-2.jpg);
+            }
 
-.part-4 .text-part-1{
-    color: #333;
-}
+            .part-4 .text-part-1 {
+                color: #333;
+            }
 
-.part-4 .text-part-1 p{
-    font-size: 1vw;
-}
+            .part-4 .text-part-1 p {
+                font-size: 1vw;
+            }
 
-.slider-part{
-    padding: 2vh 0vw;
-    width: 100%;
-    height: 70vh;
-}
+            .slider-part {
+                padding: 2vh 0vw;
+                width: 100%;
+                height: 70vh;
+            }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-}
+            .swiper {
+                width: 100%;
+                height: 100%;
+            }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
 
-.swiper-slide {
-    width:  90%;
-    background-position: center;
-    background-size: cover;
-}
+            .swiper-slide {
+                width: 90%;
+                background-position: center;
+                background-size: cover;
+            }
 
-.swiper-1{
-    background-image: url(Assets/1.jpg);
-}
-.swiper-2{
-    background-image: url(Assets/2.jpg);
-}
-.swiper-3{
-    background-image: url(Assets/3.jpg);
-}
-.swiper-4{
-    background-image: url(Assets/4.jpg);
-}
-.swiper-5{
-    background-image: url(Assets/5.jpg);
-}
-.swiper-6{
-    background-image: url(Assets/6.jpg);
-}
+            .swiper-1 {
+                background-image: url(Assets/1.jpg);
+            }
+            .swiper-2 {
+                background-image: url(Assets/2.jpg);
+            }
+            .swiper-3 {
+                background-image: url(Assets/3.jpg);
+            }
+            .swiper-4 {
+                background-image: url(Assets/4.jpg);
+            }
+            .swiper-5 {
+                background-image: url(Assets/5.jpg);
+            }
+            .swiper-6 {
+                background-image: url(Assets/6.jpg);
+            }
 
-.ri-menu-3-line{
-    display: none;
-}
+            .ri-menu-3-line {
+                display: none;
+            }
 
-.respo-header {
-    position: absolute;
-    top: -120%;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-    display: none;
-    z-index: 99;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
-}
+            .respo-header {
+                position: absolute;
+                top: -120%;
+                width: 100%;
+                height: 100vh;
+                background-color: rgb(255, 255, 255);
+                display: none;
+                z-index: 99;
+                transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+            }
 
-.submenu{
-    top: -100%;
-    position: absolute;
-    width: 100%;
-    height: 95vh;
-    z-index: 999;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
-    pointer-events: none;
-}
+            .submenu {
+                top: -100%;
+                position: absolute;
+                width: 100%;
+                height: 95vh;
+                z-index: 999;
+                transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+                pointer-events: none;
+            }
 
-.sub-top{
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    width: 100%;
-    height: 50vh;
-    background-color: #ffffff;
-    padding: 5vw 20vw;
-}
+            .sub-top {
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                width: 100%;
+                height: 50vh;
+                background-color: #ffffff;
+                padding: 5vw 20vw;
+            }
 
-.sub-top a{
-    text-decoration: none;
-    font-size: 1vw;
-    color: #333;
+            .sub-top a {
+                text-decoration: none;
+                font-size: 1vw;
+                color: #333;
+            }
 
-}
+            .sub-btm {
+                width: 100%;
+                height: 45vh;
+                background: rgba(0, 0, 0, 0.085);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+            }
 
-.sub-btm{
-    width: 100%;
-    height: 45vh;
-    background: rgba(0, 0, 0, 0.085);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-}
+            @media (max-width: 500px) {
+                .submenu {
+                    display: none;
+                }
+                #partO {
+                    background-image: url(Assets/resp1.jpg);
+                }
+                .slider-part {
+                    height: 50vh;
+                }
+                header {
+                    gap: 5vw;
+                }
+                header a {
+                    display: none;
+                }
+                header i {
+                    font-size: 5vw;
+                }
+                .ri-apple-fill {
+                    margin-right: 60vw;
+                }
+                .ri-menu-3-line {
+                    display: initial;
+                }
+                .respo-header {
+                    padding: 10vw 10vw;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3vh;
+                }
+                .respo-header a {
+                    font-size: 6vw;
+                    text-decoration: none;
+                    color: #333;
+                }
+                .respo-header i {
+                    position: absolute;
+                    top: 1%;
+                    right: 3%;
+                    font-size: 7vw;
+                }
+                .text-part-1 {
+                    gap: 2vh;
+                }
+                .text-part-1 h1 {
+                    font-size: 10vw;
+                }
+                .text-part-1 p {
+                    font-size: 5vw;
+                }
+                .link a {
+                    font-size: 5.2vw;
+                }
+                .part-2 {
+                    background-image: url(Assets/resp2.jpg);
+                }
+                .part-4 {
+                    flex-direction: column;
+                }
+                .part-4-1 {
+                    width: 100%;
+                }
+                .part-4-2 {
+                    width: 100%;
+                }
+                .part-4 .text-part-1 p {
+                    font-size: 4vw;
+                }
+            }
+        </style>
+    </head>
 
+    <body>
+        <div id="main">
+            <div>
+                <h1 style="text-align: center">APPLE IN 2020's</h1>
+            </div>
 
+            <header>
+                <i class="ri-apple-fill"></i>
+                <a id="store" href="">Store</a>
+                <a href="">Mac</a>
+                <a href="">iPad</a>
+                <a href="">iPhone</a>
+                <a href="">Watch</a>
+                <a href="">AirPods</a>
+                <a href="">TV & Home</a>
+                <a href="">Entertainment</a>
+                <a href="">Accessories</a>
+                <a href="">Support</a>
+                <i class="ri-search-line"></i>
+                <i class="ri-shopping-bag-line"></i>
+                <i class="ri-menu-3-line"></i>
+            </header>
+            <div class="respo-header">
+                <i class="ri-close-fill"></i>
+                <a href="">Store</a>
+                <a href="">Mac</a>
+                <a href="">iPad</a>
+                <a href="">iPhone</a>
+                <a href="">Watch</a>
+                <a href="">AirPods</a>
+                <a href="">TV & Home</a>
+                <a href="">Entertainment</a>
+                <a href="">Accessories</a>
+                <a href="">Support</a>
+            </div>
 
-@media (max-width:500px) {
-    .submenu{
-        display: none;
-    }
-    #partO{
-        background-image: url(Assets/resp1.jpg);
-    }
-    .slider-part{
-        height: 50vh;
-    }
-    header {
-        gap: 5vw;
-    }
-    header a{
-        display: none;
-    }
-    header i{
-        font-size: 5vw;
-    }
-    .ri-apple-fill{
-        margin-right: 60vw;
-    }
-    .ri-menu-3-line{
-        display: initial;
-    }
-    .respo-header{
-        padding: 10vw 10vw;
-        display: flex;
-        flex-direction: column;
-        gap: 3vh;
-    }
-    .respo-header a{
-        font-size: 6vw;
-        text-decoration: none;
-        color: #333;
-    }
-    .respo-header i{
-        position: absolute;
-        top: 1%;
-        right: 3%;
-        font-size: 7vw;
-    }
-    .text-part-1{
-        gap: 2vh;
-    }
-    .text-part-1 h1{
-        font-size: 10vw;
-    }
-    .text-part-1 p{
-        font-size: 5vw;
-    }
-    .link a{
-         font-size: 5.2vw;
-    }
-    .part-2{
-        background-image: url(Assets/resp2.jpg);
-    }
-    .part-4{
-        flex-direction: column;
-    }
-    .part-4-1{
-        width: 100%;
-    }
-    .part-4-2{
-        width: 100%;
-    }
-    .part-4 .text-part-1 p{
-        font-size: 4vw;
-    }
-}
+            <div
+                id="div2"
+                style="
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 2%;
+                    font-weight: 50;
+                    font-size: 15px;
+                    align-items: center;
+                    background-color: rgb(29, 29, 31);
+                    padding: 0.5%;
+                "
+            >
+                <p
+                    style="
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        word-spacing: 3px;
+                        font-size: 15px;
+                        font-weight: 100;
+                    "
+                >
+                    Get up to 8000.00 instant cashback on selected products with
+                    eligible American Express, Axis Bank and ICICI Bank cards.
+                    <sup> *</sup> <a href="#"> Shop ›</a>
+                </p>
+            </div>
 
-    </style>
-</head>
+            <section
+                style="
+                    height: 80%;
+                    background-color: rgb(0, 0, 0);
+                    z-index: -2;
+                    position: relative;
+                "
+            >
+                <div class="video-container">
+                    <img
+                        height=""
+                        width=""
+                        src="./Assets/img1.png"
+                        alt=""
+                        id="apple-logo"
+                    />
 
-<body>
+                    <div class="overlay-text">
+                        <h1>Apple Event</h1>
+                        <p>Watch Online on 9 September at 10:30 PM IST.</p>
+                        <button
+                            style="
+                                padding: 2% 3%;
+                                border-radius: 50px;
+                                margin-top: 2%;
+                                font-size: 18px;
+                                color: white;
+                                background-color: rgb(0, 117, 221);
+                            "
+                        >
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </section>
 
-    <div id="main">
-
-        <div>
-            <h1 style="text-align: center;">APPLE IN 2020's</h1>
+            <div class="div5">
+                <div id="partO" class="part-1">
+                    <div class="text-part-1">
+                        <h1>iPhone 15 Pro</h1>
+                        <p>Titanium. So Strong. So Light. So Pro</p>
+                        <div class="link">
+                            <a href="">Learn More ></a>
+                            <a href="">Buy ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="part-1 part-2">
+                    <div class="text-part-1 text-part-2">
+                        <h1>iPhone 15 Pro</h1>
+                        <p>New Camera. New Design. Newphoria.</p>
+                        <div class="link">
+                            <a href="">Learn More ></a>
+                            <a href="">Buy ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="part-1 part-3">
+                    <div class="text-part-1 text-part-3">
+                        <img src="Assets/image3-1.png" alt="" />
+                        <p>Titanium. So Strong. So Light. So Pro</p>
+                        <div class="link">
+                            <a href="">Learn More ></a>
+                            <a href="">Buy ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="part-4">
+                    <div class="part-1 part-4-1">
+                        <div class="text-part-1 text-part-3">
+                            <img src="Assets/4-1-1.png" alt="" />
+                            <p>Titanium. So Strong. So Light. So Pro</p>
+                            <div class="link">
+                                <a href="">Learn More ></a>
+                                <a href="">Buy ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-1 part-4-2">
+                        <div class="text-part-1 text-part-3">
+                            <img src="Assets/4-2-1.png" alt="" />
+                            <p>Titanium. So Strong. So Light. So Pro</p>
+                            <div class="link">
+                                <a href="">Learn More ></a>
+                                <a href="">Buy ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="part-4">
+                    <div class="part-1 part-4-1">
+                        <div class="text-part-1 text-part-3">
+                            <img src="Assets/4-1-1.png" alt="" />
+                            <p>Titanium. So Strong. So Light. So Pro</p>
+                            <div class="link">
+                                <a href="">Learn More ></a>
+                                <a href="">Buy ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-1 part-4-2">
+                        <div class="text-part-1 text-part-3">
+                            <img src="Assets/4-2-1.png" alt="" />
+                            <p>Titanium. So Strong. So Light. So Pro</p>
+                            <div class="link">
+                                <a href="">Learn More ></a>
+                                <a href="">Buy ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="part-4">
+                    <div class="part-1 part-4-1">
+                        <div class="text-part-1 text-part-3">
+                            <img src="Assets/4-1-1.png" alt="" />
+                            <p>Titanium. So Strong. So Light. So Pro</p>
+                            <div class="link">
+                                <a href="">Learn More ></a>
+                                <a href="">Buy ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-1 part-4-2">
+                        <div class="text-part-1 text-part-3">
+                            <img src="Assets/4-2-1.png" alt="" />
+                            <p>Titanium. So Strong. So Light. So Pro</p>
+                            <div class="link">
+                                <a href="">Learn More ></a>
+                                <a href="">Buy ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-part">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-1"></div>
+                            <div class="swiper-slide swiper-2"></div>
+                            <div class="swiper-slide swiper-3"></div>
+                            <div class="swiper-slide swiper-4"></div>
+                            <div class="swiper-slide swiper-5"></div>
+                            <div class="swiper-slide swiper-6"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <header>
-            <i class="ri-apple-fill"></i>
-            <a id="store" href="">Store</a>
-            <a href="">Mac</a>
-            <a href="">iPad</a>
-            <a href="">iPhone</a>
-            <a href="">Watch</a>
-            <a href="">AirPods</a>
-            <a href="">TV & Home</a>
-            <a href="">Entertainment</a>
-            <a href="">Accessories</a>
-            <a href="">Support</a>
-            <i class="ri-search-line"></i>
-            <i class="ri-shopping-bag-line"></i>
-            <i class="ri-menu-3-line"></i>
-        </header>
-        <div class="respo-header ">
-            <i class="ri-close-fill"></i>
-            <a href="">Store</a>
-            <a href="">Mac</a>
-            <a href="">iPad</a>
-            <a href="">iPhone</a>
-            <a href="">Watch</a>
-            <a href="">AirPods</a>
-            <a href="">TV & Home</a>
-            <a href="">Entertainment</a>
-            <a href="">Accessories</a>
-            <a href="">Support</a>
-        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1.5,
+                centeredSlides: true,
+                spaceBetween: 30,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                headerigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                loop: true,
+            });
 
-        <div id="div2"
-            style="display: flex; flex-wrap: wrap;justify-content: center;gap:2%; font-weight: 50; font-size: 15px; align-items: center; background-color: rgb(29, 29, 31); padding: 0.5%;">
-            <p
-                style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; color: white; word-spacing: 3px; font-size: 15px; font-weight: 100;">
-                Get up to 8000.00 instant cashback on selected products with eligible American Express, Axis Bank and
-                ICICI Bank cards. <sup> *</sup> <a href="#"> Shop ›</a>
-            </p>
-        </div>
+            var menu = document.querySelector(".ri-menu-3-line");
+            var clo = document.querySelector(".ri-close-fill");
+            var header = document.querySelector(".respo-header ");
 
-        <section style="height: 80%; background-color: rgb(0, 0, 0); z-index: -2; position: relative;">
-            <div class="video-container">
-                <img height="" width="" src="./Assets/img1.png" alt="" id="apple-logo">
+            menu.addEventListener("click", function () {
+                header.style.top = "0%";
+            });
 
-                <div class="overlay-text">
-                    <h1>Apple Event</h1>
-                    <p>Watch Online on 9 September at 10:30 PM IST.</p>
-                    <button
-                        style="padding: 2% 3%;border-radius: 50px; margin-top: 2%; font-size: 18px;color: white; background-color: rgb(0, 117, 221);">Learn
-                        More</button>
-                </div>
-            </div>
-        </section>
+            clo.addEventListener("click", function () {
+                header.style.top = "-120%";
+            });
 
-        <div class="div5">
-            <div id="partO" class="part-1">
-                <div class="text-part-1">
-                    <h1>iPhone 15 Pro</h1>
-                    <p>Titanium. So Strong. So Light. So Pro</p>
-                    <div class="link">
-                        <a href="">Learn More ></a>
-                        <a href="">Buy ></a>
-                    </div>
-                </div>
-            </div>
-            <div class="part-1 part-2">
-                <div class="text-part-1 text-part-2">
-                    <h1>iPhone 15 Pro</h1>
-                    <p>New Camera. New Design. Newphoria.</p>
-                    <div class="link">
-                        <a href="">Learn More ></a>
-                        <a href="">Buy ></a>
-                    </div>
-                </div>
-            </div>
-            <div class="part-1 part-3">
-                <div class="text-part-1 text-part-3">
-                    <img src="Assets/image3-1.png" alt="" />
-                    <p>Titanium. So Strong. So Light. So Pro</p>
-                    <div class="link">
-                        <a href="">Learn More ></a>
-                        <a href="">Buy ></a>
-                    </div>
-                </div>
-            </div>
-            <div class="part-4">
-                <div class="part-1 part-4-1">
-                    <div class="text-part-1 text-part-3">
-                        <img src="Assets/4-1-1.png" alt="" />
-                        <p>Titanium. So Strong. So Light. So Pro</p>
-                        <div class="link">
-                            <a href="">Learn More ></a>
-                            <a href="">Buy ></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="part-1 part-4-2">
-                    <div class="text-part-1 text-part-3">
-                        <img src="Assets/4-2-1.png" alt="" />
-                        <p>Titanium. So Strong. So Light. So Pro</p>
-                        <div class="link">
-                            <a href="">Learn More ></a>
-                            <a href="">Buy ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="part-4">
-                <div class="part-1 part-4-1">
-                    <div class="text-part-1 text-part-3">
-                        <img src="Assets/4-1-1.png" alt="" />
-                        <p>Titanium. So Strong. So Light. So Pro</p>
-                        <div class="link">
-                            <a href="">Learn More ></a>
-                            <a href="">Buy ></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="part-1 part-4-2">
-                    <div class="text-part-1 text-part-3">
-                        <img src="Assets/4-2-1.png" alt="" />
-                        <p>Titanium. So Strong. So Light. So Pro</p>
-                        <div class="link">
-                            <a href="">Learn More ></a>
-                            <a href="">Buy ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="part-4">
-                <div class="part-1 part-4-1">
-                    <div class="text-part-1 text-part-3">
-                        <img src="Assets/4-1-1.png" alt="" />
-                        <p>Titanium. So Strong. So Light. So Pro</p>
-                        <div class="link">
-                            <a href="">Learn More ></a>
-                            <a href="">Buy ></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="part-1 part-4-2">
-                    <div class="text-part-1 text-part-3">
-                        <img src="Assets/4-2-1.png" alt="" />
-                        <p>Titanium. So Strong. So Light. So Pro</p>
-                        <div class="link">
-                            <a href="">Learn More ></a>
-                            <a href="">Buy ></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-part">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-1"></div>
-                        <div class="swiper-slide swiper-2"></div>
-                        <div class="swiper-slide swiper-3"></div>
-                        <div class="swiper-slide swiper-4"></div>
-                        <div class="swiper-slide swiper-5"></div>
-                        <div class="swiper-slide swiper-6"></div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+            var store = document.querySelector("#store");
+            var subMenu = document.querySelector(".submenu");
 
+            store.addEventListener("mousemove", function () {
+                subMenu.style.top = "5%";
+            });
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.5,
-    centeredSlides: true,
-    spaceBetween: 30,
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    headerigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    loop: true,
-  });
-
-
-var menu = document.querySelector(".ri-menu-3-line");
-var clo = document.querySelector(".ri-close-fill");
-var header = document.querySelector(".respo-header ");
-
-menu.addEventListener("click",function(){
-      header .style.top = "0%";
-})
-
-clo.addEventListener("click",function(){
-  header .style.top = "-120%";
-})
-
-var store = document.querySelector("#store");
-var subMenu = document.querySelector(".submenu");
-
-store.addEventListener("mousemove", function(){
-  subMenu.style.top = "5%"
-})
-
-store.addEventListener("mouseleave", function(){
-  subMenu.style.top = "-100%"
-})
-
-    </script>
-</body>
-
+            store.addEventListener("mouseleave", function () {
+                subMenu.style.top = "-100%";
+            });
+        </script>
+    </body>
 </html>
