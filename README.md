@@ -14,34 +14,34 @@ https://design-timeline.netlify.app/
 ./ <br />
 ├─ index.html <br />
 ├─ era_navigation/ <br />
-   ├─ index.html <br />
-   ├─ era_pages/ <br />
-      ├─ 1990s/ <br />
-         ├─ index.html <br />
-         ├─ layouts/ <br />
-            ├─ amazon/ <br />
-               ├─ xyz.html <br />
-            ├─ apple/ <br />
-               ├─ .. <br />
-            ├─ google/ <br />
-            ├─ microsoft/ <br />
-      ├─ 2000s <br />
-         ├─ index.html <br />
-         ├─ layouts/ <br />
-            ├─ amazon/ <br />
-               ├─ xyz.html <br />
-            ├─ apple/ <br />
-            ├─ google/ <br />
-            ├─ microsoft/ <br />
-            ├─ facebook/ <br />
-      ├─ 2010s <br />
-         ├─ .. <br />
-      ├─ 2020s <br />
-         ├─ .. <br />
-      ├─ 2030s <br />
-         ├─ .. <br />
+ &nbsp; &nbsp; ├─ index.html <br />
+ &nbsp; &nbsp; ├─ era_pages/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; ├─ 1990s/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; ├─ index.html <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; ├─ layouts/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ amazon/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ xyz.html <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ apple/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ .. <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ google/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ microsoft/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; ├─ 2000s <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; ├─ index.html <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; ├─ layouts/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ amazon/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ xyz.html <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ apple/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ google/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ microsoft/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ facebook/ <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; ├─ 2010s <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ .. <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; ├─ 2020s <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ .. <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; ├─ 2030s <br />
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ├─ .. <br />
 ├─ summery/ <br />
-   ├─ index.html <br />
+ &nbsp; &nbsp; ├─ index.html <br />
 
 ## Video Walkthrough of the project
 https://youtu.be/ctD-cxAJdGM 
