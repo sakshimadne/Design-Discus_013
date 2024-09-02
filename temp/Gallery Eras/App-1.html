@@ -58,7 +58,9 @@
           <a href="#" class="hover:text-gray-400">Home</a>
           <a href="./Eras/Era's.html" class="hover:text-gray-400">Era Of</a>
           <a href="#" class="hover:text-gray-400" id="blogs-link">Blogs</a>
-          <a href="./Gallery Eras/Era's.html" class="hover:text-gray-400">Gallery</a>
+          <a href="./Gallery Eras/Era's.html" class="hover:text-gray-400"
+            >Gallery</a
+          >
           <a href="#" class="hover:text-gray-400">Contact Us</a>
         </div>
 
@@ -85,22 +87,22 @@
 
     <script>
       document
-        .getElementById('blogs-link')
-        .addEventListener('click', function (event) {
-          event.preventDefault() // Prevent the default link behavior
+        .getElementById("blogs-link")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default link behavior
 
-          var contentContainer = document.getElementById('content-container')
+          var contentContainer = document.getElementById("content-container");
 
           // Toggle the display of the content container
           if (
-            contentContainer.style.display === 'none' ||
-            contentContainer.style.display === ''
+            contentContainer.style.display === "none" ||
+            contentContainer.style.display === ""
           ) {
-            contentContainer.style.display = 'block'
+            contentContainer.style.display = "block";
           } else {
-            contentContainer.style.display = 'none'
+            contentContainer.style.display = "none";
           }
-        })
+        });
     </script>
   </body>
 </html>
