@@ -2,46 +2,46 @@
    Design Timeline (Project code : Design-Discus_013)
 
 ## Introduction
-A brief introduction of your project goes here. You may want to cover the purpose of your project, its core functionality, and what problems it solves.
+This is a website that illustrates the evolution of UI/UX design, featuring different layouts and styles from various decades, from 1990s to 2030s.
 
 ## Project Type
 Frontend
 
-## Deplolyed App
-Frontend: https://design-timeline.netlify.app/ 
+## Deployed App
+https://design-timeline.netlify.app/ 
 
 ## Directory Structure
-./
-├─ index.html
-├─ era_navigation/
-   ├─ index.html
-   ├─ era_pages/
-      ├─ 1990s/
-         ├─ index.html
-         ├─ layouts/
-            ├─ amazon/
-               ├─ xyz.html
-            ├─ apple/
-               ├─ ..
-            ├─ google/
-            ├─ microsoft/
-      ├─ 2000s
-         ├─ index.html
-         ├─ layouts/
-            ├─ amazon/
-               ├─ xyz.html
-            ├─ apple/
-            ├─ google/
-            ├─ microsoft/
-            ├─ facebook/
-      ├─ 2010s
-         ├─ ..
-      ├─ 2020s
-         ├─ ..
-      ├─ 2030s
-         ├─ ..
-├─ summery/
-   ├─ index.html
+./ <br />
+├─ index.html <br />
+├─ era_navigation/ <br />
+   ├─ index.html <br />
+   ├─ era_pages/ <br />
+      ├─ 1990s/ <br />
+         ├─ index.html <br />
+         ├─ layouts/ <br />
+            ├─ amazon/ <br />
+               ├─ xyz.html <br />
+            ├─ apple/ <br />
+               ├─ .. <br />
+            ├─ google/ <br />
+            ├─ microsoft/ <br />
+      ├─ 2000s <br />
+         ├─ index.html <br />
+         ├─ layouts/ <br />
+            ├─ amazon/ <br />
+               ├─ xyz.html <br />
+            ├─ apple/ <br />
+            ├─ google/ <br />
+            ├─ microsoft/ <br />
+            ├─ facebook/ <br />
+      ├─ 2010s <br />
+         ├─ .. <br />
+      ├─ 2020s <br />
+         ├─ .. <br />
+      ├─ 2030s <br />
+         ├─ .. <br />
+├─ summery/ <br />
+   ├─ index.html <br />
 
 ## Video Walkthrough of the project
 https://youtu.be/ctD-cxAJdGM 
@@ -74,6 +74,8 @@ https://youtu.be/ctD-cxAJdGM
 ![homepage](https://github.com/user-attachments/assets/7eb68768-c2fb-45fb-b739-dcb1ce50af8d)
 - Then, you can navigate to exploring different era layouts (from Explore more button), or the corresponding link in navbar. 
 - Or, you can also navigate to About page to see an overview of the UI evolution.
+![about](https://github.com/user-attachments/assets/110b8ec2-e983-4357-bbe3-d820b70c2e2b)
+
 
 
 ## Technology Stack
